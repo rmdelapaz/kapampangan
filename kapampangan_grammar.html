@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapampangan Grammar Patterns and Sentence Structures</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .grammar-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .pattern-demo {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .verb-conjugation {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+        .sentence-builder {
+            background: #f0f8ff;
+            border: 3px solid #4a90e2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+        .focus-system {
+            background: #fce4ec;
+            border-left: 4px solid #e91e63;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .particle-guide {
+            background: #e1f5fe;
+            border: 2px solid #0288d1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .exercise-advanced {
+            background: #f3e5f5;
+            border: 3px solid #7b1fa2;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+        .transformation-demo {
+            background: #fff8e1;
+            border: 2px solid #ff8f00;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .canvas-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .complexity-indicator {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .basic { background: #c8e6c9; color: #1b5e20; }
+        .intermediate { background: #fff3e0; color: #e65100; }
+        .advanced { background: #ffcdd2; color: #b71c1c; }
+        .expert { background: #e1bee7; color: #4a148c; }
+        .morphology-tree {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kapampangan Grammar Patterns</h1>
+        <p class="subtitle">Mastering the Architecture of Beautiful Sentences</p>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Pamagdakal king Grammar! Welcome to Grammar Mastery!</h2>
+            <p>Think of Kapampangan grammar as the blueprint of a beautiful bahay kubo - each beam, post, and joint has its purpose, and when assembled correctly, creates something both functional and elegant. Today, we'll explore the intricate architecture that makes Kapampangan sentences flow like poetry and pack meaning like efficient code.</p>
+            
+            <div class="grammar-box">
+                🏗️ <strong>Grammar Philosophy:</strong> Kapampangan grammar isn't just rules - it's the DNA of thought itself, showing how Kapampangan speakers organize reality, relationships, and time in their minds.
+            </div>
+        </section>
+
+        <section id="word-order-systems">
+            <h2>Word Order Systems - The Dance of Meaning</h2>
+            <p>Unlike English's rigid Subject-Verb-Object structure, Kapampangan words dance together in multiple formations, each creating slightly different meanings and emphasis.</p>
+
+            <div class="mermaid">
+                graph TD
+                    A[Kapampangan Word Order] --> B[VSO - Verb Subject Object<br/>Default Pattern]
+                    A --> C[VOS - Verb Object Subject<br/>Object Focus]
+                    A --> D[SVO - Subject Verb Object<br/>Actor Focus]
+                    A --> E[OSV - Object Subject Verb<br/>Topicalization]
+                    
+                    B --> F["Mag-aral ya i Juan ning aklat<br/>(Studies he Juan a book)<br/>Juan studies a book"]
+                    C --> G["Sinulat na i Juan ing liham<br/>(Wrote he Juan the letter)<br/>Juan wrote the letter"]
+                    D --> H["I Juan mag-aral ya ning aklat<br/>(Juan studies he a book)<br/>Juan studies a book"]
+                    E --> I["Ing aklat i Juan basa ne<br/>(The book Juan reads he)<br/>The book, Juan reads it"]
+                    
+                    style A fill:#ffeb99
+                    style B fill:#98fb98
+                    style C fill:#87ceeb
+                    style D fill:#ffa07a
+                    style E fill:#dda0dd
+            </div>
+
+            <div class="pattern-demo">
+                <h3>🎯 The Focus System - Heart of Kapampangan Grammar</h3>
+                <span class="complexity-indicator intermediate">Intermediate</span>
+                <p>Kapampangan doesn't just tell you what happened - it tells you what the speaker considers most important in the sentence. This is called the "focus system."</p>
+                
+                <div class="transformation-demo">
+                    <h4>Same event, different focus:</h4>
+                    <p><strong>Actor Focus:</strong> <em>Mag-luto ya i Maria ning adobo.</em></p>
+                    <p>Translation: "Maria cooks adobo." (Focus: Who's cooking?)</p>
+                    
+                    <p><strong>Object Focus:</strong> <em>Luluto na i Maria ing adobo.</em></p>
+                    <p>Translation: "Maria will cook the adobo." (Focus: What's being cooked?)</p>
+                    
+                    <p><strong>Beneficiary Focus:</strong> <em>Iluluto ne i Maria king tatang na ing adobo.</em></p>
+                    <p>Translation: "Maria will cook adobo for her father." (Focus: Who benefits?)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="verb-morphology">
+            <h2>Verb Morphology - The Heartbeat of Action</h2>
+            <p>Kapampangan verbs are like Swiss Army knives - one root word can transform into dozens of forms, each with precise meaning about time, focus, completion, and intention.</p>
+
+            <div class="canvas-container">
+                <canvas id="verbMorphologyCanvas" width="700" height="500"></canvas>
+            </div>
+
+            <script>
+                const canvas = document.getElementById('verbMorphologyCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw verb morphology tree
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '18px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Kapampangan Verb Morphology System', 350, 30);
+                
+                // Root verb in center
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillRect(300, 70, 100, 40);
+                ctx.fillStyle = 'white';
+                ctx.font = '14px Arial';
+                ctx.fillText('SULAT', 350, 95);
+                ctx.fillText('(write)', 350, 110);
+                
+                // Prefixes
+                const prefixes = [
+                    {text: 'mag-', x: 150, y: 150, meaning: 'Actor Focus'},
+                    {text: 'ma-', x: 250, y: 150, meaning: 'Abilitative'},
+                    {text: 'maka-', x: 350, y: 150, meaning: 'Potential'},
+                    {text: 'ma-/i-', x: 450, y: 150, meaning: 'Object Focus'},
+                    {text: 'pag-', x: 550, y: 150, meaning: 'Instrumental'}
+                ];
+                
+                prefixes.forEach(prefix => {
+                    ctx.fillStyle = '#3498db';
+                    ctx.fillRect(prefix.x - 30, prefix.y, 60, 30);
+                    ctx.fillStyle = 'white';
+                    ctx.font = '12px Arial';
+                    ctx.fillText(prefix.text, prefix.x, prefix.y + 18);
+                    
+                    // Draw lines from root
+                    ctx.strokeStyle = '#34495e';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(350, 110);
+                    ctx.lineTo(prefix.x, prefix.y);
+                    ctx.stroke();
+                    
+                    // Add meaning labels
+                    ctx.fillStyle = '#2c3e50';
+                    ctx.font = '10px Arial';
+                    ctx.fillText(prefix.meaning, prefix.x, prefix.y + 45);
+                });
+                
+                // Suffixes
+                const suffixes = [
+                    {text: '-an', x: 200, y: 250, meaning: 'Locative'},
+                    {text: '-in', x: 300, y: 250, meaning: 'Object'},
+                    {text: '-ing', x: 400, y: 250, meaning: 'Genitive'},
+                    {text: '-na', x: 500, y: 250, meaning: 'Completed'}
+                ];
+                
+                suffixes.forEach(suffix => {
+                    ctx.fillStyle = '#e67e22';
+                    ctx.fillRect(suffix.x - 25, suffix.y, 50, 30);
+                    ctx.fillStyle = 'white';
+                    ctx.font = '12px Arial';
+                    ctx.fillText(suffix.text, suffix.x, suffix.y + 18);
+                    
+                    // Draw lines from root
+                    ctx.strokeStyle = '#34495e';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(350, 110);
+                    ctx.lineTo(suffix.x, suffix.y);
+                    ctx.stroke();
+                    
+                    // Add meaning labels
+                    ctx.fillStyle = '#2c3e50';
+                    ctx.font = '10px Arial';
+                    ctx.fillText(suffix.meaning, suffix.x, suffix.y + 45);
+                });
+                
+                // Infixes
+                const infixes = [
+                    {text: '-um-', x: 250, y: 350, meaning: 'Actor Focus'},
+                    {text: '-in-', x: 350, y: 350, meaning: 'Progressive'},
+                    {text: '-al-', x: 450, y: 350, meaning: 'Repetitive'}
+                ];
+                
+                infixes.forEach(infix => {
+                    ctx.fillStyle = '#9b59b6';
+                    ctx.fillRect(infix.x - 25, infix.y, 50, 30);
+                    ctx.fillStyle = 'white';
+                    ctx.font = '12px Arial';
+                    ctx.fillText(infix.text, infix.x, infix.y + 18);
+                    
+                    // Draw lines from root
+                    ctx.strokeStyle = '#34495e';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(350, 110);
+                    ctx.lineTo(infix.x, infix.y);
+                    ctx.stroke();
+                    
+                    // Add meaning labels
+                    ctx.fillStyle = '#2c3e50';
+                    ctx.font = '10px Arial';
+                    ctx.fillText(infix.meaning, infix.x, infix.y + 45);
+                });
+                
+                // Examples at bottom
+                ctx.fillStyle = '#27ae60';
+                ctx.font = '12px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText('Examples: magsulat (will write), sinulat (was written), sulatan (place to write)', 50, 450);
+                ctx.fillText('sumulat (wrote), sinulat (written), pagsulat (writing instrument)', 50, 470);
+            </script>
+
+            <div class="verb-conjugation">
+                <h3>🔄 Tense and Aspect System</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                <p>Kapampangan doesn't just mark when something happened (tense) - it shows how the action relates to completion, repetition, and perspective (aspect).</p>
+                
+                <div class="morphology-tree">
+<strong>Root: KAIN (eat)</strong>
+├── Present/Ongoing
+│   ├── mangan (is eating - Actor Focus)
+│   ├── kakan (is being eaten - Object Focus)
+│   └── pangangan (place of eating - Locative Focus)
+├── Completed
+│   ├── mikan (ate - Actor Focus)
+│   ├── kinain (was eaten - Object Focus)
+│   └── pikanan (place where ate - Locative Focus)
+├── Future/Potential
+│   ├── mangan (will eat - Actor Focus)
+│   ├── kakanan (will be eaten - Object Focus)
+│   └── kakanan (will eat at - Locative Focus)
+└── Iterative/Habitual
+    ├── mangangan (eats regularly)
+    ├── kakainin (gets eaten regularly)
+    └── panganganan (regular eating place)
+                </div>
+            </div>
+
+            <div class="pattern-demo">
+                <h3>🎭 Actor vs Object Focus - The Perspective Shift</h3>
+                <span class="complexity-indicator intermediate">Intermediate</span>
+                
+                <div class="transformation-demo">
+                    <h4>Actor Focus (Mag- verbs):</h4>
+                    <p><strong>Magluto ya i Ana ning sisig.</strong></p>
+                    <p>Translation: "Ana cooks sisig." (Ana is the focus/topic)</p>
+                    <p><em>Usage: When you want to emphasize who is doing the action</em></p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Object Focus (-in/-an verbs):</h4>
+                    <p><strong>Lulutuin na i Ana ing sisig.</strong></p>
+                    <p>Translation: "Ana will cook the sisig." (Sisig is the focus/topic)</p>
+                    <p><em>Usage: When you want to emphasize what is being done or what is receiving the action</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="particle-system">
+            <h2>Particle System - The Magic Glue of Meaning</h2>
+            <p>Kapampangan particles are like seasoning in cooking - small amounts create big differences in flavor and meaning. These tiny words carry enormous grammatical and emotional weight.</p>
+
+            <div class="mermaid">
+                graph LR
+                    A[Kapampangan Particles] --> B[Case Markers<br/>i, ing, ning, king]
+                    A --> C[Aspectual Particles<br/>na, pa, lang]
+                    A --> D[Modal Particles<br/>siguru, baka, kaya]
+                    A --> E[Politeness Particles<br/>naman, po, pu]
+                    A --> F[Focus Particles<br/>ya, la, ba]
+                    
+                    B --> G[Mark relationships<br/>between words]
+                    C --> H[Show completion<br/>and timing]
+                    D --> I[Express possibility<br/>and certainty]
+                    E --> J[Show respect<br/>and social distance]
+                    F --> K[Highlight important<br/>information]
+                    
+                    style A fill:#ffeb99
+                    style B fill:#98fb98
+                    style C fill:#87ceeb
+                    style D fill:#ffa07a
+                    style E fill:#dda0dd
+                    style F fill:#ffb6c1
+            </mermaid>
+
+            <div class="particle-guide">
+                <h3>📍 Case Marking Particles - Showing Relationships</h3>
+                <span class="complexity-indicator basic">Basic</span>
+                
+                <div class="pattern-demo">
+                    <h4>Subject/Topic Markers:</h4>
+                    <p><strong>i</strong> - marks the subject/topic (definite)</p>
+                    <p>Example: <em>Datang <strong>i</strong> Juan.</em> (Juan is coming.)</p>
+                    
+                    <p><strong>ing</strong> - marks the subject/topic (specific)</p>
+                    <p>Example: <em>Masarap <strong>ing</strong> sisig.</em> (The sisig is delicious.)</p>
+                </div>
+                
+                <div class="pattern-demo">
+                    <h4>Object/Complement Markers:</h4>
+                    <p><strong>ning</strong> - marks direct objects, genitive relationships</p>
+                    <p>Example: <em>Basa ya <strong>ning</strong> aklat.</em> (He reads a book.)</p>
+                    
+                    <p><strong>king</strong> - marks locations, indirect objects, instruments</p>
+                    <p>Example: <em>Lako ya <strong>king</strong> eskuela.</em> (He goes to school.)</p>
+                </div>
+            </div>
+
+            <div class="particle-guide">
+                <h3>⏰ Aspectual Particles - Time and Completion</h3>
+                <span class="complexity-indicator intermediate">Intermediate</span>
+                
+                <p><strong>na</strong> - indicates completion, "already"</p>
+                <p>Example: <em>Mikan <strong>na</strong> ya.</em> (He already ate.)</p>
+                
+                <p><strong>pa</strong> - indicates continuation, "still" or "more"</p>
+                <p>Example: <em>Mag-aral <strong>pa</strong> ya.</em> (He's still studying.)</p>
+                
+                <p><strong>lang</strong> - indicates limitation, "only" or "just"</p>
+                <p>Example: <em>Metung <strong>lang</strong>.</em> (Just one.)</p>
+            </div>
+
+            <div class="particle-guide">
+                <h3>💭 Modal and Emotional Particles</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                
+                <p><strong>naman</strong> - softens statements, shows consideration</p>
+                <p>Example: <em>Mayap <strong>naman</strong>.</em> (It's fine, you know.)</p>
+                
+                <p><strong>ba</strong> - turns statements into questions, seeks confirmation</p>
+                <p>Example: <em>Datang ya <strong>ba</strong>?</em> (Is he coming?)</p>
+                
+                <p><strong>kaya</strong> - expresses reason or possibility</p>
+                <p>Example: <em>Ulan <strong>kaya</strong>?</em> (I wonder if it will rain?)</p>
+            </div>
+        </section>
+
+        <section id="complex-sentences">
+            <h2>Complex Sentence Construction - Building Linguistic Architecture</h2>
+            <p>Like a master architect combining simple rooms into magnificent buildings, Kapampangan speakers weave simple clauses into complex, beautiful sentences that express intricate thoughts and relationships.</p>
+
+            <div class="sentence-builder">
+                <h3>🔗 Clause Linking Strategies</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                
+                <div class="transformation-demo">
+                    <h4>Coordination (Joining Equal Clauses):</h4>
+                    <p><strong>at/ampong</strong> - "and"</p>
+                    <p>Example: <em>Mangan ya <strong>at</strong> matulog ya.</em> (He eats and sleeps.)</p>
+                    
+                    <p><strong>o/oneng</strong> - "or"</p>
+                    <p>Example: <em>Sisig <strong>o</strong> adobo?</em> (Sisig or adobo?)</p>
+                    
+                    <p><strong>dapot/pero</strong> - "but"</p>
+                    <p>Example: <em>Masarap <strong>dapot</strong> mahal.</em> (Delicious but expensive.)</p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Subordination (Dependent Clauses):</h4>
+                    <p><strong>nung</strong> - "when/while"</p>
+                    <p>Example: <em>Datang ya <strong>nung</strong> umuulan.</em> (He came when it was raining.)</p>
+                    
+                    <p><strong>bang</strong> - "that" (complement clauses)</p>
+                    <p>Example: <em>Balu ku <strong>bang</strong> masaya ya.</em> (I know that he's happy.)</p>
+                    
+                    <p><strong>nung</strong> - "because"</p>
+                    <p>Example: <em>Ali ya datang <strong>nung</strong> maulan.</em> (He didn't come because it's raining.)</p>
+                </div>
+            </div>
+
+            <div class="focus-system">
+                <h3>🎯 Advanced Focus Constructions</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                
+                <p>Kapampangan allows you to focus on almost any element of a sentence, creating nuanced meanings:</p>
+                
+                <div class="transformation-demo">
+                    <h4>Instrument Focus:</h4>
+                    <p><strong>Ikulit na ning lapis ing lagyu na.</strong></p>
+                    <p>Translation: "He wrote his name with the pencil."</p>
+                    <p><em>Focus: The pencil is highlighted as the important tool</em></p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Beneficiary Focus:</h4>
+                    <p><strong>Ibibili ne ning babai ing kayang anak.</strong></p>
+                    <p>Translation: "She will buy (something) for her child."</p>
+                    <p><em>Focus: The child as the beneficiary is emphasized</em></p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Locative Focus:</h4>
+                    <p><strong>Kinanan da king restaurant ing masarap a sisig.</strong></p>
+                    <p>Translation: "They ate the delicious sisig at the restaurant."</p>
+                    <p><em>Focus: The restaurant as the location is highlighted</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="relative-clauses">
+            <h2>Relative Clauses - Adding Rich Detail</h2>
+            <p>Relative clauses in Kapampangan are like adding brush strokes to a painting - they provide the details that bring your sentences to life with precision and beauty.</p>
+
+            <div class="pattern-demo">
+                <h3>🔍 Formation Patterns</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                
+                <div class="transformation-demo">
+                    <h4>Subject Relative Clauses:</h4>
+                    <p><strong>Basic:</strong> <em>I lalaki masikan.</em> (The man is strong.)</p>
+                    <p><strong>With Relative:</strong> <em>I lalaking mag-aral king unibersidad masikan.</em></p>
+                    <p>Translation: "The man who studies at the university is strong."</p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Object Relative Clauses:</h4>
+                    <p><strong>Basic:</strong> <em>Ing aklat matulis.</em> (The book is thick.)</p>
+                    <p><strong>With Relative:</strong> <em>Ing aklat a binasa na ni Juan matulis.</em></p>
+                    <p>Translation: "The book that Juan read is thick."</p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Locative Relative Clauses:</h4>
+                    <p><strong>Basic:</strong> <em>Ing restaurant maragul.</em> (The restaurant is big.)</p>
+                    <p><strong>With Relative:</strong> <em>Ing restaurant a kinanan da maragul.</em></p>
+                    <p>Translation: "The restaurant where they ate is big."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conditional-constructions">
+            <h2>Conditional Constructions - Exploring Possibilities</h2>
+            <p>Kapampangan conditional sentences are like bridges between reality and possibility, allowing speakers to explore what might be, could be, or should be.</p>
+
+            <div class="sentence-builder">
+                <h3>🌉 Types of Conditionals</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                
+                <div class="transformation-demo">
+                    <h4>Real Conditionals (Likely situations):</h4>
+                    <p><strong>Nung datang ya, kakain tamo.</strong></p>
+                    <p>Translation: "If he comes, we will eat."</p>
+                    <p><em>Structure: Nung + condition + consequence</em></p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Unreal Conditionals (Hypothetical situations):</h4>
+                    <p><strong>Nung meyari ya, sana miki yang pera.</strong></p>
+                    <p>Translation: "If he had worked, he would have had money."</p>
+                    <p><em>Structure: Nung + past condition + sana + consequence</em></p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Counterfactual Conditionals (Contrary to fact):</h4>
+                    <p><strong>Nung bisa ku lang, mirinan ku ka.</strong></p>
+                    <p>Translation: "If only I could, I would visit you."</p>
+                    <p><em>Structure: Nung + wish/ability + lang + desired outcome</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-morphology">
+            <h2>Advanced Morphological Processes</h2>
+            <p>Like a master craftsperson who can create intricate patterns from simple materials, Kapampangan uses sophisticated word-building processes to create precise meanings.</p>
+
+            <div class="verb-conjugation">
+                <h3>🔄 Reduplication Patterns</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                
+                <div class="morphology-tree">
+<strong>Reduplication Types:</strong>
+├── Full Reduplication (Intensity/Plurality)
+│   ├── takbo → takbo-takbo (running around)
+│   ├── maragul → maragul-ragul (very big)
+│   └── masikan → masikan-sikan (very strong)
+├── Partial Reduplication (Ongoing Action)
+│   ├── sulat → su-sulat (writing continuously)
+│   ├── kain → ka-kain (eating continuously)
+│   └── tulog → tu-tulog (sleeping continuously)
+└── CV Reduplication (Diminutive/Casual)
+    ├── malaut → ma-malaut (somewhat far)
+    ├── mababu → ma-mababu (somewhat new)
+    └── malagu → ma-malagu (somewhat good)
+                </div>
+            </div>
+
+            <div class="verb-conjugation">
+                <h3>🎨 Derivational Morphology</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                
+                <div class="transformation-demo">
+                    <h4>Causative Formation (Making someone do something):</h4>
+                    <p><strong>Root:</strong> tulog (sleep)</p>
+                    <p><strong>Causative:</strong> patulugen (make someone sleep)</p>
+                    <p>Example: <em>Patulugen ne ing anak na.</em> (He makes his child sleep.)</p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Reciprocal Formation (Mutual action):</h4>
+                    <p><strong>Root:</strong> kamalasan (help)</p>
+                    <p><strong>Reciprocal:</strong> magkamalasan (help each other)</p>
+                    <p>Example: <em>Magkamalasan la.</em> (They help each other.)</p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Distributive Formation (Action distributed over time/space):</h4>
+                    <p><strong>Root:</strong> bili (buy)</p>
+                    <p><strong>Distributive:</strong> mamili-bili (buying various things)</p>
+                    <p>Example: <em>Mamili-bili ya king palengke.</em> (He's shopping around the market.)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="discourse-markers">
+            <h2>Discourse Markers and Text Cohesion</h2>
+            <p>Like traffic signals that guide vehicles through complex intersections, discourse markers guide listeners through the flow of complex conversations and narratives.</p>
+
+            <div class="particle-guide">
+                <h3>🚦 Organizational Markers</h3>
+                <span class="complexity-indicator intermediate">Intermediate</span>
+                
+                <p><strong>Una/Mumuna</strong> - "First" (beginning sequence)</p>
+                <p>Example: <em><strong>Una</strong>, mag-prepare tamo ning ingredients.</em> (First, we prepare the ingredients.)</p>
+                
+                <p><strong>Kaibat/Kaybat</strong> - "Next/Then" (continuing sequence)</p>
+                <p>Example: <em><strong>Kaibat</strong>, lutuin tamo ing karne.</em> (Next, we cook the meat.)</p>
+                
+                <p><strong>Pamagkamate/Wakas</strong> - "Finally" (ending sequence)</p>
+                <p>Example: <em><strong>Pamagkamate</strong>, kain tamo!</em> (Finally, we eat!)</p>
+            </div>
+
+            <div class="particle-guide">
+                <h3>💭 Cognitive and Attitudinal Markers</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                
+                <p><strong>Aba</strong> - "Well/Oh" (mild surprise or realization)</p>
+                <p>Example: <em><strong>Aba</strong>, iti ya pala i Juan!</em> (Oh, so this is Juan!)</p>
+                
+                <p><strong>Kasi/Nung</strong> - "Because/You see" (explanation)</p>
+                <p>Example: <em>Ali ku datang, <strong>kasi</strong> maulan.</em> (I didn't come because it's raining.)</p>
+                
+                <p><strong>Siguru/Makatwa</strong> - "I think/Maybe" (uncertainty)</p>
+                <p>Example: <em><strong>Siguru</strong> datang ya bukas.</em> (I think he'll come tomorrow.)</p>
+            </div>
+        </section>
+
+        <section id="pragmatic-grammar">
+            <h2>Pragmatic Grammar - Grammar in Social Context</h2>
+            <p>Grammar isn't just about correct forms - it's about using language appropriately for your audience, purpose, and social situation.</p>
+
+            <div class="focus-system">
+                <h3>👥 Register Variation</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                
+                <div class="transformation-demo">
+                    <h4>Formal Register (Professional/Academic):</h4>
+                    <p><strong>Malyaring sabing...</strong> (It can be said that...)</p>
+                    <p><strong>Alimbawa...</strong> (For example...)</p>
+                    <p><strong>Samakatuwid...</strong> (Therefore...)</p>
+                    <p><em>Features: Complex sentences, formal vocabulary, indirect expressions</em></p>
+                </div>
+                
+                <div class="transformation-demo">
+                    <h4>Casual Register (Friends/Family):</h4>
+                    <p><strong>Eka...</strong> (You know...)</p>
+                    <p><strong>Tapos...</strong> (Then...)</p>
+                    <p><strong>Kaya nga...</strong> (That's why...)</p>
+                    <p><em>Features: Simple sentences, informal vocabulary, direct expressions</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="practical-exercises">
+            <div class="exercise-advanced">
+                <h2>🎯 Advanced Grammar Exercises</h2>
+                
+                <h3>Exercise 1: Focus Transformation</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                <p>Transform this sentence to emphasize different elements:</p>
+                <div class="pattern-demo">
+                    <p><strong>Base sentence:</strong> <em>Mag-luto ya i Maria ning sisig king kusina para king pamilya na.</em></p>
+                    <p>(Maria cooks sisig in the kitchen for her family.)</p>
+                    
+                    <p><strong>Your tasks:</strong></p>
+                    <ol>
+                        <li>Emphasize the sisig (object focus)</li>
+                        <li>Emphasize the kitchen (locative focus)</li>
+                        <li>Emphasize the family (beneficiary focus)</li>
+                    </ol>
+                </div>
+                
+                <h3>Exercise 2: Complex Sentence Building</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                <p>Combine these simple sentences into one complex sentence:</p>
+                <div class="transformation-demo">
+                    <ul>
+                        <li>Juan datang. (Juan comes.)</li>
+                        <li>Umuulan. (It's raining.)</li>
+                        <li>Mababasa ya. (He gets wet.)</li>
+                        <li>Ali ya mag-payung. (He doesn't use an umbrella.)</li>
+                    </ul>
+                    <p><strong>Challenge:</strong> Use conditional, causal, and temporal relationships.</p>
+                </div>
+                
+                <h3>Exercise 3: Morphological Analysis</h3>
+                <span class="complexity-indicator expert">Expert</span>
+                <p>Break down these complex words into their morphological components:</p>
+                <div class="morphology-tree">
+<strong>Words to analyze:</strong>
+1. pagkakamalasan (cooperation)
+2. pinakamaragul (biggest)
+3. makisabayan (to join in)
+4. pamanigarihan (place of trading)
+                </div>
+                
+                <h3>Exercise 4: Register Adaptation</h3>
+                <span class="complexity-indicator advanced">Advanced</span>
+                <p>Rewrite this casual sentence in formal register:</p>
+                <div class="pattern-demo">
+                    <p><strong>Casual:</strong> <em>Eka, datang ya bukas, tapos kain tamo.</em></p>
+                    <p>(You know, he's coming tomorrow, then we'll eat.)</p>
+                    <p><strong>Your task:</strong> Make it appropriate for a formal invitation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="common-mistakes">
+            <h2>Common Grammar Mistakes and How to Avoid Them</h2>
+            <p>Even advanced learners make these mistakes - recognizing them is the first step to mastery!</p>
+
+            <div class="transformation-demo">
+                <h3>❌ Mistake 1: Incorrect Focus Marking</h3>
+                <p><strong>Wrong:</strong> <em>Mag-luto ya ing sisig.</em></p>
+                <p><strong>Correct:</strong> <em>Mag-luto ya ning sisig.</em> OR <em>Luluto na ing sisig.</em></p>
+                <p><strong>Explanation:</strong> Actor focus (mag-) requires object to be marked with "ning", not "ing"</p>
+            </div>
+
+            <div class="transformation-demo">
+                <h3>❌ Mistake 2: Particle Placement</h3>
+                <p><strong>Wrong:</strong> <em>Ya na datang.</em></p>
+                <p><strong>Correct:</strong> <em>Datang na ya.</em></p>
+                <p><strong>Explanation:</strong> Particles like "na" come after the verb, before the subject</p>
+            </div>
+
+            <div class="transformation-demo">
+                <h3>❌ Mistake 3: Tense Confusion</h3>
+                <p><strong>Wrong:</strong> <em>Mangan ya aldo.</em> (trying to say "He ate yesterday")</p>
+                <p><strong>Correct:</strong> <em>Mikan ya aldo.</em></p>
+                <p><strong>Explanation:</strong> Use completed aspect (-ik-) for past events</p>
+            </div>
+        </section>
+
+        <section id="mastery-path">
+            <h2>Your Path to Grammar Mastery</h2>
+            <div class="grammar-box">
+                <h3>🎓 Congratulations, Grammar Architect!</h3>
+                <p>You've now explored the sophisticated architecture of Kapampangan grammar. You understand focus systems, complex morphology, advanced sentence structures, and pragmatic usage. This knowledge transforms you from a tourist in the language to a resident who can navigate its most elegant neighborhoods.</p>
+            </div>
+
+            <div class="sentence-builder">
+                <h3>🌟 Next Steps in Your Journey</h3>
+                <p>With this grammatical foundation, you're ready for:</p>
+                <ul>
+                    <li><strong>Literary Kapampangan</strong> - Reading poetry, novels, and traditional texts</li>
+                    <li><strong>Professional Communication</strong> - Business, academic, and technical language</li>
+                    <li><strong>Cultural Immersion</strong> - Understanding humor, idioms, and cultural expressions</li>
+                    <li><strong>Creative Expression</strong> - Writing your own stories, poems, or songs</li>
+                    <li><strong>Teaching Others</strong> - Sharing your knowledge with new learners</li>
+                </ul>
+            </div>
+
+            <div class="particle-guide">
+                <h3>🔄 Daily Grammar Practice</h3>
+                <p>To maintain and expand your skills:</p>
+                <ul>
+                    <li>Write one complex sentence daily using different focus systems</li>
+                    <li>Transform simple sentences into complex ones</li>
+                    <li>Practice morphological analysis with new words you encounter</li>
+                    <li>Experiment with different registers in your conversations</li>
+                    <li>Read Kapampangan texts and analyze their grammatical structures</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Salamat a maragul king pamagdakal king grammar! Thank you for mastering Kapampangan grammar with us!</p>
+    </footer>
+</body>
+</html>

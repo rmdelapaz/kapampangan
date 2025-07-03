@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapampangan Conversations - Speaking Like a Local</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .conversation-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .speaker-a {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 0 15px 15px 0;
+        }
+        .speaker-b {
+            background: #f3e5f5;
+            border-right: 4px solid #9c27b0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 15px 0 0 15px;
+            text-align: right;
+        }
+        .politeness-level {
+            background: #fff8e1;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+        .phrase-pattern {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .cultural-tip {
+            background: #fce4ec;
+            border-left: 4px solid #e91e63;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .exercise-interactive {
+            background: #f5f5f5;
+            border: 3px solid #607d8b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+        .mood-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+        .formal { background: #bbdefb; color: #0d47a1; }
+        .casual { background: #c8e6c9; color: #1b5e20; }
+        .intimate { background: #ffcdd2; color: #b71c1c; }
+        .respectful { background: #fff3e0; color: #e65100; }
+        .canvas-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .dialogue-practice {
+            background: #f0f4f8;
+            border: 2px dashed #718096;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .emotion-wheel {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kapampangan Conversations</h1>
+        <p class="subtitle">Speaking Like a Local - Mastering the Art of Kapampangan Communication</p>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Makakawani Tamu! Let's Talk!</h2>
+            <p>Imagine sitting in a traditional bahay kubo in Angeles City, surrounded by the warm chatter of a Kapampangan family preparing for a fiesta. The conversation flows like music - respectful with elders, playful with children, intimate with close friends. Today, you'll learn to join this beautiful symphony of human connection.</p>
+            
+            <div class="cultural-tip">
+                🎭 <strong>Cultural Insight:</strong> Kapampangan conversation is like cooking adobo - it's not just about the ingredients (words), it's about the timing, the balance, and the love you put into it!
+            </div>
+        </section>
+
+        <section id="politeness-levels">
+            <h2>Levels of Respect - The Heart of Kapampangan Communication</h2>
+            <p>Think of Kapampangan politeness like the layers of an onion - each layer represents a different level of respect and intimacy. Master these, and you'll navigate any social situation with grace.</p>
+
+            <div class="mermaid">
+                graph TD
+                    A[Kapampangan Politeness Levels] --> B[Po/Pu System<br/>Ultimate Respect]
+                    A --> C[Kayo vs Ka<br/>Formal vs Casual]
+                    A --> D[Third Person Reference<br/>Indirect Speech]
+                    A --> E[Honorific Particles<br/>Naman, Lang, Na]
+                    
+                    B --> F["Used with: Grandparents<br/>Teachers, Bosses<br/>Religious figures<br/>Community elders"]
+                    C --> G["Ka: Friends, siblings<br/>Kayo: Parents, bosses<br/>strangers, groups"]
+                    D --> H["Instead of 'you said'<br/>Say 'he/she said'<br/>Shows extra respect"]
+                    E --> I["Softens statements<br/>Shows consideration<br/>Builds rapport"]
+                    
+                    style A fill:#ffeb99
+                    style B fill:#ffcc99
+                    style C fill:#99ccff
+                    style D fill:#99ffcc
+                    style E fill:#ff99cc
+            </div>
+
+            <div class="politeness-level">
+                <h3>👑 Supreme Respect Level (Po/Pu System)</h3>
+                <span class="mood-indicator respectful">Most Formal</span>
+                <p><strong>Usage:</strong> Grandparents, teachers, priests, government officials</p>
+                <p><strong>Example:</strong> "Kumusta pu kayo?" (How are you, respected one?)</p>
+                <p><strong>Key:</strong> Always add "pu" after the verb and use "kayo" instead of "ka"</p>
+            </div>
+
+            <div class="politeness-level">
+                <h3>🤝 Standard Respect Level (Kayo)</h3>
+                <span class="mood-indicator formal">Formal</span>
+                <p><strong>Usage:</strong> Parents, older relatives, strangers, professional settings</p>
+                <p><strong>Example:</strong> "Makananu naman kayo ngeni?" (How are you today?)</p>
+                <p><strong>Key:</strong> Use "kayo" and add softening particles like "naman"</p>
+            </div>
+
+            <div class="politeness-level">
+                <h3>😊 Friendly Level (Ka)</h3>
+                <span class="mood-indicator casual">Casual</span>
+                <p><strong>Usage:</strong> Friends, siblings, peers, children</p>
+                <p><strong>Example:</strong> "Kumusta ka lang?" (How are you doing?)</p>
+                <p><strong>Key:</strong> Use "ka" and casual particles like "lang"</p>
+            </div>
+
+            <div class="politeness-level">
+                <h3>💕 Intimate Level (No particles)</h3>
+                <span class="mood-indicator intimate">Very Casual</span>
+                <p><strong>Usage:</strong> Very close friends, romantic partners, young children</p>
+                <p><strong>Example:</strong> "Kumusta?" (How are you?)</p>
+                <p><strong>Key:</strong> Direct, simple, warm - like a gentle hug in words</p>
+            </div>
+        </section>
+
+        <section id="common-expressions">
+            <h2>Everyday Expressions - Your Communication Toolkit</h2>
+            <p>These phrases are like the Swiss Army knife of Kapampangan conversation - versatile, essential, and always handy!</p>
+
+            <div class="canvas-container">
+                <canvas id="expressionWheel" width="500" height="400"></canvas>
+            </div>
+
+            <script>
+                const canvas = document.getElementById('expressionWheel');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw emotion/expression wheel
+                const centerX = 250;
+                const centerY = 200;
+                const radius = 150;
+                
+                const expressions = [
+                    {text: 'Salamat', color: '#FFB6C1', angle: 0},
+                    {text: 'Pasensya', color: '#98FB98', angle: 60},
+                    {text: 'Sori', color: '#87CEEB', angle: 120},
+                    {text: 'Eka', color: '#DDA0DD', angle: 180},
+                    {text: 'Wa naman', color: '#F0E68C', angle: 240},
+                    {text: 'Dayang', color: '#FFA07A', angle: 300}
+                ];
+                
+                expressions.forEach(expr => {
+                    const angleRad = (expr.angle * Math.PI) / 180;
+                    const x = centerX + Math.cos(angleRad) * radius;
+                    const y = centerY + Math.sin(angleRad) * radius;
+                    
+                    // Draw circle for each expression
+                    ctx.fillStyle = expr.color;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 40, 0, 2 * Math.PI);
+                    ctx.fill();
+                    
+                    // Add text
+                    ctx.fillStyle = '#000';
+                    ctx.font = '14px Arial';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(expr.text, x, y + 5);
+                });
+                
+                // Center circle
+                ctx.fillStyle = '#FFD700';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 60, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                ctx.fillStyle = '#000';
+                ctx.font = '16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Common', centerX, centerY - 10);
+                ctx.fillText('Expressions', centerX, centerY + 10);
+            </script>
+
+            <div class="phrase-pattern">
+                <h3>🙏 Gratitude and Appreciation</h3>
+                <p><strong>Salamat</strong> = Thank you (universal)</p>
+                <p><strong>Salamat a maragul</strong> = Thank you very much</p>
+                <p><strong>Salamat naman</strong> = Thanks anyway (softened)</p>
+                <p><strong>Dakal a salamat</strong> = Many thanks</p>
+                <p><em>Usage tip: Add "naman" to sound more natural and considerate</em></p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>🤔 Agreement and Disagreement</h3>
+                <p><strong>Wa naman</strong> = Yes, that's right</p>
+                <p><strong>Ali naman</strong> = No, not really</p>
+                <p><strong>Siguru</strong> = Maybe/Perhaps</p>
+                <p><strong>Eka</strong> = You're right/Exactly!</p>
+                <p><strong>Baka</strong> = Maybe/Possibly</p>
+                <p><em>Cultural note: Kapampangans rarely say direct "no" - they soften it!</em></p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>😅 Apologies and Politeness</h3>
+                <p><strong>Pasensya na</strong> = Sorry/Excuse me (general)</p>
+                <p><strong>Sori</strong> = Sorry (casual, borrowed from English)</p>
+                <p><strong>Pakawari</strong> = Excuse me (to get attention)</p>
+                <p><strong>Dipat</strong> = My fault/I'm sorry</p>
+                <p><em>Body language: Slight bow or hand gesture accompanies apologies</em></p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>⏰ Time and Patience</h3>
+                <p><strong>Dayang lang</strong> = Wait a moment</p>
+                <p><strong>Dayang muna</strong> = Wait first</p>
+                <p><strong>Daratang na</strong> = Coming now</p>
+                <p><strong>Milabas na</strong> = Already left/going out</p>
+                <p><em>Filipino time: These phrases are essential for social coordination!</em></p>
+            </div>
+        </section>
+
+        <section id="conversation-starters">
+            <h2>Conversation Starters - Breaking the Ice Kapampangan Style</h2>
+            <p>Like planting seeds in fertile soil, good conversation starters in Kapampangan culture often focus on family, food, and shared experiences.</p>
+
+            <div class="conversation-box">
+                <h3>🏠 Family and Personal Life</h3>
+                <div class="speaker-a">
+                    <strong>You:</strong> "Kumusta na yang pamilia niyu?"<br>
+                    <em>(How is your family doing?)</em>
+                </div>
+                <div class="speaker-b">
+                    <strong>Local:</strong> "Mayap naman. Ikaw, kumusta yang anak mu?"<br>
+                    <em>(They're fine. How about you, how are your children?)</em>
+                </div>
+                <div class="speaker-a">
+                    <strong>You:</strong> "Maragul na la. Mag-aral ne king unibersidad."<br>
+                    <em>(They're grown up now. He's studying at the university.)</em>
+                </div>
+            </div>
+
+            <div class="conversation-box">
+                <h3>🍽️ Food and Local Culture</h3>
+                <div class="speaker-a">
+                    <strong>You:</strong> "Nucarin yang masarap a sisig dini?"<br>
+                    <em>(Where can I find delicious sisig here?)</em>
+                </div>
+                <div class="speaker-b">
+                    <strong>Local:</strong> "Ay, king Mila's Tocino! Masarap dun!"<br>
+                    <em>(Oh, at Mila's Tocino! It's delicious there!)</em>
+                </div>
+                <div class="speaker-a">
+                    <strong>You:</strong> "Salamat! Maglako ko ngeni."<br>
+                    <em>(Thanks! I'll go there today.)</em>
+                </div>
+            </div>
+
+            <div class="conversation-box">
+                <h3>🌤️ Weather and Current Events</h3>
+                <div class="speaker-a">
+                    <strong>You:</strong> "Mainit ngening aldo, ano?"<br>
+                    <em>(It's hot today, isn't it?)</em>
+                </div>
+                <div class="speaker-b">
+                    <strong>Local:</strong> "Wa naman. Maulan pa ngeni."<br>
+                    <em>(Yes indeed. It might rain later.)</em>
+                </div>
+                <div class="speaker-a">
+                    <strong>You:</strong> "Baka masayang yang fiesta nung maulan."<br>
+                    <em>(The fiesta might be fun if it rains.)</em>
+                </div>
+            </div>
+        </section>
+
+        <section id="emotional-expressions">
+            <h2>Expressing Emotions - The Soul of Communication</h2>
+            <p>Kapampangans are known for their emotional expressiveness - they don't just speak words, they paint feelings with their voices!</p>
+
+            <div class="emotion-wheel">
+                <div class="mermaid">
+                    graph TD
+                        A[Kapampangan Emotions] --> B[Kasalanan - Joy]
+                        A --> C[Lungkut - Sadness]
+                        A --> D[Galit - Anger]
+                        A --> E[Takut - Fear]
+                        A --> F[Pagkamalagu - Love]
+                        A --> G[Pagkabalisa - Worry]
+                        
+                        B --> H["Masaya ku!<br/>Kayáng sarap!<br/>Mánggá ku!"]
+                        C --> I["Malungkut ku.<br/>Nakakalungkut.<br/>Malagu pa."]
+                        D --> J["Nakakainis!<br/>Gigil ku!<br/>Makasira!"]
+                        E --> K["Metakut ku.<br/>Nakakatakut.<br/>Baka..."]
+                        F --> L["Kaluguran da ka.<br/>Mimahal da ka.<br/>Pengari ku."]
+                        G --> M["Mbalisa ku.<br/>Nakakabalisa.<br/>Mikabalu ku."]
+                        
+                        style A fill:#ffeb99
+                        style B fill:#98fb98
+                        style C fill:#87ceeb
+                        style D fill:#ffa07a
+                        style E fill:#dda0dd
+                        style F fill:#ffb6c1
+                        style G fill:#f0e68c
+                </div>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>😊 Expressing Joy and Excitement</h3>
+                <p><strong>Masaya ku!</strong> = I'm happy! (ma-SA-ya ku)</p>
+                <p><strong>Kayáng sarap!</strong> = How wonderful! (ka-YANG sa-rap)</p>
+                <p><strong>Mángga ku!</strong> = I'm so pleased! (MANG-ga ku)</p>
+                <p><strong>Nabayag nang panahun!</strong> = It's been so long! (na-BA-yag nang pa-na-HUN)</p>
+                <p><em>Tone tip: Use rising intonation and bright facial expressions</em></p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>😢 Expressing Sadness and Sympathy</h3>
+                <p><strong>Malungkut ku.</strong> = I'm sad. (ma-LUNG-kut ku)</p>
+                <p><strong>Nakakalungkut naman.</strong> = That's so sad. (na-ka-ka-LUNG-kut na-man)</p>
+                <p><strong>Kasalanan mu naman.</strong> = I feel sorry for you. (ka-sa-LA-nan mu na-man)</p>
+                <p><strong>Makalunus.</strong> = It's pitiful. (ma-ka-LU-nus)</p>
+                <p><em>Cultural note: Sharing sadness builds strong community bonds</em></p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>😤 Expressing Frustration (Politely)</h3>
+                <p><strong>Nakakainis naman!</strong> = How annoying! (na-ka-ka-i-NIS na-man)</p>
+                <p><strong>Gigil ku!</strong> = I'm so frustrated! (GI-gil ku)</p>
+                <p><strong>Makasira!</strong> = How irritating! (ma-ka-SI-ra)</p>
+                <p><strong>Pasensya na lang.</strong> = Just be patient. (pa-SEN-sya na lang)</p>
+                <p><em>Important: Always use "naman" or "lang" to soften strong emotions</em></p>
+            </div>
+        </section>
+
+        <section id="filler-words">
+            <h2>Kapampangan Filler Words - Speaking Naturally</h2>
+            <p>Just like "um" and "uh" in English, Kapampangan has its own filler words that make you sound like a native speaker. These little gems are the secret sauce of natural conversation!</p>
+
+            <div class="phrase-pattern">
+                <h3>🤔 Thinking and Hesitation</h3>
+                <p><strong>Anu ba...</strong> = Well... / What is... (A-nu ba)</p>
+                <p><strong>Kasi...</strong> = Because... / You see... (ka-SI)</p>
+                <p><strong>Aba...</strong> = Well... / Oh... (A-ba)</p>
+                <p><strong>Hay naku...</strong> = Oh my... / Goodness... (HAY na-ku)</p>
+                <p><em>Usage: Use these when you need time to think or want to sound conversational</em></p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>✨ Emphasis and Connection</h3>
+                <p><strong>Naman</strong> = You know / Indeed (na-man)</p>
+                <p><strong>Lang</strong> = Just / Only (lang)</p>
+                <p><strong>Kaya</strong> = So / That's why (KA-ya)</p>
+                <p><strong>Talaga</strong> = Really / Indeed (ta-LA-ga)</p>
+                <p><em>Pro tip: These particles show you understand the rhythm of Kapampangan conversation</em></p>
+            </div>
+        </section>
+
+        <section id="real-conversations">
+            <h2>Real-Life Conversation Practice</h2>
+            <p>Let's practice with authentic scenarios you'll encounter in Pampanga. Think of these as your conversation training wheels!</p>
+
+            <div class="dialogue-practice">
+                <h3>🛒 Scenario 1: At the Palengke (Market)</h3>
+                <div class="conversation-box">
+                    <div class="speaker-a">
+                        <strong>Vendor:</strong> "Mayap a abak! Fresh na fresh yang isda!"<br>
+                        <em>(Good morning! The fish is very fresh!)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Mayap a abak naman! Makananu la yang bangus?"<br>
+                        <em>(Good morning too! How much is the milkfish?)</em>
+                    </div>
+                    <div class="speaker-a">
+                        <strong>Vendor:</strong> "Adwang dalan metung a kilu. Masarap na ini!"<br>
+                        <em>(Two hundred per kilo. This is really delicious!)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Makananu nung metung a kilu lang?"<br>
+                        <em>(How much for just one kilo?)</em>
+                    </div>
+                    <div class="speaker-a">
+                        <strong>Vendor:</strong> "Sige, metung sapat lima na lang. Para keka!"<br>
+                        <em>(Okay, one hundred seventy-five only. For you!)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Salamat! Kukua ku yang metung a kilu."<br>
+                        <em>(Thank you! I'll take one kilo.)</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dialogue-practice">
+                <h3>🏠 Scenario 2: Visiting a Friend's Family</h3>
+                <div class="conversation-box">
+                    <div class="speaker-a">
+                        <strong>Friend's Mother:</strong> "Ay, kumusta pu kayo? Tuloy pu kayo!"<br>
+                        <em>(Oh, how are you? Please come in!)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Mayap pu kayo, Tita. Salamat pu."<br>
+                        <em>(I'm fine, Auntie. Thank you.)</em>
+                    </div>
+                    <div class="speaker-a">
+                        <strong>Friend's Mother:</strong> "Kain pu tayo! May sisig kami ampong kare-kare."<br>
+                        <em>(Let's eat! We have sisig and kare-kare.)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Salamat pu, pero busug pa ku."<br>
+                        <em>(Thank you, but I'm still full.)</em>
+                    </div>
+                    <div class="speaker-a">
+                        <strong>Friend's Mother:</strong> "Ay, dayang lang! Tikim lang pu!"<br>
+                        <em>(Oh, wait! Just taste it!)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Sige pu, salamat. Tikim lang talaga."<br>
+                        <em>(Okay, thank you. Just a taste really.)</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dialogue-practice">
+                <h3>🎉 Scenario 3: At a Fiesta Celebration</h3>
+                <div class="conversation-box">
+                    <div class="speaker-a">
+                        <strong>Local:</strong> "Hoy, alang! Kumain ka na?"<br>
+                        <em>(Hey, friend! Have you eaten?)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Ali pa. Rami nang pamangan dini!"<br>
+                        <em>(Not yet. There's so much food here!)</em>
+                    </div>
+                    <div class="speaker-a">
+                        <strong>Local:</strong> "Kaya! Fiesta kasi. Tara, kain tayo!"<br>
+                        <em>(That's why! It's a fiesta. Come on, let's eat!)</em>
+                    </div>
+                    <div class="speaker-b">
+                        <strong>You:</strong> "Sige! Nung saan yang masarap a sisig?"<br>
+                        <em>(Okay! Where's the good sisig?)</em>
+                    </div>
+                    <div class="speaker-a">
+                        <strong>Local:</strong> "Deta, king mesa nang kuya Ben. Luto nang asawa na!"<br>
+                        <em>(Over there, at Brother Ben's table. His wife cooked it!)</em>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive-exercises">
+            <div class="exercise-interactive">
+                <h2>🎯 Interactive Practice Exercises</h2>
+                
+                <h3>Exercise 1: Politeness Level Challenge</h3>
+                <p>Choose the appropriate response for each situation:</p>
+                <div class="cultural-tip">
+                    <strong>Situation:</strong> You're greeting your friend's grandmother<br>
+                    <strong>Options:</strong><br>
+                    A) "Kumusta ka?" (casual)<br>
+                    B) "Kumusta pu kayo?" (respectful)<br>
+                    C) "Musta?" (very casual)<br>
+                    <strong>Answer:</strong> B - Always use "pu" and "kayo" with elders!
+                </div>
+                
+                <h3>Exercise 2: Conversation Flow</h3>
+                <p>Complete this market conversation:</p>
+                <div class="phrase-pattern">
+                    <p><strong>Vendor:</strong> "Masarap yang mangga!"</p>
+                    <p><strong>You:</strong> "_______?" (Ask the price)</p>
+                    <p><strong>Vendor:</strong> "Lima pesos metung."</p>
+                    <p><strong>You:</strong> "_______" (Ask for two mangoes)</p>
+                    <p><em>Answers: "Makananu?" and "Adwa sana."</em></p>
+                </div>
+                
+                <h3>Exercise 3: Emotion Expression</h3>
+                <p>Practice expressing these emotions naturally:</p>
+                <ul>
+                    <li>You're excited about visiting Pampanga</li>
+                    <li>You're sad because you're leaving</li>
+                    <li>You're frustrated with traffic</li>
+                    <li>You're grateful for someone's help</li>
+                </ul>
+                
+                <h3>Exercise 4: Filler Word Practice</h3>
+                <p>Add appropriate filler words to make these sentences sound more natural:</p>
+                <div class="phrase-pattern">
+                    <p>"Nakalimu ku... anu ba... nucarin yang restaurant." (I forgot... um... where the restaurant is.)</p>
+                    <p>"Masarap naman yang sisig dini." (The sisig here is good, you know.)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultural-communication">
+            <h2>Cultural Communication Secrets</h2>
+            <p>Understanding the unspoken rules of Kapampangan communication is like having a secret key to people's hearts.</p>
+
+            <div class="cultural-tip">
+                <h3>🎭 The Art of Indirect Communication</h3>
+                <p>Kapampangans often communicate indirectly to maintain harmony:</p>
+                <ul>
+                    <li><strong>Instead of "No":</strong> "Baka" (maybe) or "Tignan natin" (let's see)</li>
+                    <li><strong>Instead of direct criticism:</strong> "Baka mas mayap nung..." (maybe it's better if...)</li>
+                    <li><strong>Instead of direct requests:</strong> "Baka pwede..." (maybe it's possible...)</li>
+                </ul>
+            </div>
+
+            <div class="cultural-tip">
+                <h3>🤝 Building Rapport (Pakikipagkapwa)</h3>
+                <p>Successful Kapampangan conversation includes:</p>
+                <ul>
+                    <li><strong>Shared experiences:</strong> "Naranasan mu na ba...?" (Have you experienced...?)</li>
+                    <li><strong>Family connections:</strong> "Kakilala mu ba si...?" (Do you know...?)</li>
+                    <li><strong>Food bonding:</strong> "Lasa mu na ba yang...?" (Have you tasted...?)</li>
+                </ul>
+            </div>
+
+            <div class="cultural-tip">
+                <h3>⏰ The Rhythm of Conversation</h3>
+                <p>Kapampangan conversation has natural pauses and overlaps:</p>
+                <ul>
+                    <li><strong>Active listening:</strong> "Eka" (right), "Wa naman" (yes indeed)</li>
+                    <li><strong>Natural interruptions:</strong> It's okay to overlap - shows engagement!</li>
+                    <li><strong>Story building:</strong> Add to others' stories rather than changing topics abruptly</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="advanced-tips">
+            <h2>Advanced Conversation Tips</h2>
+            <div class="phrase-pattern">
+                <h3>🎪 Storytelling in Kapampangan</h3>
+                <p>Stories often start with: <strong>"Ala kang balu..."</strong> (Do you know...)</p>
+                <p>Build suspense with: <strong>"Tapos, inu ba..."</strong> (Then, what do you think...)</p>
+                <p>End with lessons: <strong>"Kaya..."</strong> (That's why...)</p>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>🎵 Using Tone and Rhythm</h3>
+                <p>Kapampangan is tonal - practice these patterns:</p>
+                <ul>
+                    <li><strong>Questions:</strong> Rising tone at the end</li>
+                    <li><strong>Statements:</strong> Falling tone</li>
+                    <li><strong>Emphasis:</strong> Stress the important word</li>
+                    <li><strong>Politeness:</strong> Softer, gentler tones</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="next-adventure">
+            <h2>Your Conversation Journey Continues</h2>
+            <p>Congratulations! You now have the tools to engage in meaningful Kapampangan conversations. You understand politeness levels, can express emotions naturally, and know the cultural secrets of effective communication.</p>
+
+            <div class="cultural-tip">
+                <h3>🌟 Ready for Your Next Challenge?</h3>
+                <p>In our next lesson, we'll explore:</p>
+                <ul>
+                    <li>Regional variations and dialects within Kapampangan</li>
+                    <li>Traditional expressions and idiomatic phrases</li>
+                    <li>Festival and celebration vocabulary</li>
+                    <li>Business and professional communication</li>
+                    <li>Advanced grammar patterns and complex sentences</li>
+                </ul>
+            </div>
+
+            <div class="phrase-pattern">
+                <h3>🎯 Practice Challenge</h3>
+                <p>This week, try to have one conversation in Kapampangan every day. Start with simple greetings and gradually build up to longer exchanges. Remember: mistakes are part of learning - Kapampangans will appreciate your effort more than perfect grammar!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Salamat a maragul! Keep practicing, and soon you'll be speaking like a true Kapampangan!</p>
+    </footer>
+</body>
+</html>

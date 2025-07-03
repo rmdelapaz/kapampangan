@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapampangan Mastery and Cultural Celebration</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .celebration-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            animation: celebrationGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes celebrationGlow {
+            0%, 100% { box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+            50% { box-shadow: 0 20px 40px rgba(255,107,107,0.4); }
+        }
+        
+        .festival-section {
+            background: #f8f9fa;
+            border: 3px solid #fd7e14;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .festival-section::before {
+            content: "🎉";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1.5em;
+        }
+        
+        .mastery-level {
+            background: white;
+            border: 2px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .mastery-level:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        
+        .conversation-showcase {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+        
+        .dialogue-flow {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+        }
+        
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .skill-meter {
+            background: white;
+            border: 2px solid #6c757d;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            position: relative;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .cultural-immersion {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .achievement-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .final-challenge {
+            background: #dc3545;
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .canvas-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .interactive-quiz {
+            background: #f0f4f8;
+            border: 2px solid #4a90e2;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+        }
+        
+        .quiz-question {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+        
+        .quiz-option {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .quiz-option:hover {
+            background: #e9ecef;
+        }
+        
+        .quiz-option.correct {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        
+        .quiz-option.incorrect {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+        
+        .celebration-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #007bff;
+        }
+        
+        .big-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #007bff;
+            margin: 10px 0;
+        }
+        
+        .journey-timeline {
+            position: relative;
+            margin: 30px 0;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 20px 0 20px 60px;
+            border-left: 3px solid #007bff;
+            margin-left: 20px;
+        }
+        
+        .timeline-item::before {
+            content: '✓';
+            position: absolute;
+            left: -15px;
+            top: 25px;
+            background: #28a745;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .diploma-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .diploma-section::before {
+            content: '🏆';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="celebration-header">
+            <h1>🎉 Kapampangan Mastery Celebration! 🎉</h1>
+            <p class="subtitle">Pakabani Tamu! Let's Celebrate Your Journey to Fluency!</p>
+            <div class="achievement-badge">🌟 Language Ambassador</div>
+            <div class="achievement-badge">🎭 Cultural Bridge</div>
+            <div class="achievement-badge">💬 Conversation Master</div>
+        </div>
+    </header>
+
+    <main>
+        <section id="journey-celebration">
+            <h2>Your Incredible Learning Journey</h2>
+            <p>From your first "Kumusta ka?" to understanding complex cultural expressions, you've traveled an amazing path. Let's celebrate every milestone of your Kapampangan mastery!</p>
+            
+            <div class="celebration-stats">
+                <div class="stat-card">
+                    <div class="big-number">500+</div>
+                    <p>Vocabulary Words Learned</p>
+                </div>
+                <div class="stat-card">
+                    <div class="big-number">50+</div>
+                    <p>Cultural Expressions Mastered</p>
+                </div>
+                <div class="stat-card">
+                    <div class="big-number">25+</div>
+                    <p>Grammar Patterns Understood</p>
+                </div>
+                <div class="stat-card">
+                    <div class="big-number">∞</div>
+                    <p>Cultural Connections Made</p>
+                </div>
+            </div>
+
+            <div class="journey-timeline">
+                <h3>🛤️ Your Learning Milestones</h3>
+                <div class="timeline-item">
+                    <h4>Lesson 1: Foundation Building</h4>
+                    <p>You discovered the musical beauty of Kapampangan and learned essential greetings, understanding why this language is called the "heart language" of Central Luzon.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Lesson 2: Vocabulary Mastery</h4>
+                    <p>You built your word bank with family terms, food vocabulary, numbers, and verbs - the building blocks of natural conversation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Lesson 3: Conversational Fluency</h4>
+                    <p>You learned the art of respectful communication, mastering politeness levels and emotional expressions that make you sound like a native speaker.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Lesson 4: Grammar Architecture</h4>
+                    <p>You conquered the sophisticated focus system, complex morphology, and advanced sentence structures that make Kapampangan so linguistically fascinating.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Lesson 5: Cultural Wisdom</h4>
+                    <p>You embraced traditional expressions, proverbs, and cultural vocabulary that connect you to generations of Kapampangan wisdom and heritage.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill-assessment">
+            <h2>Your Current Mastery Level</h2>
+            <p>Let's see how far you've come! These interactive assessments will show your progress across all language skills.</p>
+
+            <div class="assessment-grid">
+                <div class="skill-meter">
+                    <h3>🗣️ Speaking Ability</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                    <p><strong>Advanced Conversationalist</strong></p>
+                    <p>You can handle complex conversations, express emotions naturally, and use appropriate politeness levels.</p>
+                </div>
+
+                <div class="skill-meter">
+                    <h3>👂 Listening Comprehension</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                    <p><strong>Cultural Listener</strong></p>
+                    <p>You understand not just words but cultural context, emotional undertones, and social meanings.</p>
+                </div>
+
+                <div class="skill-meter">
+                    <h3>📚 Vocabulary Knowledge</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                    <p><strong>Word Wizard</strong></p>
+                    <p>Your vocabulary spans from everyday essentials to cultural expressions and traditional wisdom.</p>
+                </div>
+
+                <div class="skill-meter">
+                    <h3>🏗️ Grammar Mastery</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                    <p><strong>Structure Architect</strong></p>
+                    <p>You understand complex grammar patterns, focus systems, and can build sophisticated sentences.</p>
+                </div>
+
+                <div class="skill-meter">
+                    <h3>🎭 Cultural Understanding</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                    <p><strong>Cultural Ambassador</strong></p>
+                    <p>You understand the deep cultural contexts that make Kapampangan communication meaningful and authentic.</p>
+                </div>
+
+                <div class="skill-meter">
+                    <h3>✍️ Expression Ability</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 88%;"></div>
+                    </div>
+                    <p><strong>Expressive Communicator</strong></p>
+                    <p>You can use idioms, proverbs, and emotional expressions to communicate with depth and nuance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultural-festivals">
+            <h2>Celebrating Through Kapampangan Festivals</h2>
+            <p>Language and culture dance together in Kapampangan festivals. Let's explore how your language skills come alive during these vibrant celebrations!</p>
+
+            <div class="canvas-container">
+                <canvas id="festivalCanvas" width="700" height="400"></canvas>
+            </div>
+
+            <script>
+                const canvas = document.getElementById('festivalCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw festival scene
+                ctx.fillStyle = '#87CEEB';
+                ctx.fillRect(0, 0, 700, 150); // Sky
+                
+                ctx.fillStyle = '#90EE90';
+                ctx.fillRect(0, 150, 700, 250); // Ground
+                
+                // Draw stage/platform
+                ctx.fillStyle = '#8B4513';
+                ctx.fillRect(250, 200, 200, 100);
+                
+                // Draw colorful decorations
+                const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8'];
+                for (let i = 0; i < 10; i++) {
+                    ctx.fillStyle = colors[i % colors.length];
+                    ctx.beginPath();
+                    ctx.arc(50 + i * 60, 100, 15, 0, 2 * Math.PI);
+                    ctx.fill();
+                }
+                
+                // Draw people celebrating
+                ctx.fillStyle = '#DEB887';
+                for (let i = 0; i < 8; i++) {
+                    ctx.beginPath();
+                    ctx.arc(100 + i * 70, 280, 20, 0, 2 * Math.PI);
+                    ctx.fill();
+                    
+                    // Bodies
+                    ctx.fillStyle = colors[i % colors.length];
+                    ctx.fillRect(90 + i * 70, 300, 20, 40);
+                    ctx.fillStyle = '#DEB887';
+                }
+                
+                // Add text
+                ctx.fillStyle = '#2F4F4F';
+                ctx.font = '24px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Kapampangan Fiesta Celebration', 350, 40);
+                
+                ctx.font = '16px Arial';
+                ctx.fillText('Where Language Meets Culture', 350, 370);
+            </script>
+
+            <div class="festival-section">
+                <h3>🎊 Sinulog Festival Expressions</h3>
+                <div class="dialogue-flow">
+                    <p><strong>Festival Announcer:</strong> "Maging masaya tamu king Sinulog! Ing kultura tamu, buri tamung ipakita!"</p>
+                    <p><em>(Be happy everyone at Sinulog! Our culture, we want to show!)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>You (as participant):</strong> "Masayang-masaya ku! Kayabang gandang ning sayaw!"</p>
+                    <p><em>(I'm so very happy! How beautiful the dance is!)</em></p>
+                </div>
+                <div class="cultural-immersion">
+                    <h4>Cultural Context:</h4>
+                    <p>During festivals, Kapampangans use heightened emotional expressions. Notice the repetition "masayang-masaya" (very very happy) and the exclamatory "Kayabang!" (How...!) - these show the festive spirit through language itself.</p>
+                </div>
+            </div>
+
+            <div class="festival-section">
+                <h3>🏮 Giant Lantern Festival (Ligligan Parul)</h3>
+                <div class="dialogue-flow">
+                    <p><strong>Local Craftsman:</strong> "King parul a ini, maki kamalayan kaming ngan ning aming lahi."</p>
+                    <p><em>(In this lantern, all our people's consciousness is present.)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>You (admiring):</strong> "Pengari ning bengi! Ali ku malyaring kalimutan iti."</p>
+                    <p><em>(Light of the night! I won't be able to forget this.)</em></p>
+                </div>
+                <div class="cultural-immersion">
+                    <h4>Cultural Depth:</h4>
+                    <p>The lantern festival vocabulary shows how Kapampangans see light as both physical and spiritual. "Pengari" (light) is also used for beloved people, and "kamalayan" (consciousness/awareness) reflects the deeper meaning of cultural preservation through art.</p>
+                </div>
+            </div>
+
+            <div class="festival-section">
+                <h3>🍖 Sisig Festival Culinary Celebration</h3>
+                <div class="dialogue-flow">
+                    <p><strong>Chef/Cook:</strong> "Iti ing tunay a sisig! Lasa ning Kapampangan a pugad!"</p>
+                    <p><em>(This is authentic sisig! Taste of the Kapampangan homeland!)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>You (tasting):</strong> "Pak sarap! Deti ya ing lasa ning keka king pusu!"</p>
+                    <p><em>(So delicious! This is the taste of home in the heart!)</em></p>
+                </div>
+                <div class="cultural-immersion">
+                    <h4>Food as Cultural Identity:</h4>
+                    <p>Notice how food vocabulary connects to emotional and spiritual concepts: "pugad" (homeland/nest), "pusu" (heart). For Kapampangans, food isn't just sustenance - it's cultural DNA made edible.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-conversations">
+            <h2>Master-Level Conversations</h2>
+            <p>You're now ready for the most sophisticated Kapampangan conversations - discussing philosophy, culture, business, and deep personal topics with native-speaker fluency.</p>
+
+            <div class="conversation-showcase">
+                <h3>🎓 Academic/Intellectual Discussion</h3>
+                <div class="dialogue-flow">
+                    <p><strong>Professor:</strong> "Makananu ya mag-impluwensya ing globalisasyon king Kapampangan a kultura?"</p>
+                    <p><em>(How does globalization influence Kapampangan culture?)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>You:</strong> "Nakakabalisa ku nung mawala ya ing amanung sisuan tamu, dapot makakita ku mu naman ing modernisasyon a magsilbing bridge king aliwang kultura."</p>
+                    <p><em>(I'm worried that our mother tongue might disappear, but I also see modernization serving as a bridge to other cultures.)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>Professor:</strong> "Masikan mong argument. Makananu tamu mag-preserve king tradisyon at mag-adapt mu naman king modernong panahun?"</p>
+                    <p><em>(Strong argument. How do we preserve tradition while also adapting to modern times?)</em></p>
+                </div>
+            </div>
+
+            <div class="conversation-showcase">
+                <h3>💼 Business/Professional Context</h3>
+                <div class="dialogue-flow">
+                    <p><strong>Business Partner:</strong> "Ing proyektong iti, kailangan tang hanapan ning balanse antara king tradisyonal a pamangako ampong modernong estratehiya."</p>
+                    <p><em>(This project, we need to find balance between traditional business practices and modern strategies.)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>You:</strong> "Tutu ya ini. Kapamilaanan da reng Kapampangan ing personal na relationship king business, dapot kailangan da mu naman ning digital transformation."</p>
+                    <p><em>(This is true. Kapampangans value personal relationships in business, but they also need digital transformation.)</em></p>
+                </div>
+            </div>
+
+            <div class="conversation-showcase">
+                <h3>💕 Deep Personal/Philosophical Discussion</h3>
+                <div class="dialogue-flow">
+                    <p><strong>Close Friend:</strong> "Nung sisipan ta ing kabaldugan ning pamiyabyi, anu ya bang tunay a importante king biye?"</p>
+                    <p><em>(If we think about the meaning of existence, what is truly important in life?)</em></p>
+                </div>
+                <div class="dialogue-flow">
+                    <p><strong>You:</strong> "Para kaku, ing kaluguran - kaluguran king pamilia, king mga alang, king kultura tamu. Deti ing magbibigyang kabaldugan king tamu."</p>
+                    <p><em>(For me, love - love for family, for friends, for our culture. These are what give meaning to us.)</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mastery-quiz">
+            <div class="interactive-quiz">
+                <h2>🧠 Final Mastery Assessment</h2>
+                <p>Test your comprehensive understanding across all areas of Kapampangan language and culture!</p>
+
+                <div class="quiz-question">
+                    <h3>Question 1: Cultural Context</h3>
+                    <p>When someone says "Kulang pa ing pamangan" at a feast with abundant food, they are:</p>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">A) Actually worried there isn't enough food</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, true)">B) Showing humility and concern for guests (cultural politeness)</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">C) Complaining about the food quality</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">D) Making a joke about being hungry</div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>Question 2: Grammar Mastery</h3>
+                    <p>In the sentence "Lulutuin na i Maria ing sisig," what is the focus?</p>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">A) Maria (who is cooking)</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, true)">B) Sisig (what is being cooked)</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">C) The cooking action itself</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">D) The future timing</div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>Question 3: Emotional Expression</h3>
+                    <p>Which expression shows the deepest level of sympathy in Kapampangan?</p>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">A) "Kasalanan mu naman"</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, true)">B) "Sakit ning pusu ku para keka"</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">C) "Nakakalunus naman"</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">D) "Malungkut ku para keka"</div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>Question 4: Proverb Understanding</h3>
+                    <p>"Ing buri ning pusu, ya ing lalam ning mata" is best applied when:</p>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">A) Someone is looking for their lost keys</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, true)">B) Discussing how we notice what we truly desire or value</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">C) Talking about physical vision problems</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">D) Describing a beautiful sunset</div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>Question 5: Advanced Vocabulary</h3>
+                    <p>In business contexts, what does "pamangako" refer to?</p>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">A) Marketing strategies</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, true)">B) Business practices/dealings</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">C) Financial accounting</div>
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">D) Employee management</div>
+                </div>
+
+                <script>
+                    let score = 0;
+                    let answered = 0;
+                    
+                    function selectAnswer(element, isCorrect) {
+                        // Prevent multiple selections
+                        if (element.parentNode.querySelector('.correct') || element.parentNode.querySelector('.incorrect')) {
+                            return;
+                        }
+                        
+                        answered++;
+                        
+                        if (isCorrect) {
+                            element.classList.add('correct');
+                            score++;
+                        } else {
+                            element.classList.add('incorrect');
+                            // Show correct answer
+                            const correctOption = element.parentNode.querySelector('.quiz-option[onclick*="true"]');
+                            if (correctOption) {
+                                correctOption.classList.add('correct');
+                            }
+                        }
+                        
+                        if (answered === 5) {
+                            setTimeout(() => {
+                                showFinalScore();
+                            }, 2000);
+                        }
+                    }
+                    
+                    function showFinalScore() {
+                        const percentage = (score / 5) * 100;
+                        let message = '';
+                        
+                        if (percentage >= 90) {
+                            message = "🏆 MASTER LEVEL! You're ready to be a Kapampangan cultural ambassador!";
+                        } else if (percentage >= 70) {
+                            message = "🌟 ADVANCED! You have excellent command of Kapampangan!";
+                        } else if (percentage >= 50) {
+                            message = "📚 INTERMEDIATE! Great progress, keep practicing!";
+                        } else {
+                            message = "🌱 DEVELOPING! You're on the right path, review the lessons!";
+                        }
+                        
+                        alert(`Final Score: ${score}/5 (${percentage}%)\n\n${message}`);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section id="continuing-journey">
+            <h2>Your Continuing Language Journey</h2>
+            <p>Mastery isn't the end - it's the beginning of a lifelong relationship with Kapampangan language and culture!</p>
+
+            <div class="mastery-level">
+                <h3>🌍 Real-World Application Opportunities</h3>
+                <ul>
+                    <li><strong>Cultural Tourism:</strong> Become a guide for visitors to Pampanga</li>
+                    <li><strong>Community Engagement:</strong> Participate in local cultural events and festivals</li>
+                    <li><strong>Language Preservation:</strong> Teach others and help document the language</li>
+                    <li><strong>Business Communication:</strong> Use your skills in professional Kapampangan contexts</li>
+                    <li><strong>Academic Research:</strong> Contribute to linguistic and cultural studies</li>
+                    <li><strong>Media Creation:</strong> Write, create content, or translate in Kapampangan</li>
+                </ul>
+            </div>
+
+            <div class="mastery-level">
+                <h3>📚 Advanced Learning Resources</h3>
+                <ul>
+                    <li><strong>Literature:</strong> Read Kapampangan novels, poetry, and historical texts</li>
+                    <li><strong>Media Consumption:</strong> Watch local TV shows, listen to radio, read newspapers</li>
+                    <li><strong>Community Immersion:</strong> Spend extended time in Kapampangan-speaking communities</li>
+                    <li><strong>Academic Study:</strong> Explore formal linguistics and anthropology courses</li>
+                    <li><strong>Teaching Practice:</strong> Volunteer to teach the language to others</li>
+                    <li><strong>Cultural Research:</strong> Document local customs, stories, and expressions</li>
+                </ul>
+            </div>
+
+            <div class="mastery-level">
+                <h3>🤝 Building Cultural Bridges</h3>
+                <ul>
+                    <li><strong>Translation Work:</strong> Help bridge Kapampangan and other languages</li>
+                    <li><strong>Cultural Events:</strong> Organize or participate in cultural exchange programs</li>
+                    <li><strong>International Outreach:</strong> Connect with Kapampangan diaspora communities</li>
+                    <li><strong>Digital Preservation:</strong> Create online resources and documentation</li>
+                    <li><strong>Youth Engagement:</strong> Encourage young people to learn their heritage language</li>
+                    <li><strong>Academic Collaboration:</strong> Work with universities on language research</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="final-celebration">
+            <div class="diploma-section">
+                <h2>🏆 Congratulations, Kapampangan Language Master! 🏆</h2>
+                <p>You have completed an extraordinary journey from beginner to advanced speaker. You now possess:</p>
+                
+                <div class="achievement-badge">✅ Comprehensive Vocabulary (500+ words)</div>
+                <div class="achievement-badge">✅ Advanced Grammar Mastery</div>
+                <div class="achievement-badge">✅ Cultural Fluency</div>
+                <div class="achievement-badge">✅ Conversational Excellence</div>
+                <div class="achievement-badge">✅ Expression Artistry</div>
+                
+                <h3 style="margin-top: 30px;">Your Kapampangan Name Certificate</h3>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <p style="font-size: 1.5em; font-weight: bold;">You are now officially:</p>
+                    <p style="font-size: 2em; color: #ffd700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                        MANURU KING AMANUNG KAPAMPANGAN
+                    </p>
+                    <p style="font-size: 1.2em;">(Teacher/Master of the Kapampangan Language)</p>
+                </div>
+            </div>
+
+            <div class="final-challenge">
+                <h2>🌟 Your Final Challenge</h2>
+                <p>Share your Kapampangan learning journey with others! Write a short message in Kapampangan about what this language means to you, and encourage someone else to start their own journey.</p>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3>Example Message to Share:</h3>
+                    <p><em>"Ing Kapampangan, eki na mu yang pamiyalitang balu ku - pamilyang balu ku pa. Makakawani tamu king kultura at tradisyon ning aming lahi. Nung buri mu ring mag-aral, simulan mu na ngeni - masayang pamaglakbe ya iti!"</em></p>
+                    <p><strong>Translation:</strong> "Kapampangan is not just a language I know - it's a family I now belong to. We can connect to the culture and traditions of this people. If you want to learn too, start now - this is a joyful journey!"</p>
+                </div>
+            </div>
+
+            <div class="cultural-immersion">
+                <h3>🌈 Parting Words of Wisdom</h3>
+                <p>Remember these beautiful Kapampangan truths as you continue your journey:</p>
+                <div style="font-style: italic; text-align: center; font-size: 1.1em; margin: 20px 0;">
+                    <p><strong>"Ing kamalayan king amanung sisuan, kamalayan ya mu king sariling pagkakakilanlan."</strong></p>
+                    <p>(Awareness of one's mother tongue is awareness of one's own identity.)</p>
+                </div>
+                <div style="font-style: italic; text-align: center; font-size: 1.1em; margin: 20px 0;">
+                    <p><strong>"Ing pamag-aral king metung a amanu, pamag-aral ya mu king metung a yatu."</strong></p>
+                    <p>(Learning a language is learning a world.)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 40px 20px; margin-top: 40px;">
+        <h2>🙏 Dakal a Salamat! 🙏</h2>
+        <p style="font-size: 1.2em;">Thank you for joining this incredible journey through the heart and soul of the Kapampangan language!</p>
+        <p>You are now a guardian of this beautiful language and culture. Use your knowledge wisely, share it generously, and keep the flame of Kapampangan heritage burning bright!</p>
+        
+        <div style="margin: 30px 0;">
+            <div class="achievement-badge">🌟 Language Lover</div>
+            <div class="achievement-badge">🎭 Culture Keeper</div>
+            <div class="achievement-badge">🌍 Bridge Builder</div>
+            <div class="achievement-badge">💝 Heritage Guardian</div>
+        </div>
+        
+        <p style="font-size: 1.3em; font-weight: bold; color: #ffd700;">
+            Mayap a bye! Agyu na ka king pamagaral!
+        </p>
+        <p>(Good luck! Continue your learning!)</p>
+    </footer>
+</body>
+</html>

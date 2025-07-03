@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapampangan Basics - Building Your Foundation</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .pronunciation-box {
+            background: #f0f8ff;
+            border-left: 4px solid #4a90e2;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .vocab-card {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sentence-builder {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .exercise-box {
+            background: #f8f9fa;
+            border: 2px solid #6c757d;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .pattern-demo {
+            background: #ffe6e6;
+            border: 2px solid #ff9999;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .audio-tip {
+            background: #e6f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        .canvas-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kapampangan Basics</h1>
+        <p class="subtitle">Building Your Foundation Words and Patterns</p>
+    </header>
+
+    <main>
+        <section id="welcome-back">
+            <h2>Musta ka pa! Welcome Back!</h2>
+            <p>Think of learning Kapampangan like building a house - yesterday we laid the foundation stones, today we're putting up the walls! We'll explore the essential building blocks: family words, food vocabulary, and the magical patterns that make Kapampangan sentences work.</p>
+            
+            <div class="audio-tip">
+                🎵 <strong>Listening Tip:</strong> Kapampangan flows like a gentle river - smooth, with natural pauses. Don't rush the words; let them breathe!
+            </div>
+        </section>
+
+        <section id="sentence-patterns">
+            <h2>Understanding Kapampangan Sentence Patterns</h2>
+            <p>Imagine Kapampangan sentences as a dance - the partners (words) can switch positions, but the rhythm remains beautiful. Unlike English's rigid word order, Kapampangan is flexible and musical.</p>
+
+            <div class="mermaid">
+                graph TD
+                    A[Kapampangan Sentence] --> B[Verb-Subject-Object VSO]
+                    A --> C[Subject-Verb-Object SVO]
+                    A --> D[Object-Subject-Verb OSV]
+                    
+                    B --> E["Mag-aral ya i Juan" <br/> "Studies he Juan" <br/> Juan studies]
+                    C --> F["I Juan mag-aral ya" <br/> "Juan studies he" <br/> Juan studies]
+                    D --> G["Aklat i Juan basa ne" <br/> "Book Juan reads he" <br/> Juan reads a book]
+                    
+                    style A fill:#ffeb99
+                    style B fill:#99ccff
+                    style C fill:#99ffcc
+                    style D fill:#ffcc99
+            </div>
+
+            <div class="sentence-builder">
+                <h3>🔧 Sentence Building Blocks</h3>
+                <p><strong>Core Pattern:</strong> [Action] + [Who does it] + [What it's done to]</p>
+                <div class="pattern-demo">
+                    <p><strong>Kaluguran</strong> + <strong>da ka</strong> + <strong>(object)</strong></p>
+                    <p>"Love" + "they you" = "They love you"</p>
+                    <p><em>Pronunciation: ka-lu-GU-ran da ka</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="family-vocabulary">
+            <h2>Pamilia - Family: Your Circle of Love</h2>
+            <p>In Kapampangan culture, family extends beyond blood - it's everyone who shares your table and your heart. Let's learn the words that connect us all.</p>
+
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <h3>👨‍👩‍👧‍👦 Immediate Family</h3>
+                    <p><strong>Ama</strong> = Father (AH-ma)</p>
+                    <p><strong>Ina</strong> = Mother (EE-na)</p>
+                    <p><strong>Anak</strong> = Child (AH-nak)</p>
+                    <p><strong>Kapatad</strong> = Sibling (ka-PA-tad)</p>
+                    <p><strong>Lalaki</strong> = Male/Boy (la-LA-ki)</p>
+                    <p><strong>Babai</strong> = Female/Girl (ba-BA-ee)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>👴👵 Extended Family</h3>
+                    <p><strong>Apu</strong> = Grandparent (AH-pu)</p>
+                    <p><strong>Tiyu</strong> = Uncle (TEE-yu)</p>
+                    <p><strong>Tiya</strong> = Aunt (TEE-ya)</p>
+                    <p><strong>Pamangkin</strong> = Nephew/Niece (pa-MANG-kin)</p>
+                    <p><strong>Bayaw</strong> = Brother-in-law (BA-yaw)</p>
+                    <p><strong>Hipag</strong> = Sister-in-law (HEE-pag)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>💕 Terms of Endearment</h3>
+                    <p><strong>Nanu</strong> = Dear/Darling (NA-nu)</p>
+                    <p><strong>Alang</strong> = Friend/Buddy (AH-lang)</p>
+                    <p><strong>Balu ku</strong> = My love (BA-lu ku)</p>
+                    <p><strong>Pengari</strong> = Sweetheart (pe-NGA-ri)</p>
+                </div>
+            </div>
+
+            <div class="sentence-builder">
+                <h3>🗣️ Family Phrases in Action</h3>
+                <p><strong>"Nucarin ya i ama mu?"</strong> = "Where is your father?"</p>
+                <p><em>Breaking it down: Nucarin (where) + ya (is) + i (the) + ama (father) + mu (your)</em></p>
+                
+                <p><strong>"Maragul yang pamilia tamu."</strong> = "Our family is big."</p>
+                <p><em>Breaking it down: Maragul (big) + yang (is) + pamilia (family) + tamu (our)</em></p>
+            </div>
+        </section>
+
+        <section id="food-vocabulary">
+            <h2>Pamangan - Food: The Heart of Kapampangan Culture</h2>
+            <p>If Kapampangan culture were a book, food would be written on every page! Pampanga is the Philippines' culinary capital, and knowing food vocabulary isn't just useful - it's essential for cultural understanding.</p>
+
+            <div class="canvas-container">
+                <canvas id="foodCanvas" width="600" height="400"></canvas>
+            </div>
+
+            <script>
+                const canvas = document.getElementById('foodCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw a traditional Filipino table setting
+                ctx.fillStyle = '#8B4513';
+                ctx.fillRect(50, 200, 500, 150);
+                
+                // Draw plates
+                ctx.fillStyle = '#F5F5DC';
+                ctx.beginPath();
+                ctx.arc(150, 275, 40, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(300, 275, 40, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(450, 275, 40, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Draw food items
+                ctx.fillStyle = '#8B0000';
+                ctx.fillRect(130, 255, 40, 20); // Sisig
+                
+                ctx.fillStyle = '#FFFF00';
+                ctx.fillRect(280, 255, 40, 20); // Rice
+                
+                ctx.fillStyle = '#006400';
+                ctx.fillRect(430, 255, 40, 20); // Vegetables
+                
+                // Add labels
+                ctx.fillStyle = '#000';
+                ctx.font = '16px Arial';
+                ctx.fillText('Sisig', 135, 320);
+                ctx.fillText('Nasi', 290, 320);
+                ctx.fillText('Gulay', 435, 320);
+                
+                ctx.font = '20px Arial';
+                ctx.fillText('Traditional Kapampangan Table', 200, 50);
+            </script>
+
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <h3>🍚 Staple Foods</h3>
+                    <p><strong>Nasi</strong> = Rice (NA-see)</p>
+                    <p><strong>Tinapay</strong> = Bread (ti-NA-pay)</p>
+                    <p><strong>Mais</strong> = Corn (mah-EES)</p>
+                    <p><strong>Pancit</strong> = Noodles (PAN-sit)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>🥩 Proteins</h3>
+                    <p><strong>Karni</strong> = Meat (KAR-nee)</p>
+                    <p><strong>Asan</strong> = Fish (AH-san)</p>
+                    <p><strong>Manuk</strong> = Chicken (ma-NUK)</p>
+                    <p><strong>Bayi</strong> = Pork (BA-yee)</p>
+                    <p><strong>Baka</strong> = Beef (BA-ka)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>🥬 Vegetables & Fruits</h3>
+                    <p><strong>Gulay</strong> = Vegetables (GU-lay)</p>
+                    <p><strong>Bunga</strong> = Fruit (BU-nga)</p>
+                    <p><strong>Sili</strong> = Chili (SEE-lee)</p>
+                    <p><strong>Kamatis</strong> = Tomato (ka-ma-TEES)</p>
+                    <p><strong>Mangga</strong> = Mango (MANG-ga)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>🍲 Famous Kapampangan Dishes</h3>
+                    <p><strong>Sisig</strong> = Chopped pork dish (SEE-sig)</p>
+                    <p><strong>Kare-kare</strong> = Peanut stew (ka-re KA-re)</p>
+                    <p><strong>Bringhi</strong> = Glutinous rice dish (BRING-hee)</p>
+                    <p><strong>Tocino</strong> = Sweet cured pork (to-SEE-no)</p>
+                </div>
+            </div>
+
+            <div class="pattern-demo">
+                <h3>🍽️ Food-Related Phrases</h3>
+                <p><strong>"Masarap yang sisig a iti!"</strong> = "This sisig is delicious!"</p>
+                <p><em>Masarap (delicious) + yang (is) + sisig + a iti (this)</em></p>
+                
+                <p><strong>"Makananu la yang kare-kare?"</strong> = "How much is the kare-kare?"</p>
+                <p><em>Makananu (how much) + la + yang (is) + kare-kare?</em></p>
+            </div>
+        </section>
+
+        <section id="numbers-time">
+            <h2>Bilang ampong Oras - Numbers and Time</h2>
+            <p>Numbers in Kapampangan are like a musical scale - each one has its place and rhythm. Learning them opens doors to shopping, telling time, and expressing quantities.</p>
+
+            <div class="mermaid">
+                graph LR
+                    A[Kapampangan Numbers] --> B[Cardinal Numbers<br/>1-10]
+                    A --> C[Ordinal Numbers<br/>First, Second...]
+                    A --> D[Time Expressions<br/>Hours, Days, Months]
+                    
+                    B --> E[metung, adwa, atlu<br/>apat, lima, anam<br/>pitu, walu, siam, apulu]
+                    C --> F[pangatlu, pangapat<br/>pangalima...]
+                    D --> G[aldo, bengi, simana<br/>bulan, banua]
+                    
+                    style A fill:#ffeb99
+                    style B fill:#99ccff
+                    style C fill:#99ffcc
+                    style D fill:#ffcc99
+            </div>
+
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <h3>🔢 Numbers 1-10</h3>
+                    <p><strong>Metung</strong> = One (me-TUNG)</p>
+                    <p><strong>Adwa</strong> = Two (AD-wa)</p>
+                    <p><strong>Atlu</strong> = Three (AT-lu)</p>
+                    <p><strong>Apat</strong> = Four (A-pat)</p>
+                    <p><strong>Lima</strong> = Five (LEE-ma)</p>
+                    <p><strong>Anam</strong> = Six (A-nam)</p>
+                    <p><strong>Pitu</strong> = Seven (PEE-tu)</p>
+                    <p><strong>Walu</strong> = Eight (WA-lu)</p>
+                    <p><strong>Siam</strong> = Nine (SEE-am)</p>
+                    <p><strong>Apulu</strong> = Ten (a-PU-lu)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>⏰ Time Words</h3>
+                    <p><strong>Oras</strong> = Hour/Time (O-ras)</p>
+                    <p><strong>Minuto</strong> = Minute (mi-NU-to)</p>
+                    <p><strong>Aldo</strong> = Day (AL-do)</p>
+                    <p><strong>Bengi</strong> = Night (BEHN-gi)</p>
+                    <p><strong>Simana</strong> = Week (si-MA-na)</p>
+                    <p><strong>Bulan</strong> = Month (BU-lan)</p>
+                    <p><strong>Banua</strong> = Year (ba-NU-a)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>📅 Days of the Week</h3>
+                    <p><strong>Lunes</strong> = Monday (LU-nes)</p>
+                    <p><strong>Martes</strong> = Tuesday (MAR-tes)</p>
+                    <p><strong>Mierkules</strong> = Wednesday (mier-KU-les)</p>
+                    <p><strong>Jueves</strong> = Thursday (HUE-ves)</p>
+                    <p><strong>Biernes</strong> = Friday (bi-ER-nes)</p>
+                    <p><strong>Sabado</strong> = Saturday (sa-BA-do)</p>
+                    <p><strong>Domingu</strong> = Sunday (do-MING-gu)</p>
+                </div>
+            </div>
+
+            <div class="sentence-builder">
+                <h3>🕐 Telling Time in Kapampangan</h3>
+                <p><strong>"Pilan oras na?"</strong> = "What time is it?"</p>
+                <p><strong>"Alas dose na."</strong> = "It's 12 o'clock."</p>
+                <p><strong>"Atlu y trenta na."</strong> = "It's 3:30."</p>
+            </div>
+        </section>
+
+        <section id="common-verbs">
+            <h2>Pandiwang Gagamitin - Action Words You'll Use Daily</h2>
+            <p>Verbs in Kapampangan are like the engines of communication - they drive your sentences forward and bring them to life!</p>
+
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <h3>🏃‍♂️ Movement Verbs</h3>
+                    <p><strong>Lako</strong> = Walk/Go (LA-ko)</p>
+                    <p><strong>Takbo</strong> = Run (TAK-bo)</p>
+                    <p><strong>Dakal</strong> = Come (da-KAL)</p>
+                    <p><strong>Uli</strong> = Return (U-lee)</p>
+                    <p><strong>Lukluk</strong> = Sit (LUK-luk)</p>
+                    <p><strong>Tindug</strong> = Stand (TIN-dug)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>💭 Mental Actions</h3>
+                    <p><strong>Isip</strong> = Think (EE-sip)</p>
+                    <p><strong>Balu</strong> = Know (BA-lu)</p>
+                    <p><strong>Kalimutan</strong> = Forget (ka-li-MU-tan)</p>
+                    <p><strong>Aralan</strong> = Study/Learn (a-ra-LAN)</p>
+                    <p><strong>Intindi</strong> = Understand (in-TIN-di)</p>
+                </div>
+
+                <div class="vocab-card">
+                    <h3>🗣️ Communication</h3>
+                    <p><strong>Magsalita</strong> = Speak (mag-sa-LEE-ta)</p>
+                    <p><strong>Marineg</strong> = Listen (ma-ri-NEG)</p>
+                    <p><strong>Lawen</strong> = See/Look (LA-wen)</p>
+                    <p><strong>Basahin</strong> = Read (ba-sa-HIN)</p>
+                    <p><strong>Sulat</strong> = Write (SU-lat)</p>
+                </div>
+            </div>
+
+            <div class="pattern-demo">
+                <h3>🔄 Verb Tense Patterns</h3>
+                <p><strong>Present:</strong> "Mag-aral ya." = "He studies."</p>
+                <p><strong>Past:</strong> "Sinulat ne." = "He wrote."</p>
+                <p><strong>Future:</strong> "Maglako ya." = "He will go."</p>
+            </div>
+        </section>
+
+        <section id="practice-exercises">
+            <div class="exercise-box">
+                <h2>🎯 Practice Exercises</h2>
+                
+                <h3>Exercise 1: Family Tree</h3>
+                <p>Create a simple family tree using Kapampangan words. Start with "ama" and "ina" at the top, then add yourself and your siblings as "anak."</p>
+                
+                <h3>Exercise 2: Menu Translation</h3>
+                <p>Imagine you're at a Kapampangan restaurant. Translate this menu into English:</p>
+                <ul>
+                    <li>Sisig a manuk</li>
+                    <li>Kare-kare a baka</li>
+                    <li>Nasi ampong gulay</li>
+                    <li>Bringhi a masarap</li>
+                </ul>
+                
+                <h3>Exercise 3: Time Practice</h3>
+                <p>Practice saying these times in Kapampangan:</p>
+                <ul>
+                    <li>7:00 AM</li>
+                    <li>12:30 PM</li>
+                    <li>6:45 PM</li>
+                    <li>11:15 PM</li>
+                </ul>
+                
+                <h3>Exercise 4: Daily Routine</h3>
+                <p>Describe your morning routine using the verbs you learned. Start with "Abak..." (Morning...)</p>
+            </div>
+        </section>
+
+        <section id="cultural-insights">
+            <h2>Cultural Insights: Language in Context</h2>
+            <div class="sentence-builder">
+                <h3>🏠 Respect in the Family</h3>
+                <p>Kapampangan speakers use different levels of formality. With elders, you might say <strong>"Pu"</strong> (respectful particle) after their name: "Kumusta pu kayo, Lola?" instead of just "Kumusta ka?"</p>
+                
+                <h3>🍽️ Food and Hospitality</h3>
+                <p>When visiting a Kapampangan home, you'll likely hear <strong>"Kain tayo!"</strong> (Let's eat!). Refusing food can be seen as impolite - even a small bite shows respect!</p>
+                
+                <h3>🕐 Filipino Time</h3>
+                <p>Time in Kapampangan culture is flexible. <strong>"Dayang lang"</strong> (wait a moment) might mean 5 minutes or 30 minutes - patience is a virtue!</p>
+            </div>
+        </section>
+
+        <section id="real-world-scenarios">
+            <h2>Real-World Scenarios</h2>
+            <div class="pattern-demo">
+                <h3>🛒 At the Market</h3>
+                <p><strong>Vendor:</strong> "Masarap yang mangga! Lima pesos metung!"</p>
+                <p><strong>You:</strong> "Makananu la nung adwa?"</p>
+                <p><strong>Translation:</strong> "Those mangoes are delicious! Five pesos each!" / "How much for two?"</p>
+            </div>
+
+            <div class="pattern-demo">
+                <h3>🏠 Meeting the Family</h3>
+                <p><strong>Host:</strong> "Iti ya i anak ming babai, si Maria."</p>
+                <p><strong>You:</strong> "Kumusta ka, Maria? Masaya kung makilala ka."</p>
+                <p><strong>Translation:</strong> "This is our daughter, Maria." / "How are you, Maria? I'm happy to meet you."</p>
+            </div>
+        </section>
+
+        <section id="next-lesson">
+            <h2>Ready for the Next Adventure?</h2>
+            <p>Congratulations! You now have a solid foundation in Kapampangan basics. You can introduce family members, order food, tell time, and express basic actions. In our next lesson, we'll explore:</p>
+            <ul>
+                <li>Conversational phrases and polite expressions</li>
+                <li>Advanced sentence structures and grammar patterns</li>
+                <li>Regional variations and dialects within Kapampangan</li>
+                <li>Cultural celebrations and traditional expressions</li>
+                <li>Real conversations with native speakers</li>
+            </ul>
+
+            <div class="audio-tip">
+                🌟 <strong>Keep Practicing:</strong> Try to use one new Kapampangan word each day. Start with family members - call your parents "Ama" and "Ina" and see their reaction!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Salamat! Thank you for learning Kapampangan with us!</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapampangan Expressions and Comprehensive Vocabulary</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .expression-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .idiom-card {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            position: relative;
+        }
+        .idiom-card::before {
+            content: "💡";
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: #fff;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .vocabulary-section {
+            background: #f8f9fa;
+            border: 3px solid #6c757d;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .vocab-card {
+            background: white;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .vocab-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .proverb-showcase {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .cultural-expression {
+            background: #fce4ec;
+            border-left: 4px solid #e91e63;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .search-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .search-input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .tab {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .tab:hover, .tab.active {
+            background: #0056b3;
+        }
+        .difficulty-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .beginner { background: #d4edda; color: #155724; }
+        .intermediate { background: #fff3cd; color: #856404; }
+        .advanced { background: #f8d7da; color: #721c24; }
+        .native { background: #e2e3e5; color: #383d41; }
+        .canvas-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .frequency-indicator {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin: 5px 0;
+            overflow: hidden;
+        }
+        .frequency-bar {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .very-common { background: #28a745; }
+        .common { background: #ffc107; }
+        .uncommon { background: #fd7e14; }
+        .rare { background: #dc3545; }
+        .etymology-note {
+            background: #f0f4f8;
+            border-left: 3px solid #718096;
+            padding: 10px;
+            margin: 10px 0;
+            font-style: italic;
+            border-radius: 0 5px 5px 0;
+        }
+        .pronunciation-guide {
+            background: #e6f3ff;
+            border: 1px solid #b3d9ff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kapampangan Expressions & Vocabulary</h1>
+        <p class="subtitle">The Soul of the Language - Idioms, Proverbs, and Essential Words</p>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Maralas a Pamiyalita! Rich Expressions Await!</h2>
+            <p>Imagine sitting with a Kapampangan elder under the shade of an ancient balete tree, listening to stories filled with wisdom passed down through generations. The expressions you'll learn today aren't just words - they're cultural treasures that reveal how Kapampangans see the world, love, life, and each other.</p>
+            
+            <div class="expression-box">
+                🌟 <strong>Cultural Wisdom:</strong> Kapampangan expressions are like heirloom recipes - each one carries the flavor of generations, the wisdom of experience, and the love of those who came before us.
+            </div>
+        </section>
+
+        <section id="traditional-proverbs">
+            <h2>Kasebyan - Traditional Proverbs and Wisdom</h2>
+            <p>Kapampangan proverbs are like compressed libraries of wisdom - each short phrase contains lifetimes of observation about human nature, relationships, and the way the world works.</p>
+
+            <div class="canvas-container">
+                <canvas id="proverbCanvas" width="600" height="400"></canvas>
+            </div>
+
+            <script>
+                const canvas = document.getElementById('proverbCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw a traditional scene with an elder teaching
+                ctx.fillStyle = '#87CEEB';
+                ctx.fillRect(0, 0, 600, 150); // Sky
+                
+                ctx.fillStyle = '#90EE90';
+                ctx.fillRect(0, 150, 600, 250); // Ground
+                
+                // Draw a traditional tree
+                ctx.fillStyle = '#8B4513';
+                ctx.fillRect(280, 100, 40, 150); // Tree trunk
+                
+                ctx.fillStyle = '#228B22';
+                ctx.beginPath();
+                ctx.arc(300, 120, 80, 0, 2 * Math.PI);
+                ctx.fill(); // Tree crown
+                
+                // Draw people sitting under tree
+                ctx.fillStyle = '#DEB887';
+                ctx.beginPath();
+                ctx.arc(220, 220, 25, 0, 2 * Math.PI);
+                ctx.fill(); // Elder's head
+                
+                ctx.beginPath();
+                ctx.arc(350, 230, 20, 0, 2 * Math.PI);
+                ctx.fill(); // Child's head
+                
+                // Add text
+                ctx.fillStyle = '#2F4F4F';
+                ctx.font = '18px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Traditional Wisdom Sharing', 300, 50);
+                
+                ctx.font = '14px Arial';
+                ctx.fillText('Under the Balete Tree', 300, 320);
+                
+                // Add speech bubble
+                ctx.fillStyle = '#FFF';
+                ctx.beginPath();
+                ctx.roundRect(120, 160, 120, 40, 10);
+                ctx.fill();
+                
+                ctx.fillStyle = '#000';
+                ctx.font = '10px Arial';
+                ctx.fillText('Kasebyan...', 180, 185);
+            </script>
+
+            <div class="proverb-showcase">
+                <h3>🌾 Life and Character</h3>
+                <div class="idiom-card">
+                    <h4>"Ing taung masikan, e ya marok king pengan."</h4>
+                    <p><strong>Literal:</strong> A strong person doesn't fall from climbing.</p>
+                    <p><strong>Meaning:</strong> A person of strong character doesn't fail when facing challenges.</p>
+                    <p><strong>Usage:</strong> Encouraging someone facing difficulties</p>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Ing buri ning pusu, ya ing lalam ning mata."</h4>
+                    <p><strong>Literal:</strong> What the heart wants is what the eyes seek.</p>
+                    <p><strong>Meaning:</strong> We notice and find what we truly desire.</p>
+                    <p><strong>Usage:</strong> About love, goals, and desires</p>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"E mo ibabo ing palad mo nung atin kang kamut."</h4>
+                    <p><strong>Literal:</strong> Don't turn your palm down if you have hands.</p>
+                    <p><strong>Meaning:</strong> Don't give up if you still have the ability to work.</p>
+                    <p><strong>Usage:</strong> Motivating someone to keep trying</p>
+                    <span class="difficulty-badge advanced">Advanced</span>
+                </div>
+            </div>
+
+            <div class="proverb-showcase">
+                <h3>👨‍👩‍👧‍👦 Family and Relationships</h3>
+                <div class="idiom-card">
+                    <h4>"Ing anak a mabait, kayabe ning magulang."</h4>
+                    <p><strong>Literal:</strong> A good child is the companion of the parents.</p>
+                    <p><strong>Meaning:</strong> Well-behaved children are their parents' greatest joy and support.</p>
+                    <p><strong>Usage:</strong> Praising good children or encouraging good behavior</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Ing kaluguran, ali ya marok king layo."</h4>
+                    <p><strong>Literal:</strong> Love doesn't fall because of distance.</p>
+                    <p><strong>Meaning:</strong> True love endures despite physical separation.</p>
+                    <p><strong>Usage:</strong> About long-distance relationships, overseas family</p>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+            </div>
+
+            <div class="proverb-showcase">
+                <h3>💰 Work and Success</h3>
+                <div class="idiom-card">
+                    <h4>"Ing sipag ampong tiyaga, kayabe ning tagumpay."</h4>
+                    <p><strong>Literal:</strong> Diligence and perseverance are companions of success.</p>
+                    <p><strong>Meaning:</strong> Hard work and persistence lead to achievement.</p>
+                    <p><strong>Usage:</strong> Motivating students, workers, entrepreneurs</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Ing pera, e ya ugali. Ing ugali, ya ing pera."</h4>
+                    <p><strong>Literal:</strong> Money is not character. Character is money.</p>
+                    <p><strong>Meaning:</strong> Good character is more valuable than wealth.</p>
+                    <p><strong>Usage:</strong> Teaching children values, business ethics</p>
+                    <span class="difficulty-badge advanced">Advanced</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="modern-expressions">
+            <h2>Modernong Pamiyalita - Contemporary Expressions</h2>
+            <p>Language lives and breathes with its speakers. Modern Kapampangan has embraced new expressions that blend traditional wisdom with contemporary life.</p>
+
+            <div class="cultural-expression">
+                <h3>📱 Digital Age Expressions</h3>
+                <div class="idiom-card">
+                    <h4>"Text ka lang, 'di ka na magselos."</h4>
+                    <p><strong>Meaning:</strong> Just text, don't be jealous anymore.</p>
+                    <p><strong>Usage:</strong> Playful way to tell someone to communicate instead of assuming</p>
+                    <p><strong>Cultural Context:</strong> Reflects how technology changed relationships</p>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Loading pa, dayang lang."</h4>
+                    <p><strong>Meaning:</strong> Still loading, wait a moment.</p>
+                    <p><strong>Usage:</strong> When someone is thinking or processing information</p>
+                    <p><strong>Cultural Context:</strong> Tech metaphor for mental processing</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+            </div>
+
+            <div class="cultural-expression">
+                <h3>🎉 Social Media and Youth Culture</h3>
+                <div class="idiom-card">
+                    <h4>"Solid ka, alang!"</h4>
+                    <p><strong>Meaning:</strong> You're awesome, friend!</p>
+                    <p><strong>Usage:</strong> Expressing admiration or support</p>
+                    <p><strong>Cultural Context:</strong> Youth slang blending Filipino and Kapampangan</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Pak na pak!"</h4>
+                    <p><strong>Meaning:</strong> Perfect! Right on target!</p>
+                    <p><strong>Usage:</strong> When something is exactly right or well-executed</p>
+                    <p><strong>Cultural Context:</strong> Expressive exclamation popular in social media</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="emotional-expressions">
+            <h2>Emotional Expressions - The Language of the Heart</h2>
+            <p>Kapampangans are known for their emotional depth and expressiveness. These phrases capture the full spectrum of human feeling.</p>
+
+            <div class="mermaid">
+                graph TD
+                    A[Kapampangan Emotions] --> B[Joy & Celebration<br/>Kasalanan & Galak]
+                    A --> C[Love & Affection<br/>Kaluguran & Luid]
+                    A --> D[Sadness & Grief<br/>Lungkut & Kapighatian]
+                    A --> E[Anger & Frustration<br/>Galit & Gigil]
+                    A --> F[Surprise & Wonder<br/>Kabala & Pamagkakamanghang]
+                    
+                    B --> G["Manyaman!<br/>Pak gandang!<br/>Kayabang sarap!"]
+                    C --> H["Kaluguran da ka<br/>Mimahal da ka<br/>Pengari ku"]
+                    D --> I["Malungkut ku<br/>Nakakalunus<br/>Sakit ning pusu ku"]
+                    E --> J["Gigil ku!<br/>Nakakainis!<br/>Buring galit ku!"]
+                    F --> K["Kabala!<br/>Ay sus!<br/>Mangyaring Dios!"]
+                    
+                    style A fill:#ffeb99
+                    style B fill:#98fb98
+                    style C fill:#ffb6c1
+                    style D fill:#87ceeb
+                    style E fill:#ffa07a
+                    style F fill:#dda0dd
+            </div>
+
+            <div class="cultural-expression">
+                <h3>💕 Love and Affection</h3>
+                <div class="idiom-card">
+                    <h4>"Kaluguran da ka king pusu ku."</h4>
+                    <p><strong>Meaning:</strong> I love you with my heart.</p>
+                    <p><strong>Usage:</strong> Deep, sincere declaration of love</p>
+                    <div class="pronunciation-guide">
+                        ka-lu-GU-ran da ka king PU-su ku
+                    </div>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Pengari ning mata ku."</h4>
+                    <p><strong>Meaning:</strong> Light of my eyes (term of endearment)</p>
+                    <p><strong>Usage:</strong> Romantic expression, also used for beloved children</p>
+                    <div class="pronunciation-guide">
+                        pe-NGA-ri ning MA-ta ku
+                    </div>
+                    <span class="difficulty-badge advanced">Advanced</span>
+                </div>
+            </div>
+
+            <div class="cultural-expression">
+                <h3>😊 Joy and Celebration</h3>
+                <div class="idiom-card">
+                    <h4>"Manyaman ing pusu ku!"</h4>
+                    <p><strong>Meaning:</strong> My heart is so happy!</p>
+                    <p><strong>Usage:</strong> Expressing deep joy or satisfaction</p>
+                    <div class="pronunciation-guide">
+                        man-YA-man ing PU-su ku
+                    </div>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Pak gandang ning balita!"</h4>
+                    <p><strong>Meaning:</strong> What wonderful news!</p>
+                    <p><strong>Usage:</strong> Reacting to good news</p>
+                    <div class="pronunciation-guide">
+                        pak GAN-dang ning ba-LI-ta
+                    </div>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+            </div>
+
+            <div class="cultural-expression">
+                <h3>😢 Sadness and Sympathy</h3>
+                <div class="idiom-card">
+                    <h4>"Sakit ning pusu ku para keka."</h4>
+                    <p><strong>Meaning:</strong> My heart aches for you.</p>
+                    <p><strong>Usage:</strong> Expressing deep sympathy</p>
+                    <div class="pronunciation-guide">
+                        sa-KIT ning PU-su ku PA-ra ke-ka
+                    </div>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Kasalanan mu naman."</h4>
+                    <p><strong>Meaning:</strong> I feel sorry for you / What a pity.</p>
+                    <p><strong>Usage:</strong> Expressing sympathy or pity</p>
+                    <div class="pronunciation-guide">
+                        ka-sa-LA-nan mu na-man
+                    </div>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="food-expressions">
+            <h2>Food and Hospitality Expressions</h2>
+            <p>In Kapampangan culture, food is love made visible. These expressions show how deeply food is woven into social relationships and cultural identity.</p>
+
+            <div class="cultural-expression">
+                <h3>🍽️ Invitation and Hospitality</h3>
+                <div class="idiom-card">
+                    <h4>"Kain tayo, e ka mag-eka!"</h4>
+                    <p><strong>Meaning:</strong> Let's eat, don't be shy!</p>
+                    <p><strong>Usage:</strong> Standard invitation to eat, shows warmth and inclusion</p>
+                    <p><strong>Cultural Note:</strong> Refusing this invitation can be seen as impolite</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Busug ka na? Kain pa!"</h4>
+                    <p><strong>Meaning:</strong> Are you full? Eat more!</p>
+                    <p><strong>Usage:</strong> Typical host persistence, showing care through food</p>
+                    <p><strong>Cultural Note:</strong> Hosts feel honored when guests eat heartily</p>
+                    <span class="difficulty-badge beginner">Beginner</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Kulang pa ing pamangan."</h4>
+                    <p><strong>Meaning:</strong> There's still not enough food.</p>
+                    <p><strong>Usage:</strong> Host's humble apology, even when there's plenty</p>
+                    <p><strong>Cultural Note:</strong> Shows humility and concern for guests' satisfaction</p>
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                </div>
+            </div>
+
+            <div class="cultural-expression">
+                <h3>🧑‍🍳 Cooking and Preparation</h3>
+                <div class="idiom-card">
+                    <h4>"Keka king kusina, king pusu ku."</h4>
+                    <p><strong>Meaning:</strong> You in the kitchen, in my heart.</p>
+                    <p><strong>Usage:</strong> Appreciating someone's cooking with love</p>
+                    <p><strong>Cultural Note:</strong> Cooking for someone is a deep expression of care</p>
+                    <span class="difficulty-badge advanced">Advanced</span>
+                </div>
+
+                <div class="idiom-card">
+                    <h4>"Masarap ing lasa, masarap ing buri."</h4>
+                    <p><strong>Meaning:</strong> Good taste (in food), good intentions.</p>
+                    <p><strong>Usage:</strong> Complimenting both the food and the cook's care</p>
+                    <p><strong>Cultural Note:</strong> Connects food quality with the cook's character</p>
+                    <span class="difficulty-badge advanced">Advanced</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="comprehensive-vocabulary">
+            <h2>Comprehensive Vocabulary Lists</h2>
+            <p>Your complete reference for essential Kapampangan words, organized by frequency and usage to optimize your learning journey.</p>
+
+            <div class="search-box">
+                <h3>🔍 Vocabulary Search & Filter</h3>
+                <input type="text" id="vocabSearch" class="search-input" placeholder="Search vocabulary..." onkeyup="filterVocabulary()">
+                <div class="category-tabs">
+                    <button class="tab active" onclick="filterCategory('all')">All</button>
+                    <button class="tab" onclick="filterCategory('family')">Family</button>
+                    <button class="tab" onclick="filterCategory('food')">Food</button>
+                    <button class="tab" onclick="filterCategory('time')">Time</button>
+                    <button class="tab" onclick="filterCategory('emotions')">Emotions</button>
+                    <button class="tab" onclick="filterCategory('actions')">Actions</button>
+                    <button class="tab" onclick="filterCategory('nature')">Nature</button>
+                    <button class="tab" onclick="filterCategory('body')">Body</button>
+                    <button class="tab" onclick="filterCategory('house')">House</button>
+                    <button class="tab" onclick="filterCategory('adjectives')">Adjectives</button>
+                </div>
+            </div>
+
+            <div class="vocabulary-section">
+                <h3>👨‍👩‍👧‍👦 Family Relations (Pamilia)</h3>
+                <div class="vocab-grid" data-category="family">
+                    <div class="vocab-card">
+                        <h4>Ama <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 95%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> AH-ma</p>
+                        <p><strong>Meaning:</strong> Father</p>
+                        <p><strong>Example:</strong> Masikan ya i ama ku. (My father is strong.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *ama
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Ina <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 95%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> EE-na</p>
+                        <p><strong>Meaning:</strong> Mother</p>
+                        <p><strong>Example:</strong> Malutu ya i ina ku. (My mother cooks well.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *ina
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Anak <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 90%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> AH-nak</p>
+                        <p><strong>Meaning:</strong> Child</p>
+                        <p><strong>Example:</strong> Mag-aral ya ing anak ku. (My child studies.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *anak
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Kapatad <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 85%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> ka-PA-tad</p>
+                        <p><strong>Meaning:</strong> Sibling</p>
+                        <p><strong>Example:</strong> Adua la reng kapatad ku. (I have two siblings.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From ka- + patad (to be born together)
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Apu <span class="difficulty-badge intermediate">Common</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 75%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> AH-pu</p>
+                        <p><strong>Meaning:</strong> Grandparent</p>
+                        <p><strong>Example:</strong> Manimbanginau ya i apu ku. (My grandparent is cooking.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *apu
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Bayaw <span class="difficulty-badge intermediate">Common</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 60%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> BA-yaw</p>
+                        <p><strong>Meaning:</strong> Brother-in-law</p>
+                        <p><strong>Example:</strong> Maragul ya i bayaw ku. (My brother-in-law is big.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Austronesian kinship system
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocabulary-section">
+                <h3>🍽️ Food and Cooking (Pamangan)</h3>
+                <div class="vocab-grid" data-category="food">
+                    <div class="vocab-card">
+                        <h4>Nasi <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 98%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> NA-see</p>
+                        <p><strong>Meaning:</strong> Rice (cooked)</p>
+                        <p><strong>Example:</strong> Masarap ya ing nasi. (The rice is delicious.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Malay nasi, via trade contact
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Sisig <span class="difficulty-badge beginner">Cultural</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 95%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> SEE-sig</p>
+                        <p><strong>Meaning:</strong> Chopped pork dish (Kapampangan specialty)</p>
+                        <p><strong>Example:</strong> Masarap ya ing sisig dini. (The sisig here is delicious.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> Possibly from sisig (to snack on something sour)
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Karni <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 85%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> KAR-nee</p>
+                        <p><strong>Meaning:</strong> Meat</p>
+                        <p><strong>Example:</strong> Mahal ya ing karni ngeni. (Meat is expensive today.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Spanish carne
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Asan <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 80%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> AH-san</p>
+                        <p><strong>Meaning:</strong> Fish</p>
+                        <p><strong>Example:</strong> Fresh ya ing asan king palengke. (The fish in the market is fresh.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *hasaN
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Kare-kare <span class="difficulty-badge intermediate">Cultural</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 70%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> ka-re KA-re</p>
+                        <p><strong>Meaning:</strong> Peanut stew with vegetables</p>
+                        <p><strong>Example:</strong> Lutuan taku ning kare-kare. (Let's cook kare-kare.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> Possibly from curry, adapted to local taste
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Bringhi <span class="difficulty-badge advanced">Cultural</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar uncommon" style="width: 50%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> BRING-hee</p>
+                        <p><strong>Meaning:</strong> Glutinous rice dish with coconut milk</p>
+                        <p><strong>Example:</strong> Special ya ing bringhi king fiesta. (Bringhi is special during fiestas.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> Traditional Kapampangan dish name
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocabulary-section">
+                <h3>⏰ Time and Calendar (Oras ampong Kalendayu)</h3>
+                <div class="vocab-grid" data-category="time">
+                    <div class="vocab-card">
+                        <h4>Aldo <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 95%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> AL-do</p>
+                        <p><strong>Meaning:</strong> Day</p>
+                        <p><strong>Example:</strong> Mainit ya ing aldo ngeni. (The day is hot today.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *qalejaw
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Bengi <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 90%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> BEHN-gi</p>
+                        <p><strong>Meaning:</strong> Night</p>
+                        <p><strong>Example:</strong> Mayap a bengi keka. (Good night to you.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *beRŋi
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Simana <span class="difficulty-badge intermediate">Common</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 75%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> si-MA-na</p>
+                        <p><strong>Meaning:</strong> Week</p>
+                        <p><strong>Example:</strong> Metung a simana pa. (One more week.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Spanish semana
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Bulan <span class="difficulty-badge intermediate">Common</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 80%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> BU-lan</p>
+                        <p><strong>Meaning:</strong> Month</p>
+                        <p><strong>Example:</strong> King bulan na ing kasal. (The wedding is next month.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *bulaN
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Banua <span class="difficulty-badge intermediate">Common</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 75%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> ba-NU-a</p>
+                        <p><strong>Meaning:</strong> Year</p>
+                        <p><strong>Example:</strong> Mayap a banua kekayung ngan! (Happy New Year to all of you!)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *baNua (land, year)
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Abak <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 85%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> AH-bak</p>
+                        <p><strong>Meaning:</strong> Morning</p>
+                        <p><strong>Example:</strong> Mayap a abak keka! (Good morning to you!)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> Traditional Kapampangan time word
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocabulary-section">
+                <h3>💭 Emotions and Feelings (Pananalaman)</h3>
+                <div class="vocab-grid" data-category="emotions">
+                    <div class="vocab-card">
+                        <h4>Masaya <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 95%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> ma-SA-ya</p>
+                        <p><strong>Meaning:</strong> Happy</p>
+                        <p><strong>Example:</strong> Masaya ku ngeni. (I'm happy today.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian, related to celebration
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Malungkut <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar very-common" style="width: 85%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> ma-LUNG-kut</p>
+                        <p><strong>Meaning:</strong> Sad</p>
+                        <p><strong>Example:</strong> Malungkut ya nung ali ya datang. (He's sad because he didn't come.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From lungkut (sorrow, grief)
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Galit <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 75%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> GA-lit</p>
+                        <p><strong>Meaning:</strong> Angry</p>
+                        <p><strong>Example:</strong> Galit ya king kayang kapatad. (He's angry at his sibling.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian anger emotion
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Takut <span class="difficulty-badge beginner">Essential</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 70%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> TA-kut</p>
+                        <p><strong>Meaning:</strong> Afraid/Fear</p>
+                        <p><strong>Example:</strong> Takut ya king asu. (He's afraid of dogs.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> From Proto-Austronesian *takut
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Gigil <span class="difficulty-badge intermediate">Expressive</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar common" style="width: 65%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> GI-gil</p>
+                        <p><strong>Meaning:</strong> Frustrated/Trembling with emotion</p>
+                        <p><strong>Example:</strong> Gigil ku king traffic! (I'm so frustrated with traffic!)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> Onomatopoeia for trembling or shaking
+                        </div>
+                    </div>
+
+                    <div class="vocab-card">
+                        <h4>Luid <span class="difficulty-badge advanced">Literary</span></h4>
+                        <div class="frequency-indicator">
+                            <div class="frequency-bar uncommon" style="width: 45%;"></div>
+                        </div>
+                        <p><strong>Pronunciation:</strong> LU-id</p>
+                        <p><strong>Meaning:</strong> Deep love/attachment</p>
+                        <p><strong>Example:</strong> Luid ku keka. (I have deep love for you.)</p>
+                        <div class="etymology-note">
+                            <strong>Etymology:</strong> Traditional Kapampangan emotion word
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function filterVocabulary() {
+                    const searchTerm = document.getElementById('vocabSearch').value.toLowerCase();
+                    const cards = document.querySelectorAll('.vocab-card');
+                    
+                    cards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+                
+                function filterCategory(category) {
+                    // Update active tab
+                    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                    event.target.classList.add('active');
+                    
+                    // Show/hide vocabulary sections
+                    const sections = document.querySelectorAll('.vocab-grid');
+                    sections.forEach(section => {
+                        if (category === 'all' || section.dataset.category === category) {
+                            section.parentElement.style.display = 'block';
+                        } else {
+                            section.parentElement.style.display = 'none';
+                        }
+                    });
+                }
+            </script>
+        </section>
+
+        <section id="usage-exercises">
+            <div class="vocabulary-section">
+                <h2>🎯 Expression and Vocabulary Practice</h2>
+                
+                <h3>Exercise 1: Proverb Application</h3>
+                <div class="cultural-expression">
+                    <p>Match these life situations with appropriate Kapampangan proverbs:</p>
+                    <ol>
+                        <li>A student struggling with difficult subjects</li>
+                        <li>Parents proud of their well-behaved child</li>
+                        <li>Someone who won't give up despite setbacks</li>
+                        <li>A couple in a long-distance relationship</li>
+                    </ol>
+                    <p><em>Use the proverbs from the traditional wisdom section above.</em></p>
+                </div>
+                
+                <h3>Exercise 2: Emotional Expression Practice</h3>
+                <div class="cultural-expression">
+                    <p>Express these emotions using appropriate Kapampangan phrases:</p>
+                    <ul>
+                        <li>You just received wonderful news about a promotion</li>
+                        <li>You're deeply sympathizing with a friend who lost a relative</li>
+                        <li>You're frustrated with slow internet connection</li>
+                        <li>You want to express deep love to your partner</li>
+                    </ul>
+                </div>
+                
+                <h3>Exercise 3: Hospitality Scenarios</h3>
+                <div class="cultural-expression">
+                    <p>Role-play these situations using food and hospitality expressions:</p>
+                    <ol>
+                        <li>You're visiting a Kapampangan family for the first time</li>
+                        <li>You're hosting a dinner and want guests to eat more</li>
+                        <li>You want to compliment someone's cooking</li>
+                        <li>You're politely declining more food because you're full</li>
+                    </ol>
+                </div>
+                
+                <h3>Exercise 4: Vocabulary Building Challenge</h3>
+                <div class="cultural-expression">
+                    <p>Create sentences using these vocabulary combinations:</p>
+                    <ul>
+                        <li>Family + Emotions: Talk about family relationships</li>
+                        <li>Food + Time: Describe meal times and cooking schedules</li>
+                        <li>Emotions + Actions: Express feelings about activities</li>
+                        <li>Time + Family: Discuss family gatherings and schedules</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultural-context">
+            <h2>Cultural Context and Usage Notes</h2>
+            <div class="expression-box">
+                <h3>🎭 Understanding Expression Layers</h3>
+                <p>Kapampangan expressions work on multiple levels:</p>
+                <ul>
+                    <li><strong>Literal meaning:</strong> What the words actually say</li>
+                    <li><strong>Cultural meaning:</strong> What the community understands</li>
+                    <li><strong>Emotional meaning:</strong> What the speaker feels</li>
+                    <li><strong>Social meaning:</strong> What relationships are being negotiated</li>
+                </ul>
+            </div>
+
+            <div class="cultural-expression">
+                <h3>🌍 Regional Variations</h3>
+                <p>Different areas of Pampanga may have slight variations in expressions:</p>
+                <ul>
+                    <li><strong>Angeles City:</strong> More modern expressions, English borrowings</li>
+                    <li><strong>San Fernando:</strong> Traditional expressions, formal register</li>
+                    <li><strong>Rural areas:</strong> Agricultural metaphors, older vocabulary</li>
+                    <li><strong>Coastal areas:</strong> Maritime influences, fishing terminology</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>Your Expressive Journey Continues</h2>
+            <div class="expression-box">
+                <h3>🌟 Congratulations, Cultural Ambassador!</h3>
+                <p>You now possess a treasure trove of Kapampangan expressions and vocabulary that connects you to centuries of wisdom, emotion, and cultural richness. You can express complex feelings, understand cultural nuances, and communicate with the depth and beauty that makes Kapampangan such a beloved language.</p>
+            </div>
+
+            <div class="proverb-showcase">
+                <h3>🎯 Your Next Adventures</h3>
+                <p>With this expressive foundation, you're ready to:</p>
+                <ul>
+                    <li><strong>Engage in deep conversations</strong> using culturally appropriate expressions</li>
+                    <li><strong>Understand Kapampangan literature, songs, and media</strong></li>
+                    <li><strong>Express yourself authentically</strong> in various social situations</li>
+                    <li><strong>Connect emotionally</strong> with native speakers</li>
+                    <li><strong>Appreciate the cultural wisdom</strong> embedded in the language</li>
+                </ul>
+            </div>
+
+            <div class="cultural-expression">
+                <h3>🔄 Daily Practice Recommendations</h3>
+                <ul>
+                    <li>Use one new expression each day in conversation</li>
+                    <li>Practice emotional expressions by describing your daily feelings</li>
+                    <li>Study one proverb per week and find opportunities to use it</li>
+                    <li>Build vocabulary through themed word groups</li>
+                    <li>Listen to Kapampangan media to hear expressions in context</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Salamat a dakal king pamagdakal! Thank you for learning the expressions and vocabulary that make Kapampangan truly alive!</p>
+    </footer>
+</body>
+</html>
