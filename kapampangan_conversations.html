@@ -6,6 +6,7 @@
     <title>Kapampangan Conversations - Speaking Like a Local</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="icon" href="/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
       mermaid.initialize({ startOnLoad: true });
@@ -96,6 +97,26 @@
     </style>
 </head>
 <body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Kapampangan</a>
+            <div class="nav-right">
+                <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="kapampangan_intro.html">Intro</a>
+                <a href="kapampangan_basics.html">Basics</a>
+                <a href="kapampangan_conversations.html" class="active">Conversations</a>
+                <a href="kapampangan_grammar.html">Grammar</a>
+                <a href="kapampangan_expressions_vocabulary.html">Expressions</a>
+                <a href="kapampangan_mastery_celebration.html">Mastery</a>
+                <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
+                <a href="https://rays-home.netlify.app/contact">Contact</a>
+            </div>
+        </div>
+    </nav>
     <header>
         <h1>Kapampangan Conversations</h1>
         <p class="subtitle">Speaking Like a Local - Mastering the Art of Kapampangan Communication</p>
@@ -613,5 +634,27 @@
     <footer>
         <p>Salamat a maragul! Keep practicing, and soon you'll be speaking like a true Kapampangan!</p>
     </footer>
+    <div class="lesson-nav">
+        <a href="kapampangan_basics.html" class="nav-prev">← Previous</a>
+        <a href="index.html" class="nav-home">🏠 Home</a>
+        <a href="kapampangan_grammar.html" class="nav-next">Next: Grammar →</a>
+    </div>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('kapampangan-theme', next);
+            document.querySelector('.theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
+        }
+        (function() {
+            const saved = localStorage.getItem('kapampangan-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', saved);
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('.theme-toggle').textContent = saved === 'dark' ? '☀️' : '🌙';
+            });
+        })();
+    </script>
 </body>
 </html>
