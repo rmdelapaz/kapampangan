@@ -199,10 +199,22 @@
     <footer>
         <p>Continue your Kapampangan journey in the next lesson!</p>
     </footer>
-    <div class="lesson-nav">
-        <a href="index.html" class="nav-home">🏠 Home</a>
-        <a href="kapampangan_basics.html" class="nav-next">Next: Basics →</a>
+    <!-- BEGIN footer-nav (managed by add_footer_nav.py) -->
+<nav class="lesson-nav" aria-label="Lesson Navigation">
+    <span></span>
+    <a href="index.html" class="home-link">&#127968; Course Home</a>
+    <a href="kapampangan_basics.html" class="next-lesson">Next: Kapampangan Basics &rarr;</a>
+</nav>
+
+<footer class="site-footer">
+    <p>&copy; 2026 All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
+        <a href="https://rays-home.netlify.app/contact">Contact</a>
+        <a href="#" onclick="window.print(); return false;">Print Page</a>
     </div>
+</footer>
+<!-- END footer-nav -->
     <script>
         function toggleTheme() {
             const html = document.documentElement;
