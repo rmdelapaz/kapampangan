@@ -146,10 +146,10 @@
                     A --> D[SVO - Subject Verb Object<br/>Actor Focus]
                     A --> E[OSV - Object Subject Verb<br/>Topicalization]
                     
-                    B --> F["Mag-aral ya i Juan ning aklat<br/>(Studies he Juan a book)<br/>Juan studies a book<button type='button' class='audio-btn' data-speak='Mag-aral ya i Juan ning aklat' aria-label='Listen to Mag-aral ya i Juan ning aklat' title='Listen'>🔊</button>"]
-                    C --> G["Sinulat na i Juan ing liham<br/>(Wrote he Juan the letter)<br/>Juan wrote the letter<button type='button' class='audio-btn' data-speak='Sinulat na i Juan ing liham' aria-label='Listen to Sinulat na i Juan ing liham' title='Listen'>🔊</button>"]
-                    D --> H["I Juan mag-aral ya ning aklat<br/>(Juan studies he a book)<br/>Juan studies a book<button type='button' class='audio-btn' data-speak='I Juan mag-aral ya ning aklat' aria-label='Listen to I Juan mag-aral ya ning aklat' title='Listen'>🔊</button>"]
-                    E --> I["Ing aklat i Juan basa ne<br/>(The book Juan reads he)<br/>The book, Juan reads it<button type='button' class='audio-btn' data-speak='Ing aklat i Juan basa ne' aria-label='Listen to Ing aklat i Juan basa ne' title='Listen'>🔊</button>"]
+                    B --> F["Mag-aral ya i Juan ning aklat<br/>(Studies he Juan a book)<br/>Juan studies a book"]
+                    C --> G["Sinulat na i Juan ing liham<br/>(Wrote he Juan the letter)<br/>Juan wrote the letter"]
+                    D --> H["I Juan mag-aral ya ning aklat<br/>(Juan studies he a book)<br/>Juan studies a book"]
+                    E --> I["Ing aklat i Juan basa ne<br/>(The book Juan reads he)<br/>The book, Juan reads it"]
                     
                     style A fill:#ffeb99
                     style B fill:#98fb98
@@ -181,18 +181,9 @@
             <h2>Verb Morphology - The Heartbeat of Action</h2>
             <p>Kapampangan verbs are like Swiss Army knives - one root word can transform into dozens of forms, each with precise meaning about time, focus, completion, and intention.</p>
 
-            <figure class="canvas-container" data-cap="verbMorphologyCanvas">
+            <div class="canvas-container">
                 <canvas id="verbMorphologyCanvas" width="700" height="500"></canvas>
-                <figcaption class="canvas-caption">
-                    <span class="cap-lead">Kapampangan forms shown above:</span>
-                    <span class="kp-term">Sulat</span> <span class="cap-gloss">write (root)</span>,
-                    <span class="kp-term">Magsulat</span> <span class="cap-gloss">will write</span>,
-                    <span class="kp-term">Sinulat</span> <span class="cap-gloss">was written</span>,
-                    <span class="kp-term">Sulatan</span> <span class="cap-gloss">place to write</span>,
-                    <span class="kp-term">Sumulat</span> <span class="cap-gloss">wrote</span>,
-                    <span class="kp-term">Pagsulat</span> <span class="cap-gloss">writing instrument</span>
-                </figcaption>
-            </figure>
+            </div>
 
             <script>
                 const canvas = document.getElementById('verbMorphologyCanvas');
@@ -359,11 +350,11 @@
 
             <div class="mermaid">
                 graph LR
-                    A[Kapampangan Particles] --> B["Case Markers<br/>i, ing, ning, king<button type='button' class='audio-btn' data-speak='i, ing, ning, king' aria-label='Listen to i, ing, ning, king' title='Listen'>🔊</button>"]
-                    A --> C["Aspectual Particles<br/>na, pa, lang<button type='button' class='audio-btn' data-speak='na, pa, lang' aria-label='Listen to na, pa, lang' title='Listen'>🔊</button>"]
-                    A --> D["Modal Particles<br/>siguru, baka, kaya<button type='button' class='audio-btn' data-speak='siguru, baka, kaya' aria-label='Listen to siguru, baka, kaya' title='Listen'>🔊</button>"]
-                    A --> E["Politeness Particles<br/>naman, po, pu<button type='button' class='audio-btn' data-speak='naman, po, pu' aria-label='Listen to naman, po, pu' title='Listen'>🔊</button>"]
-                    A --> F["Focus Particles<br/>ya, la, ba<button type='button' class='audio-btn' data-speak='ya, la, ba' aria-label='Listen to ya, la, ba' title='Listen'>🔊</button>"]
+                    A[Kapampangan Particles] --> B[Case Markers<br/>i, ing, ning, king]
+                    A --> C[Aspectual Particles<br/>na, pa, lang]
+                    A --> D[Modal Particles<br/>siguru, baka, kaya]
+                    A --> E[Politeness Particles<br/>naman, po, pu]
+                    A --> F[Focus Particles<br/>ya, la, ba]
                     
                     B --> G[Mark relationships<br/>between words]
                     C --> H[Show completion<br/>and timing]
@@ -377,7 +368,7 @@
                     style D fill:#ffa07a
                     style E fill:#dda0dd
                     style F fill:#ffb6c1
-            </div>
+            </mermaid>
 
             <div class="particle-guide">
                 <h3>📍 Case Marking Particles - Showing Relationships</h3>
@@ -815,6 +806,5 @@
             });
         })();
     </script>
-<script src="/audio.js"></script>
 </body>
 </html>

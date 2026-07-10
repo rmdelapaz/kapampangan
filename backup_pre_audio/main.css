@@ -353,27 +353,6 @@ canvas {
 
 .canvas-container { text-align: center; margin: 1.5rem 0; }
 
-/* Caption naming the Kapampangan text drawn inside an illustration <canvas>, so the
-   labels are legible, screen-reader accessible, and reachable by the audio layer
-   (each .kp-term receives a speaker button; its gloss is never spoken). Colours come
-   from the theme tokens, so light/dark are handled automatically. */
-.canvas-caption {
-    margin-top: .7rem;
-    font-size: .92rem;
-    line-height: 1.9;
-    color: var(--text-secondary);
-    text-align: center;
-}
-.canvas-caption .cap-lead {
-    display: block;
-    font-size: .8rem;
-    color: var(--text-muted);
-    margin-bottom: .15rem;
-}
-.canvas-caption .kp-term { font-weight: 600; color: var(--text-primary); }
-.canvas-caption .cap-gloss { color: var(--text-muted); font-style: italic; }
-.canvas-caption .cap-gloss::before { content: "\2014\00a0"; }
-
 /* ===== SVG ===== */
 svg {
   display: block;
@@ -600,78 +579,3 @@ sub { font-size: 0.75em; vertical-align: sub; }
     .site-footer { display: none !important; }
 }
 /* END footer-nav-styles */
-
-/* ---------------------------------------------------------------
-   Token aliases for the audio layer. This course's token scheme is
-   almost the same as Tagalog's source scheme, but it ALSO defines
-   --radius-sm and --shadow-sm itself, so — unlike the Tagalog alias —
-   those are left untouched rather than clobbered. Only the tokens the
-   audio CSS actually needs are aliased. main.css owns :root and the
-   [data-theme="dark"] scope, so the dark warning tint is set there too.
-   --------------------------------------------------------------- */
-:root {
-    --text-light: var(--text-muted);
-    --border-color: var(--border);
-    --primary-color: var(--accent);
-    --primary-light: var(--accent-light);
-    --warning-bg: #fffbeb;
-    --warning-border: #f59e0b;
-}
-[data-theme="dark"] {
-    --warning-bg: rgba(245, 158, 11, .12);
-}
-
-/* ===========================
-   Audio buttons
-   Injected by audio.js next to target-language text. When no matching
-   voice is installed the whole layer is hidden rather than left to
-   mispronounce the text with an English voice.
-   =========================== */
-.audio-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.55rem;
-    height: 1.55rem;
-    margin-left: .4rem;
-    padding: 0;
-    vertical-align: middle;
-    background: transparent;
-    color: var(--text-light);
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    font-size: .7rem;
-    line-height: 1;
-    cursor: pointer;
-    transition: color .2s, border-color .2s, background .2s;
-}
-.audio-btn:hover  { color: var(--primary-color); border-color: var(--primary-color); background: var(--primary-light); }
-.audio-btn:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
-.audio-btn.speaking { color: #fff; background: var(--primary-color); border-color: var(--primary-color); }
-
-html.no-tts-voice .audio-btn { display: none; }
-
-.audio-notice {
-    display: none;
-    font-size: .85rem;
-    color: var(--text-light);
-    background: var(--warning-bg);
-    border-left: 4px solid var(--warning-border);
-    border-radius: var(--radius-sm);
-    padding: .6rem .9rem;
-    margin: 1rem 0;
-}
-html.no-tts-voice .audio-notice { display: block; }
-
-/* Shown only when a stand-in voice is speaking (e.g. Spanish reading Tagalog). */
-.audio-fallback {
-    display: none;
-    font-size: .85rem;
-    color: var(--text-light);
-    background: var(--info-bg, var(--primary-light));
-    border-left: 4px solid var(--primary-color);
-    border-radius: var(--radius-sm);
-    padding: .6rem .9rem;
-    margin: 1rem 0;
-}
-html.tts-fallback .audio-fallback { display: block; }

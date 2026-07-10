@@ -205,13 +205,9 @@
             <h2>Kasebyan - Traditional Proverbs and Wisdom</h2>
             <p>Kapampangan proverbs are like compressed libraries of wisdom - each short phrase contains lifetimes of observation about human nature, relationships, and the way the world works.</p>
 
-            <figure class="canvas-container" data-cap="proverbCanvas">
+            <div class="canvas-container">
                 <canvas id="proverbCanvas" width="600" height="400"></canvas>
-                <figcaption class="canvas-caption">
-                    <span class="cap-lead">Kapampangan label shown above:</span>
-                    <span class="kp-term">Kasebyan</span> <span class="cap-gloss">proverbs and sayings</span>
-                </figcaption>
-            </figure>
+            </div>
 
             <script>
                 const canvas = document.getElementById('proverbCanvas');
@@ -378,17 +374,17 @@
 
             <div class="mermaid">
                 graph TD
-                    A[Kapampangan Emotions] --> B["Joy & Celebration<br/>Kasalanan & Galak<button type='button' class='audio-btn' data-speak='Kasalanan, Galak' aria-label='Listen to Kasalanan, Galak' title='Listen'>🔊</button>"]
-                    A --> C["Love & Affection<br/>Kaluguran & Luid<button type='button' class='audio-btn' data-speak='Kaluguran, Luid' aria-label='Listen to Kaluguran, Luid' title='Listen'>🔊</button>"]
-                    A --> D["Sadness & Grief<br/>Lungkut & Kapighatian<button type='button' class='audio-btn' data-speak='Lungkut, Kapighatian' aria-label='Listen to Lungkut, Kapighatian' title='Listen'>🔊</button>"]
-                    A --> E["Anger & Frustration<br/>Galit & Gigil<button type='button' class='audio-btn' data-speak='Galit, Gigil' aria-label='Listen to Galit, Gigil' title='Listen'>🔊</button>"]
-                    A --> F["Surprise & Wonder<br/>Kabala & Pamagkakamanghang<button type='button' class='audio-btn' data-speak='Kabala, Pamagkakamanghang' aria-label='Listen to Kabala, Pamagkakamanghang' title='Listen'>🔊</button>"]
+                    A[Kapampangan Emotions] --> B[Joy & Celebration<br/>Kasalanan & Galak]
+                    A --> C[Love & Affection<br/>Kaluguran & Luid]
+                    A --> D[Sadness & Grief<br/>Lungkut & Kapighatian]
+                    A --> E[Anger & Frustration<br/>Galit & Gigil]
+                    A --> F[Surprise & Wonder<br/>Kabala & Pamagkakamanghang]
                     
-                    B --> G["Manyaman!<br/>Pak gandang!<br/>Kayabang sarap!<button type='button' class='audio-btn' data-speak='Manyaman! Pak gandang! Kayabang sarap!' aria-label='Listen to Manyaman! Pak gandang! Kayabang sarap!' title='Listen'>🔊</button>"]
-                    C --> H["Kaluguran da ka<br/>Mimahal da ka<br/>Pengari ku<button type='button' class='audio-btn' data-speak='Kaluguran da ka. Mimahal da ka. Pengari ku.' aria-label='Listen to Kaluguran da ka. Mimahal da ka. Pengari ku.' title='Listen'>🔊</button>"]
-                    D --> I["Malungkut ku<br/>Nakakalunus<br/>Sakit ning pusu ku<button type='button' class='audio-btn' data-speak='Malungkut ku. Nakakalunus. Sakit ning pusu ku.' aria-label='Listen to Malungkut ku. Nakakalunus. Sakit ning pusu ku.' title='Listen'>🔊</button>"]
-                    E --> J["Gigil ku!<br/>Nakakainis!<br/>Buring galit ku!<button type='button' class='audio-btn' data-speak='Gigil ku! Nakakainis! Buring galit ku!' aria-label='Listen to Gigil ku! Nakakainis! Buring galit ku!' title='Listen'>🔊</button>"]
-                    F --> K["Kabala!<br/>Ay sus!<br/>Mangyaring Dios!<button type='button' class='audio-btn' data-speak='Kabala! Ay sus! Mangyaring Dios!' aria-label='Listen to Kabala! Ay sus! Mangyaring Dios!' title='Listen'>🔊</button>"]
+                    B --> G["Manyaman!<br/>Pak gandang!<br/>Kayabang sarap!"]
+                    C --> H["Kaluguran da ka<br/>Mimahal da ka<br/>Pengari ku"]
+                    D --> I["Malungkut ku<br/>Nakakalunus<br/>Sakit ning pusu ku"]
+                    E --> J["Gigil ku!<br/>Nakakainis!<br/>Buring galit ku!"]
+                    F --> K["Kabala!<br/>Ay sus!<br/>Mangyaring Dios!"]
                     
                     style A fill:#ffeb99
                     style B fill:#98fb98
@@ -1049,6 +1045,5 @@
             });
         })();
     </script>
-<script src="/audio.js"></script>
 </body>
 </html>

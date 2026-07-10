@@ -117,9 +117,9 @@
                     A --> C[Subject-Verb-Object SVO]
                     A --> D[Object-Subject-Verb OSV]
                     
-                    B --> E["Mag-aral ya i Juan<br/>(Studies he Juan)<br/>Juan studies<button type='button' class='audio-btn' data-speak='Mag-aral ya i Juan' aria-label='Listen to Mag-aral ya i Juan' title='Listen'>🔊</button>"]
-                    C --> F["I Juan mag-aral ya<br/>(Juan studies he)<br/>Juan studies<button type='button' class='audio-btn' data-speak='I Juan mag-aral ya' aria-label='Listen to I Juan mag-aral ya' title='Listen'>🔊</button>"]
-                    D --> G["Aklat i Juan basa ne<br/>(Book Juan reads he)<br/>Juan reads a book<button type='button' class='audio-btn' data-speak='Aklat i Juan basa ne' aria-label='Listen to Aklat i Juan basa ne' title='Listen'>🔊</button>"]
+                    B --> E["Mag-aral ya i Juan" <br/> "Studies he Juan" <br/> Juan studies]
+                    C --> F["I Juan mag-aral ya" <br/> "Juan studies he" <br/> Juan studies]
+                    D --> G["Aklat i Juan basa ne" <br/> "Book Juan reads he" <br/> Juan reads a book]
                     
                     style A fill:#ffeb99
                     style B fill:#99ccff
@@ -186,15 +186,9 @@
             <h2>Pamangan - Food: The Heart of Kapampangan Culture</h2>
             <p>If Kapampangan culture were a book, food would be written on every page! Pampanga is the Philippines' culinary capital, and knowing food vocabulary isn't just useful - it's essential for cultural understanding.</p>
 
-            <figure class="canvas-container" data-cap="foodCanvas">
+            <div class="canvas-container">
                 <canvas id="foodCanvas" width="600" height="400"></canvas>
-                <figcaption class="canvas-caption">
-                    <span class="cap-lead">Kapampangan labels shown above:</span>
-                    <span class="kp-term">Sisig</span> <span class="cap-gloss">chopped pork dish</span>,
-                    <span class="kp-term">Nasi</span> <span class="cap-gloss">rice</span>,
-                    <span class="kp-term">Gulay</span> <span class="cap-gloss">vegetables</span>
-                </figcaption>
-            </figure>
+            </div>
 
             <script>
                 const canvas = document.getElementById('foodCanvas');
@@ -295,9 +289,9 @@
                     A --> C[Ordinal Numbers<br/>First, Second...]
                     A --> D[Time Expressions<br/>Hours, Days, Months]
                     
-                    B --> E["metung, adwa, atlu<br/>apat, lima, anam<br/>pitu, walu, siam, apulu<button type='button' class='audio-btn' data-speak='metung, adwa, atlu, apat, lima, anam, pitu, walu, siam, apulu' aria-label='Listen to metung, adwa, atlu, apat, lima, anam, pitu, walu, siam, apulu' title='Listen'>🔊</button>"]
-                    C --> F["pangatlu, pangapat<br/>pangalima...<button type='button' class='audio-btn' data-speak='pangatlu, pangapat, pangalima' aria-label='Listen to pangatlu, pangapat, pangalima' title='Listen'>🔊</button>"]
-                    D --> G["aldo, bengi, simana<br/>bulan, banua<button type='button' class='audio-btn' data-speak='aldo, bengi, simana, bulan, banua' aria-label='Listen to aldo, bengi, simana, bulan, banua' title='Listen'>🔊</button>"]
+                    B --> E[metung, adwa, atlu<br/>apat, lima, anam<br/>pitu, walu, siam, apulu]
+                    C --> F[pangatlu, pangapat<br/>pangalima...]
+                    D --> G[aldo, bengi, simana<br/>bulan, banua]
                     
                     style A fill:#ffeb99
                     style B fill:#99ccff
@@ -507,6 +501,5 @@
             });
         })();
     </script>
-<script src="/audio.js"></script>
 </body>
 </html>
