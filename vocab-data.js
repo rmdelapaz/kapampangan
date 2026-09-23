@@ -2533,7 +2533,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "parul",
       "pron": "PA-rul",
       "en": "lantern",
-      "cat": "Pampanga's festivals"
+      "cat": "Pampanga's festivals",
+      "img": "parul"
     },
     {
       "kp": "Kuraldal",

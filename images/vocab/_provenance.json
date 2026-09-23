@@ -259,6 +259,12 @@
     "from": "tagalog",
     "src_file": "tagalog/images/vocab/masakit.webp"
   },
+  "parul": {
+    "concept": "lantern (Filipino star parol)",
+    "from": "generated",
+    "note": "ChatGPT pipeline per tagalog/docs/vocab-art-guide.md; Medium effort; regenerated once to force bold black outlines + flat cel shading. Shape checked against Wikimedia Commons Simple_capiz_parol.jpg.",
+    "src_file": "_art_src/vocab/parul_1024.png (gitignored)"
+  },
   "rain": {
     "concept": "rain",
     "from": "french",
