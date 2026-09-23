@@ -1,0 +1,347 @@
+{
+  "banana": {
+    "concept": "banana",
+    "from": "esl",
+    "src_file": "esl/images/vocab/banana.webp"
+  },
+  "beautiful": {
+    "concept": "beautiful",
+    "from": "esl",
+    "src_file": "esl/images/vocab/beautiful.webp"
+  },
+  "big": {
+    "concept": "big",
+    "from": "esl",
+    "src_file": "esl/images/vocab/big.webp"
+  },
+  "black": {
+    "concept": "black",
+    "from": "esl",
+    "src_file": "esl/images/vocab/black.webp"
+  },
+  "book": {
+    "concept": "book",
+    "from": "esl",
+    "src_file": "esl/images/vocab/book.webp"
+  },
+  "bread": {
+    "concept": "bread",
+    "from": "esl",
+    "src_file": "esl/images/vocab/bread.webp"
+  },
+  "chair": {
+    "concept": "chair",
+    "from": "esl",
+    "src_file": "esl/images/vocab/chair.webp"
+  },
+  "chicken": {
+    "concept": "chicken",
+    "from": "esl",
+    "src_file": "esl/images/vocab/chicken.webp"
+  },
+  "cold": {
+    "concept": "cold",
+    "from": "esl",
+    "src_file": "esl/images/vocab/cold.webp"
+  },
+  "cook": {
+    "concept": "cook",
+    "from": "esl",
+    "src_file": "esl/images/vocab/cook.webp"
+  },
+  "delicious": {
+    "concept": "delicious",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/masarap.webp"
+  },
+  "doctor": {
+    "concept": "doctor",
+    "from": "esl",
+    "src_file": "esl/images/vocab/doctor.webp"
+  },
+  "door": {
+    "concept": "door",
+    "from": "esl",
+    "src_file": "esl/images/vocab/door.webp"
+  },
+  "drink": {
+    "concept": "drink",
+    "from": "esl",
+    "src_file": "esl/images/vocab/drink.webp"
+  },
+  "driver": {
+    "concept": "driver",
+    "from": "esl",
+    "src_file": "esl/images/vocab/driver.webp"
+  },
+  "egg": {
+    "concept": "egg",
+    "from": "esl",
+    "src_file": "esl/images/vocab/egg.webp"
+  },
+  "expensive": {
+    "concept": "expensive",
+    "from": "esl",
+    "src_file": "esl/images/vocab/expensive.webp"
+  },
+  "eye": {
+    "concept": "eye",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/mata.webp"
+  },
+  "family": {
+    "concept": "family",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/pamilya.webp"
+  },
+  "father": {
+    "concept": "father",
+    "from": "esl",
+    "src_file": "esl/images/vocab/father.webp"
+  },
+  "fever": {
+    "concept": "fever",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/lagnat.webp"
+  },
+  "fish": {
+    "concept": "fish",
+    "from": "esl",
+    "src_file": "esl/images/vocab/fish.webp"
+  },
+  "flower": {
+    "concept": "flower",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/bulaklak.webp"
+  },
+  "foot": {
+    "concept": "foot",
+    "from": "esl",
+    "src_file": "esl/images/vocab/foot.webp"
+  },
+  "friend": {
+    "concept": "friend",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/kaibigan.webp"
+  },
+  "fruit": {
+    "concept": "fruit",
+    "from": "esl",
+    "src_file": "esl/images/vocab/fruit.webp"
+  },
+  "full": {
+    "concept": "full",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/busog.webp"
+  },
+  "good": {
+    "concept": "good",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/mabuti.webp"
+  },
+  "grandfather": {
+    "concept": "grandfather",
+    "from": "esl",
+    "src_file": "esl/images/vocab/grandfather.webp"
+  },
+  "green": {
+    "concept": "green",
+    "from": "esl",
+    "src_file": "esl/images/vocab/green.webp"
+  },
+  "hand": {
+    "concept": "hand",
+    "from": "esl",
+    "src_file": "esl/images/vocab/hand.webp"
+  },
+  "happy": {
+    "concept": "happy",
+    "from": "esl",
+    "src_file": "esl/images/vocab/happy.webp"
+  },
+  "head": {
+    "concept": "head",
+    "from": "esl",
+    "src_file": "esl/images/vocab/head.webp"
+  },
+  "hospital": {
+    "concept": "hospital",
+    "from": "esl",
+    "src_file": "esl/images/vocab/hospital.webp"
+  },
+  "hot": {
+    "concept": "hot",
+    "from": "esl",
+    "src_file": "esl/images/vocab/hot.webp"
+  },
+  "house": {
+    "concept": "house",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/bahay.webp"
+  },
+  "hungry": {
+    "concept": "hungry",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/gutom.webp"
+  },
+  "illness": {
+    "concept": "illness",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/sakit.webp"
+  },
+  "kitchen": {
+    "concept": "kitchen",
+    "from": "esl",
+    "src_file": "esl/images/vocab/kitchen.webp"
+  },
+  "love": {
+    "concept": "love",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/mahal.webp"
+  },
+  "market": {
+    "concept": "market",
+    "from": "esl",
+    "src_file": "esl/images/vocab/market.webp"
+  },
+  "medicine": {
+    "concept": "medicine",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/gamot.webp"
+  },
+  "milk": {
+    "concept": "milk",
+    "from": "esl",
+    "src_file": "esl/images/vocab/milk.webp"
+  },
+  "mirror": {
+    "concept": "mirror",
+    "from": "esl",
+    "src_file": "esl/images/vocab/mirror.webp"
+  },
+  "money": {
+    "concept": "money",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/pera.webp"
+  },
+  "mother": {
+    "concept": "mother",
+    "from": "esl",
+    "src_file": "esl/images/vocab/mother.webp"
+  },
+  "mouth": {
+    "concept": "mouth",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/bibig.webp"
+  },
+  "nervous": {
+    "concept": "nervous",
+    "from": "esl",
+    "src_file": "esl/images/vocab/nervous.webp"
+  },
+  "nose": {
+    "concept": "nose",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/ilong.webp"
+  },
+  "older-brother": {
+    "concept": "older brother",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/kuya.webp"
+  },
+  "older-sister": {
+    "concept": "older sister",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/ate.webp"
+  },
+  "painful": {
+    "concept": "painful",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/masakit.webp"
+  },
+  "rain": {
+    "concept": "rain",
+    "from": "french",
+    "src_file": "french/images/vocab/rain.webp"
+  },
+  "read": {
+    "concept": "read",
+    "from": "esl",
+    "src_file": "esl/images/vocab/read.webp"
+  },
+  "red": {
+    "concept": "red",
+    "from": "esl",
+    "src_file": "esl/images/vocab/red.webp"
+  },
+  "rice": {
+    "concept": "rice",
+    "from": "esl",
+    "src_file": "esl/images/vocab/rice.webp"
+  },
+  "salt": {
+    "concept": "salt",
+    "from": "esl",
+    "src_file": "esl/images/vocab/salt.webp"
+  },
+  "shop": {
+    "concept": "shop",
+    "from": "esl",
+    "src_file": "esl/images/vocab/shop.webp"
+  },
+  "shop-assistant": {
+    "concept": "shop assistant",
+    "from": "esl",
+    "src_file": "esl/images/vocab/shop-assistant.webp"
+  },
+  "sing": {
+    "concept": "sing",
+    "from": "esl",
+    "src_file": "esl/images/vocab/sing.webp"
+  },
+  "small": {
+    "concept": "small",
+    "from": "esl",
+    "src_file": "esl/images/vocab/small.webp"
+  },
+  "sugar": {
+    "concept": "sugar",
+    "from": "esl",
+    "src_file": "esl/images/vocab/sugar.webp"
+  },
+  "sun": {
+    "concept": "sun",
+    "from": "french",
+    "src_file": "french/images/vocab/sun.webp"
+  },
+  "typhoon": {
+    "concept": "typhoon",
+    "from": "tagalog",
+    "src_file": "tagalog/images/vocab/bagyo.webp"
+  },
+  "vegetable": {
+    "concept": "vegetable",
+    "from": "esl",
+    "src_file": "esl/images/vocab/vegetable.webp"
+  },
+  "water": {
+    "concept": "water",
+    "from": "esl",
+    "src_file": "esl/images/vocab/water.webp"
+  },
+  "white": {
+    "concept": "white",
+    "from": "esl",
+    "src_file": "esl/images/vocab/white.webp"
+  },
+  "window": {
+    "concept": "window",
+    "from": "esl",
+    "src_file": "esl/images/vocab/window.webp"
+  },
+  "yellow": {
+    "concept": "yellow",
+    "from": "esl",
+    "src_file": "esl/images/vocab/yellow.webp"
+  }
+}

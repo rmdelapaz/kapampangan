@@ -2,3 +2,4 @@ status.md
 old_content/
 *.bak
 __pycache__/
+_art_src/

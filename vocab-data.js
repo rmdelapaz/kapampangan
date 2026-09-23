@@ -22,13 +22,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "bale",
       "pron": "BA-le",
       "en": "house",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "house"
     },
     {
       "kp": "aldo",
       "pron": "AL-do",
       "en": "day; sun",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "sun"
     },
     {
       "kp": "bengi",
@@ -40,43 +42,50 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "danum",
       "pron": "DA-num",
       "en": "water",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "water"
     },
     {
       "kp": "nasi",
       "pron": "NA-si",
       "en": "cooked rice",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "rice"
     },
     {
       "kp": "asan",
       "pron": "A-san",
       "en": "fish",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "fish"
     },
     {
       "kp": "libru",
       "pron": "LIB-ru",
       "en": "book",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "book"
     },
     {
       "kp": "sampaga",
       "pron": "sam-PA-ga",
       "en": "flower",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "flower"
     },
     {
       "kp": "masanting",
       "pron": "ma-SAN-ting",
       "en": "beautiful, fine, excellent",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "beautiful"
     },
     {
       "kp": "mayap",
       "pron": "MA-yap",
       "en": "good",
-      "cat": "First words to sound out"
+      "cat": "First words to sound out",
+      "img": "good"
     }
   ],
   "2": [
@@ -192,7 +201,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "kaluguran",
       "pron": "ka-lu-GU-ran",
       "en": "friend; beloved",
-      "cat": "Names"
+      "cat": "Names",
+      "img": "friend"
     },
     {
       "kp": "kaluguran daka",
@@ -296,7 +306,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "drayber",
       "pron": "DRAY-ber",
       "en": "driver",
-      "cat": "Words to practise with"
+      "cat": "Words to practise with",
+      "img": "driver"
     },
     {
       "kp": "mestra",
@@ -320,7 +331,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "kwalta",
       "pron": "KWAL-ta",
       "en": "money",
-      "cat": "Words to practise with"
+      "cat": "Words to practise with",
+      "img": "money"
     }
   ],
   "4": [
@@ -748,31 +760,36 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "pamilya",
       "pron": "pa-MIL-ya",
       "en": "family",
-      "cat": "Parents and children"
+      "cat": "Parents and children",
+      "img": "family"
     },
     {
       "kp": "ibpa",
       "pron": "IB-pa",
       "en": "father",
-      "cat": "Parents and children"
+      "cat": "Parents and children",
+      "img": "father"
     },
     {
       "kp": "indu",
       "pron": "IN-du",
       "en": "mother",
-      "cat": "Parents and children"
+      "cat": "Parents and children",
+      "img": "mother"
     },
     {
       "kp": "tata",
       "pron": "TA-ta",
       "en": "dad",
-      "cat": "Parents and children"
+      "cat": "Parents and children",
+      "img": "father"
     },
     {
       "kp": "ima",
       "pron": "I-ma",
       "en": "mum",
-      "cat": "Parents and children"
+      "cat": "Parents and children",
+      "img": "mother"
     },
     {
       "kp": "anak",
@@ -790,13 +807,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "koya",
       "pron": "KO-ya",
       "en": "older brother",
-      "cat": "Older and younger"
+      "cat": "Older and younger",
+      "img": "older-brother"
     },
     {
       "kp": "atsi",
       "pron": "AT-si",
       "en": "older sister",
-      "cat": "Older and younger"
+      "cat": "Older and younger",
+      "img": "older-sister"
     },
     {
       "kp": "kaka",
@@ -814,7 +833,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "ingkung",
       "pron": "ING-kung",
       "en": "grandfather",
-      "cat": "Grandparents and beyond"
+      "cat": "Grandparents and beyond",
+      "img": "grandfather"
     },
     {
       "kp": "apung babai",
@@ -832,7 +852,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "kaluguran",
       "pron": "ka-lu-GU-ran",
       "en": "friend; beloved",
-      "cat": "People around you"
+      "cat": "People around you",
+      "img": "friend"
     },
     {
       "kp": "kapitbale",
@@ -954,13 +975,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "kwalta",
       "pron": "KWAL-ta",
       "en": "money",
-      "cat": "Money"
+      "cat": "Money",
+      "img": "money"
     },
     {
       "kp": "piso",
       "pron": "PI-so",
       "en": "peso",
-      "cat": "Money"
+      "cat": "Money",
+      "img": "money"
     },
     {
       "kp": "magkanu",
@@ -978,7 +1001,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "mal",
       "pron": "mal",
       "en": "expensive",
-      "cat": "Money"
+      "cat": "Money",
+      "img": "expensive"
     },
     {
       "kp": "mura",
@@ -996,7 +1020,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "aldo",
       "pron": "AL-do",
       "en": "day; sun",
-      "cat": "Time"
+      "cat": "Time",
+      "img": "sun"
     },
     {
       "kp": "bulan",
@@ -1064,49 +1089,57 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "nasi",
       "pron": "NA-si",
       "en": "cooked rice",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "rice"
     },
     {
       "kp": "danum",
       "pron": "DA-num",
       "en": "water",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "water"
     },
     {
       "kp": "asin",
       "pron": "A-sin",
       "en": "salt",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "salt"
     },
     {
       "kp": "asukal",
       "pron": "a-SU-kal",
       "en": "sugar",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "sugar"
     },
     {
       "kp": "ebun",
       "pron": "E-bun",
       "en": "egg",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "egg"
     },
     {
       "kp": "gulay",
       "pron": "GU-lay",
       "en": "vegetable",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "vegetable"
     },
     {
       "kp": "prutas",
       "pron": "PRU-tas",
       "en": "fruit",
-      "cat": "At the table"
+      "cat": "At the table",
+      "img": "fruit"
     },
     {
       "kp": "asan",
       "pron": "A-san",
       "en": "fish",
-      "cat": "Meat and fish"
+      "cat": "Meat and fish",
+      "img": "fish"
     },
     {
       "kp": "babi",
@@ -1118,7 +1151,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "manuk",
       "pron": "ma-NUK",
       "en": "chicken",
-      "cat": "Meat and fish"
+      "cat": "Meat and fish",
+      "img": "chicken"
     },
     {
       "kp": "baka",
@@ -1160,13 +1194,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "minum",
       "pron": "MI-num",
       "en": "to drink",
-      "cat": "Eating and drinking"
+      "cat": "Eating and drinking",
+      "img": "drink"
     },
     {
       "kp": "maniaman",
       "pron": "ma-ni-A-man",
       "en": "delicious",
-      "cat": "Eating and drinking"
+      "cat": "Eating and drinking",
+      "img": "delicious"
     },
     {
       "kp": "mabanglu",
@@ -1178,13 +1214,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "busug",
       "pron": "BU-sug",
       "en": "full, satisfied",
-      "cat": "Eating and drinking"
+      "cat": "Eating and drinking",
+      "img": "full"
     },
     {
       "kp": "danup",
       "pron": "DA-nup",
       "en": "hunger; hungry",
-      "cat": "Eating and drinking"
+      "cat": "Eating and drinking",
+      "img": "hungry"
     },
     {
       "kp": "mangan tana",
@@ -1222,25 +1260,29 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "bale",
       "pron": "BA-le",
       "en": "house",
-      "cat": "The house"
+      "cat": "The house",
+      "img": "house"
     },
     {
       "kp": "pasbul",
       "pron": "PAS-bul",
       "en": "door",
-      "cat": "The house"
+      "cat": "The house",
+      "img": "door"
     },
     {
       "kp": "awang",
       "pron": "A-wang",
       "en": "window",
-      "cat": "The house"
+      "cat": "The house",
+      "img": "window"
     },
     {
       "kp": "kusina",
       "pron": "ku-SI-na",
       "en": "kitchen",
-      "cat": "The house"
+      "cat": "The house",
+      "img": "kitchen"
     },
     {
       "kp": "dalan",
@@ -1252,13 +1294,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "libru",
       "pron": "LIB-ru",
       "en": "book",
-      "cat": "Things in it"
+      "cat": "Things in it",
+      "img": "book"
     },
     {
       "kp": "salamin",
       "pron": "sa-LA-min",
       "en": "glasses; mirror",
-      "cat": "Things in it"
+      "cat": "Things in it",
+      "img": "mirror"
     },
     {
       "kp": "pinggan",
@@ -1276,7 +1320,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "luklukan",
       "pron": "luk-LU-kan",
       "en": "chair",
-      "cat": "Things in it"
+      "cat": "Things in it",
+      "img": "chair"
     },
     {
       "kp": "dulang",
@@ -1338,19 +1383,22 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "magluto",
       "pron": "mag-LU-to",
       "en": "will cook",
-      "cat": "The mag- pattern"
+      "cat": "The mag- pattern",
+      "img": "cook"
     },
     {
       "kp": "maglutu",
       "pron": "mag-LU-tu",
       "en": "cooking",
-      "cat": "The mag- pattern"
+      "cat": "The mag- pattern",
+      "img": "cook"
     },
     {
       "kp": "meglutu",
       "pron": "meg-LU-tu",
       "en": "cooked (mag- becomes meg-)",
-      "cat": "The mag- pattern"
+      "cat": "The mag- pattern",
+      "img": "cook"
     },
     {
       "kp": "mangan",
@@ -1374,7 +1422,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "mamasa",
       "pron": "ma-MA-sa",
       "en": "is reading",
-      "cat": "The maN- pattern"
+      "cat": "The maN- pattern",
+      "img": "read"
     },
     {
       "kp": "muli",
@@ -1514,7 +1563,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "basa",
       "pron": "BA-sa",
       "en": "to read",
-      "cat": "Verbs to practise"
+      "cat": "Verbs to practise",
+      "img": "read"
     },
     {
       "kp": "dinan",
@@ -1556,7 +1606,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "bayad",
       "pron": "BA-yad",
       "en": "to pay; payment",
-      "cat": "Verbs to practise"
+      "cat": "Verbs to practise",
+      "img": "money"
     }
   ],
   "13": [
@@ -1784,7 +1835,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "mayap",
       "pron": "MA-yap",
       "en": "good",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "good"
     },
     {
       "kp": "marok",
@@ -1796,49 +1848,57 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "masanting",
       "pron": "ma-SAN-ting",
       "en": "beautiful, fine, excellent",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "beautiful"
     },
     {
       "kp": "malagu",
       "pron": "ma-LA-gu",
       "en": "beautiful (of a person)",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "beautiful"
     },
     {
       "kp": "maragul",
       "pron": "ma-ra-GUL",
       "en": "big",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "big"
     },
     {
       "kp": "malati",
       "pron": "ma-LA-ti",
       "en": "small",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "small"
     },
     {
       "kp": "mapali",
       "pron": "ma-PA-li",
       "en": "hot",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "hot"
     },
     {
       "kp": "marimla",
       "pron": "ma-RIM-la",
       "en": "cold",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "cold"
     },
     {
       "kp": "masakit",
       "pron": "ma-sa-KIT",
       "en": "painful; difficult",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "painful"
     },
     {
       "kp": "matula",
       "pron": "ma-TU-la",
       "en": "happy",
-      "cat": "The ma- adjectives"
+      "cat": "The ma- adjectives",
+      "img": "happy"
     },
     {
       "kp": "mabilis",
@@ -1886,31 +1946,36 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "malutu",
       "pron": "ma-LU-tu",
       "en": "red",
-      "cat": "Colours"
+      "cat": "Colours",
+      "img": "red"
     },
     {
       "kp": "matuling",
       "pron": "ma-TU-ling",
       "en": "black",
-      "cat": "Colours"
+      "cat": "Colours",
+      "img": "black"
     },
     {
       "kp": "maputi",
       "pron": "ma-pu-TI",
       "en": "white",
-      "cat": "Colours"
+      "cat": "Colours",
+      "img": "white"
     },
     {
       "kp": "dilo",
       "pron": "DI-lo",
       "en": "yellow",
-      "cat": "Colours"
+      "cat": "Colours",
+      "img": "yellow"
     },
     {
       "kp": "berde",
       "pron": "BER-de",
       "en": "green",
-      "cat": "Colours"
+      "cat": "Colours",
+      "img": "green"
     },
     {
       "kp": "ka-",
@@ -2014,7 +2079,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "takut",
       "pron": "TA-kut",
       "en": "fear; afraid",
-      "cat": "Feelings"
+      "cat": "Feelings",
+      "img": "nervous"
     },
     {
       "kp": "tatakut kami",
@@ -2026,13 +2092,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "lugud",
       "pron": "LU-gud",
       "en": "love",
-      "cat": "Feelings"
+      "cat": "Feelings",
+      "img": "love"
     },
     {
       "kp": "tula",
       "pron": "TU-la",
       "en": "joy",
-      "cat": "Feelings"
+      "cat": "Feelings",
+      "img": "happy"
     }
   ],
   "17": [
@@ -2126,19 +2194,22 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "palengke",
       "pron": "pa-LENG-ke",
       "en": "market",
-      "cat": "At the market"
+      "cat": "At the market",
+      "img": "market"
     },
     {
       "kp": "tindera",
       "pron": "tin-DE-ra",
       "en": "female vendor",
-      "cat": "At the market"
+      "cat": "At the market",
+      "img": "shop-assistant"
     },
     {
       "kp": "tindahan",
       "pron": "tin-DA-han",
       "en": "shop, store",
-      "cat": "At the market"
+      "cat": "At the market",
+      "img": "shop"
     },
     {
       "kp": "sali",
@@ -2156,7 +2227,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "bayad",
       "pron": "BA-yad",
       "en": "payment; to pay",
-      "cat": "At the market"
+      "cat": "At the market",
+      "img": "money"
     },
     {
       "kp": "bayaran",
@@ -2234,25 +2306,29 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "saging",
       "pron": "SA-ging",
       "en": "banana",
-      "cat": "Things to buy"
+      "cat": "Things to buy",
+      "img": "banana"
     },
     {
       "kp": "tinape",
       "pron": "ti-NA-pe",
       "en": "bread",
-      "cat": "Things to buy"
+      "cat": "Things to buy",
+      "img": "bread"
     },
     {
       "kp": "gatas",
       "pron": "GA-tas",
       "en": "milk",
-      "cat": "Things to buy"
+      "cat": "Things to buy",
+      "img": "milk"
     },
     {
       "kp": "sampaga",
       "pron": "sam-PA-ga",
       "en": "flower",
-      "cat": "Things to buy"
+      "cat": "Things to buy",
+      "img": "flower"
     }
   ],
   "19": [
@@ -2266,37 +2342,43 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "buntuk",
       "pron": "bun-TUK",
       "en": "head",
-      "cat": "The body"
+      "cat": "The body",
+      "img": "head"
     },
     {
       "kp": "mata",
       "pron": "ma-TA",
       "en": "eye",
-      "cat": "The body"
+      "cat": "The body",
+      "img": "eye"
     },
     {
       "kp": "arung",
       "pron": "A-rung",
       "en": "nose",
-      "cat": "The body"
+      "cat": "The body",
+      "img": "nose"
     },
     {
       "kp": "asbuk",
       "pron": "AS-buk",
       "en": "mouth",
-      "cat": "The body"
+      "cat": "The body",
+      "img": "mouth"
     },
     {
       "kp": "gamat",
       "pron": "ga-MAT",
       "en": "hand",
-      "cat": "The body"
+      "cat": "The body",
+      "img": "hand"
     },
     {
       "kp": "bitis",
       "pron": "BI-tis",
       "en": "foot, leg",
-      "cat": "The body"
+      "cat": "The body",
+      "img": "foot"
     },
     {
       "kp": "pusu",
@@ -2308,13 +2390,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "sakit",
       "pron": "sa-KIT",
       "en": "illness; pain",
-      "cat": "Not feeling well"
+      "cat": "Not feeling well",
+      "img": "illness"
     },
     {
       "kp": "masakit",
       "pron": "ma-sa-KIT",
       "en": "it hurts; painful",
-      "cat": "Not feeling well"
+      "cat": "Not feeling well",
+      "img": "painful"
     },
     {
       "kp": "masakit ya ing buntuk ku",
@@ -2326,25 +2410,29 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "maglagnat",
       "pron": "mag-LAG-nat",
       "en": "to have a fever",
-      "cat": "Not feeling well"
+      "cat": "Not feeling well",
+      "img": "fever"
     },
     {
       "kp": "doktor",
       "pron": "dok-TOR",
       "en": "doctor",
-      "cat": "Not feeling well"
+      "cat": "Not feeling well",
+      "img": "doctor"
     },
     {
       "kp": "ospital",
       "pron": "os-pi-TAL",
       "en": "hospital",
-      "cat": "Not feeling well"
+      "cat": "Not feeling well",
+      "img": "hospital"
     },
     {
       "kp": "gamut",
       "pron": "GA-mut",
       "en": "medicine",
-      "cat": "Not feeling well"
+      "cat": "Not feeling well",
+      "img": "medicine"
     },
     {
       "kp": "panaun",
@@ -2356,13 +2444,15 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "uran",
       "pron": "U-ran",
       "en": "rain",
-      "cat": "Weather"
+      "cat": "Weather",
+      "img": "rain"
     },
     {
       "kp": "aldo",
       "pron": "AL-do",
       "en": "sun; day",
-      "cat": "Weather"
+      "cat": "Weather",
+      "img": "sun"
     },
     {
       "kp": "angin",
@@ -2374,7 +2464,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "bagyu",
       "pron": "BAG-yu",
       "en": "typhoon",
-      "cat": "Weather"
+      "cat": "Weather",
+      "img": "typhoon"
     },
     {
       "kp": "mapali ya ngeni",
@@ -2478,7 +2569,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "dalit",
       "pron": "DA-lit",
       "en": "hymn, song",
-      "cat": "Faith and community"
+      "cat": "Faith and community",
+      "img": "sing"
     },
     {
       "kp": "bayu a banua",
@@ -2526,7 +2618,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "lugud",
       "pron": "LU-gud",
       "en": "love",
-      "cat": "Words of pride"
+      "cat": "Words of pride",
+      "img": "love"
     },
     {
       "kp": "pamana",
