@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can-Do Checklist — Ray's Kapampangan Lessons</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/learn.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <style>
+        .ck-hero { background: linear-gradient(135deg, #6c5ce7, #00b894, #0984e3); color: #fff;
+            padding: 40px 20px; border-radius: 15px; text-align: center; margin-bottom: 24px; }
+        .ck-hero h1 { margin: 0 0 8px; }
+        .ck-intro { max-width: 820px; margin: 0 auto 16px; }
+
+        .ck-overall { max-width: 820px; margin: 0 auto 24px; background: var(--card-bg,#fff);
+            border: 1px solid rgba(0,0,0,.1); border-radius: 12px; padding: 16px 18px; box-shadow: 0 4px 10px rgba(0,0,0,.06); }
+        .ck-overall-top { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
+        .ck-overall-label { font-weight: 700; }
+        .ck-bar { flex: 1 1 100%; height: 12px; background: rgba(0,0,0,.1); border-radius: 999px; overflow: hidden; margin-top: 10px; }
+        .ck-bar-fill { display: block; height: 100%; width: 0; background: linear-gradient(90deg,#6c5ce7,#00b894); transition: width .25s ease; }
+        .ck-reset { border: 1px solid rgba(0,0,0,.2); background: transparent; color: var(--text-color,#333);
+            border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: .9rem; }
+        .ck-reset:hover { background: rgba(0,0,0,.06); }
+
+        #cando-root { max-width: 820px; margin: 0 auto; }
+        .ck-level { background: var(--card-bg,#fff); border: 1px solid rgba(0,0,0,.08); border-radius: 14px;
+            padding: 18px 20px; margin-bottom: 22px; box-shadow: 0 6px 14px rgba(0,0,0,.06); }
+        .ck-level-head h2 { margin: 0 0 8px; }
+        .ck-level-meter { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+        .ck-level-meter .ck-bar { flex: 1 1 200px; margin-top: 0; }
+        .ck-level-count { font-weight: 700; font-size: .9rem; color: var(--muted-color,#667); white-space: nowrap; }
+        .ck-group { font-size: 1rem; margin: 18px 0 8px; color: #6c5ce7; }
+        .ck-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+        .ck-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px;
+            padding: 10px 12px; border: 1px solid rgba(0,0,0,.08); border-radius: 10px; background: rgba(0,0,0,.015); }
+        .ck-item label { display: inline-flex; align-items: baseline; gap: 8px; cursor: pointer; flex: 1 1 auto; }
+        .ck-box { width: 18px; height: 18px; flex: 0 0 auto; accent-color: #00b894; cursor: pointer; }
+        .ck-item.ck-on { background: rgba(0,184,148,.1); border-color: rgba(0,184,148,.4); }
+        .ck-item.ck-on .ck-text { text-decoration: line-through; color: var(--muted-color,#667); }
+        .ck-lessons { flex: 0 0 auto; }
+        .ck-lesson { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px;
+            background: rgba(108,92,231,.14); color: #4a3fbf; text-decoration: none; font-weight: 600; font-size: .78rem; }
+        .ck-lesson:hover { background: rgba(108,92,231,.28); }
+
+        @media print {
+            .ck-reset, .ck-lessons, .tts-settings { display: none !important; }
+            .ck-item { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ck-hero">
+    <h1>✅ Can-Do Checklist</h1>
+    <p>Track your progress toward a solid A1–A2 foundation in Kapampangan.</p>
+</div>
+
+<div class="section ck-intro">
+    <p>These are the real-world things you should be able to do at each CEFR level. Tick each one
+    as you feel confident — your progress saves automatically in this browser. Tap a lesson chip
+    to jump back and review anything you want to firm up.</p>
+</div>
+
+<div class="ck-overall">
+    <div class="ck-overall-top">
+        <span class="ck-overall-label" id="ck-overall">0 / 0 can-do statements (0%)</span>
+        <button type="button" class="ck-reset" id="ck-reset">Reset checklist</button>
+    </div>
+    <div class="ck-bar"><span class="ck-bar-fill" id="ck-overall-fill"></span></div>
+</div>
+
+<div id="cando-root"></div>
+
+<div style="max-width:820px;margin:8px auto 24px;padding:1.25rem 1.5rem;
+    background:linear-gradient(135deg,#b45309,#dc2626,#7c3aed);border-radius:14px;color:#fff;
+    box-shadow:0 8px 24px rgba(180,83,9,.25);">
+    <strong style="display:block;font-size:1.1rem;">Ticked everything off?</strong>
+    <span style="opacity:.92;font-size:.92rem;">Then you have a working A1&ndash;A2 Kapampangan.
+    There is no B1&ndash;B2 tier of this course yet &mdash; what comes next is the other three
+    voices (goal, locative and circumstantial focus), deeper morphology, the full particle
+    system, and <em>kasebyan</em>. Lesson&nbsp;20 sets out the road.</span>
+</div>
+
+<!-- BEGIN footer-nav (managed by add_footer_nav.py) -->
+<nav class="lesson-nav" aria-label="Lesson Navigation">
+    <a href="index.html" class="prev-lesson">&larr; Course Home</a>
+    <a href="readings.html" class="home-link">Readings</a>
+    <a href="glossary.html" class="next-lesson">Glossary &rarr;</a>
+</nav>
+
+<footer class="site-footer">
+    <p>&copy; 2026 All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
+        <a href="https://rays-home.netlify.app/contact">Contact</a>
+        <a href="#" onclick="window.print(); return false;">Print Page</a>
+    </div>
+</footer>
+<!-- END footer-nav -->
+
+<script src="/scripts/nav.js"></script>
+<script src="/cando.js"></script>
+</body>
+</html>

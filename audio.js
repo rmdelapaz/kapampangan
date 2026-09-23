@@ -22,6 +22,7 @@
         /* Rewrites applied to the utterance (never the page) when speaking through a
            fallback voice, so its orthography produces the right sounds. */
         fallbackRules: [
+            ['\\bmga\\b', 'gi', 'manga'],
             ['\\bng\\b', 'gi', 'nang'],
             ['h', 'g', 'j'],
             ['k(?=[ei])', 'g', 'qu'],
@@ -33,7 +34,7 @@
         /* Lowercase before speaking: engines spell out ALL-CAPS words letter by letter. */
         lowercase: true,
         /* Re-attach when the DOM changes, for content built by page scripts. */
-        rescan: false,
+        rescan: true,
         langName: 'Filipino',
         fallbackName: 'Spanish',
         addLanguageAs: 'Filipino',
@@ -54,35 +55,27 @@
         headerSkip: null,
         /* 'rules': explicit selectors, for courses whose containers disagree. */
         rules: [
-            { selector: '.vocab-card > p > strong', pick: 'self' },
-            { selector: '.example-phrase > p > strong', pick: 'self' },
-            { selector: '.phrase-pattern > p > strong', pick: 'self' },
-            { selector: '.transformation-demo > p > strong', pick: 'self' },
-            { selector: '.sentence-builder > p > strong', pick: 'self' },
-            { selector: '.particle-guide .pattern-demo > p > strong', pick: 'self' },
-            { selector: '.transformation-demo > p > em', pick: 'self' },
-            { selector: '.pattern-demo > p > em', pick: 'self' },
-            { selector: '.final-challenge p > em', pick: 'self' },
-            { selector: '.idiom-card > h4', pick: 'self' },
-            { selector: '.vocab-card > h4', pick: 'directText' },
-            { selector: '.speaker-a, .speaker-b', pick: 'quotes' },
-            { selector: '.dialogue-flow > p', pick: 'quotes' },
-            { selector: '.politeness-level > p', pick: 'quotes' },
-            { selector: '.pattern-demo > p', pick: 'quotes' },
-            { selector: '.cultural-immersion p', pick: 'quotes' },
-            { selector: '.diploma-section p', pick: 'self', requireTarget: true },
-            { selector: '.canvas-caption .kp-term', pick: 'self' }
+            { selector: '.pos-card li strong', pick: 'self' },
+            { selector: '.expression-card > strong', pick: 'self' },
+            { selector: '.family-member > strong', pick: 'self' },
+            { selector: '.meaning strong', pick: 'self' },
+            { selector: '.root-word', pick: 'self' },
+            { selector: '.number-kapampangan', pick: 'self' },
+            { selector: '.example-box li', pick: 'syllabifiedWord' },
+            { selector: '.vocab-card .kapampangan-word', pick: 'self' },
+            { selector: '.vocab-card .example-sentence', pick: 'beforeParen' },
+            { selector: '.example-box p, .conversation-box p, .dialogue-practice p, .cultural-note li, .tip-box li, .practice-box li', pick: 'quotes' }
         ],
         /* Does this string look like the target language? Used where a container
            holds both target text and English. */
-        targetTest: '\\b(ya|ka|ku|mu|mi|ta|ko|na|la|da|ne|pa|po|pu|ni|ing|ning|king|naman|lang|nung|ampong|yang|niyu|keka|keku|tamu|tamo|tayo|kayo|reng|ding|deng|siguru|baka|kaya|ano)\\b',
+        targetTest: '\\b(ang|ng|mga|sa|ay|na|po|opo|ko|mo|ka|ako|ikaw|siya|kami|tayo|kayo|sila|hindi|kung|dahil|kasi|naman|lang|din|rin|nga|ni|kay|nang|salamat|kumusta|magandang|mabuti|magkano|walang)\\b',
         /* Strings that must never be spoken (pronunciation respellings). */
-        excludeTest: null,
+        excludeTest: '^(?=.*[A-Z]{2,})[A-Za-z]+(-[A-Za-z]+)+$',
         /* Removed from the utterance but left visible on the page (annotations). */
         stripSpoken: null,
         /* A cell whose remaining text still matches this is not target text at all
            and gets no button. Applied AFTER stripSpoken. */
-        rejectTest: ':\\s*$|^[A-Za-z][A-Za-z ]{1,18}:\\s|\\+|\\(|[a-z]-[A-Z]{2}|[A-Z]{2}-[a-z]|^[A-Z]{2,}-|\\b(the|is|are|was|were|this|that|these|those|how|what|where|when|why|who|your|you|will|would|with|from|of|to|and|it|delicious|much|thanks?|studies|study|studied|reads?|writes?|wrote|written|father|mother|book|letter|hello|please|focus|system|structure|pattern|love|like|want|need|know|see|come|go|eat|big|small|good|bad|family|first|second|third|morning|afternoon|evening|night)\\b',
+        rejectTest: null,
         rate: 0.85
     };
 
@@ -138,11 +131,28 @@
     var voice = null;
     var activeBtn = null;
 
+    /* User-adjustable voice + speed, remembered per device. The listener panel
+       (buildAudioPanel) writes these; speak() reads them. */
+    var RATE_KEY = 'kapampangan-tts-rate';
+    var VOICE_KEY = 'kapampangan-tts-voice';
+    var rate = CONFIG.rate;
+    (function () {
+        try { var r = parseFloat(localStorage.getItem(RATE_KEY)); if (r >= 0.5 && r <= 1.2) rate = r; } catch (_) {}
+    })();
+
     function langOf(v) { return v.lang.replace('_', '-').toLowerCase(); }
 
     function findVoice() {
         var voices = synth.getVoices();
         if (!voices.length) return null;
+        /* A voice the learner explicitly chose wins over the automatic pick, as long
+           as it is still installed. */
+        var saved = null;
+        try { saved = localStorage.getItem(VOICE_KEY); } catch (_) {}
+        if (saved) {
+            var hit = voices.filter(function (v) { return v.voiceURI === saved; });
+            if (hit.length) return hit[0];
+        }
         /* Try each accepted language in order, so a native voice always wins over a
            fallback. Voice.lang is 'ru-RU' on most platforms but 'ru_RU' on some
            Android builds. */
@@ -217,7 +227,7 @@
         var u = new SpeechSynthesisUtterance(forFallback(text));
         u.voice = voice;
         u.lang = voice.lang;
-        u.rate = CONFIG.rate;
+        u.rate = rate;
         return u;
     }
 
@@ -352,17 +362,6 @@
         return clean(ownText(el).split(DASH)[0]);
     }
 
-    /* Only the element's own direct text nodes, ignoring any child elements. A dictionary
-       headword carries a trailing badge span: <h4>Ama <span class="badge">Essential</span></h4>
-       -> "Ama", where ownText would read "Ama Essential". */
-    function directText(el) {
-        var out = '';
-        for (var n = el.firstChild; n; n = n.nextSibling) {
-            if (n.nodeType === 3) out += n.textContent;
-        }
-        return clean(out);
-    }
-
     /* "Kumusta ka? (How are you?)" -> "Kumusta ka?" — target sentence, English gloss
        in a trailing parenthetical. */
     function textBeforeParen(el) {
@@ -441,8 +440,7 @@
         beforeDash: textBeforeDash,
         beforeParen: textBeforeParen,
         vocabWord: vocabWord,
-        syllabifiedWord: syllabifiedWord,
-        directText: directText
+        syllabifiedWord: syllabifiedWord
     };
 
     function attachByRules() {
@@ -541,6 +539,109 @@
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
+    /* ===========================
+       Listener panel: voice + speed
+       A floating "🎧 Audio" control, like the ESL courses. Lists every voice that
+       matches an accepted language (native first, then the stand-in), plus a speed
+       slider and a test button. Both choices persist per device and apply to every
+       button on the page. Skipped on the pronunciation reader, which has its own.
+       =========================== */
+    var panelBuilt = false;
+    var repopulate = function () {};
+
+    function candidateVoices() {
+        var voices = synth.getVoices();
+        var seen = {}, out = [];
+        CONFIG.langs.forEach(function (prefix) {
+            voices.forEach(function (v) {
+                if (langOf(v).indexOf(prefix) === 0 && !seen[v.voiceURI]) { seen[v.voiceURI] = 1; out.push(v); }
+            });
+        });
+        return out;
+    }
+
+    function applyVoiceChoice(v) {
+        voice = v;
+        try { localStorage.setItem(VOICE_KEY, v.voiceURI); } catch (_) {}
+        var fb = isFallbackVoice(v);
+        document.documentElement.classList.toggle('tts-fallback', fb);
+        if (fb) addFallbackNotice();
+    }
+
+    function buildAudioPanel() {
+        /* The reader page carries its own voice + speed controls; don't double up. */
+        if (document.getElementById('reader-voice')) return;
+        if (panelBuilt) { repopulate(); return; }
+        panelBuilt = true;
+
+        var panel = document.createElement('div');
+        panel.className = 'tts-settings';
+        panel.innerHTML =
+            '<button type="button" class="tts-toggle" aria-expanded="false" aria-controls="tts-panel" title="Audio settings">' +
+                '🎧 Audio <span class="tts-caret" aria-hidden="true">▸</span></button>' +
+            '<div class="tts-panel" id="tts-panel" hidden>' +
+                '<div class="tts-row"><label for="tts-voice">Voice</label>' +
+                    '<select id="tts-voice"></select></div>' +
+                '<div class="tts-row"><label for="tts-rate">Speed <span class="tts-rate-val"></span></label>' +
+                    '<input type="range" id="tts-rate" min="0.5" max="1.2" step="0.05"></div>' +
+                '<button type="button" class="tts-test">▶ Test voice</button>' +
+            '</div>';
+        document.body.appendChild(panel);
+
+        var toggle = panel.querySelector('.tts-toggle');
+        var body = panel.querySelector('.tts-panel');
+        var sel = panel.querySelector('#tts-voice');
+        var range = panel.querySelector('#tts-rate');
+        var rateVal = panel.querySelector('.tts-rate-val');
+        var caret = panel.querySelector('.tts-caret');
+
+        toggle.addEventListener('click', function () {
+            var willOpen = body.hidden;
+            body.hidden = !willOpen;
+            toggle.setAttribute('aria-expanded', String(willOpen));
+            if (caret) caret.textContent = willOpen ? '▾' : '▸';
+        });
+
+        repopulate = function () {
+            var list = candidateVoices();
+            sel.innerHTML = '';
+            if (!list.length) {
+                var o = document.createElement('option');
+                o.textContent = 'No voice found';
+                o.disabled = o.selected = true;
+                sel.appendChild(o);
+                sel.disabled = true;
+                return;
+            }
+            sel.disabled = false;
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.voiceURI;
+                o.textContent = v.name + ' — ' + v.lang + (isFallbackVoice(v) ? ' (stand-in)' : '');
+                if (voice && v.voiceURI === voice.voiceURI) o.selected = true;
+                sel.appendChild(o);
+            });
+        };
+        repopulate();
+
+        sel.addEventListener('change', function () {
+            var chosen = synth.getVoices().filter(function (v) { return v.voiceURI === sel.value; })[0];
+            if (chosen) applyVoiceChoice(chosen);
+        });
+
+        range.value = rate;
+        rateVal.textContent = rate.toFixed(2) + '×';
+        range.addEventListener('input', function () {
+            rate = parseFloat(range.value);
+            rateVal.textContent = rate.toFixed(2) + '×';
+            try { localStorage.setItem(RATE_KEY, String(rate)); } catch (_) {}
+        });
+
+        panel.querySelector('.tts-test').addEventListener('click', function () {
+            speakPlain('Kumusta! Magandang araw sa iyo.');
+        });
+    }
+
     function init() {
         voice = findVoice();
         if (!voice) {
@@ -554,6 +655,7 @@
         if (fallback) addFallbackNotice();
         attachButtons();
         startRescan();
+        buildAudioPanel();
     }
 
     /* Delegated, so buttons injected later still work. site-nav.js binds one

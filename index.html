@@ -3,500 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapampangan Learning Journey</title>
+    <title>Kapampangan — A Complete A1–A2 Course</title>
+    <meta name="description" content="Learn Kapampangan, the language of Pampanga and Central Luzon, from scratch. Twenty lessons covering CEFR A1 and A2: markers, pronouns, the fused-pronoun system, verb aspect, focus, and the culture of the Philippines' culinary capital.">
+    <meta name="keywords" content="Kapampangan, Pampango, Pampanga, learn Kapampangan, Kapampangan lessons, Amanung Sisuan, Philippine languages, Central Luzon, A1, A2, CEFR">
+    <meta property="og:title" content="Kapampangan — A Complete A1–A2 Course">
+    <meta property="og:description" content="Twenty lessons in Kapampangan, the Amanung Sisuan of Pampanga — from greetings to the fused-pronoun system.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/learn.css">
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .hero-section {
-            background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
-            color: white;
-            text-align: center;
-            padding: clamp(2.5rem, 8vw, 5rem) 1.5rem;
-            margin: 0;
-            position: relative;
-            overflow: hidden;
-            border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1.5" fill="rgba(255,255,255,0.07)"/></svg>') repeat;
-            animation: drift 30s infinite linear;
-        }
-        @keyframes drift {
-            0% { transform: translate(0,0); }
-            100% { transform: translate(-50px, -50px); }
-        }
-        .hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
-        .hero-title {
-            font-size: clamp(2rem, 5vw, 3.25rem);
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            background: none; color: white; padding: 0;
-        }
-        .hero-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.35rem);
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        .hero-tagline { opacity: 0.75; font-size: 0.95rem; color: rgba(255,255,255,0.85); }
-
-        .quick-start {
-            background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .quick-start h2 { background: none; color: white; margin: 0 0 0.5rem; padding: 0; font-size: clamp(1.25rem, 3vw, 1.6rem); }
-        .quick-start p { color: rgba(255,255,255,0.9); margin: 0 0 1rem; }
-
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-        }
-        .quick-link {
-            background: rgba(255,255,255,0.18);
-            border: 2px solid rgba(255,255,255,0.5);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: var(--radius-xl);
-            text-decoration: none;
-            transition: all 0.25s;
-        }
-        .quick-link:hover {
-            background: white;
-            color: #ef4444;
-            border-color: white;
-            transform: translateY(-2px);
-        }
-
-        .stats-section {
-            background: var(--bg-tertiary);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            margin: 2rem 0;
-        }
-        .stats-section h2 { background: none; color: var(--text-primary); text-align: center; margin: 0 0 1.25rem; padding: 0; }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-        }
-        .stat-card {
-            background: var(--bg-card);
-            padding: 1.25rem;
-            border-radius: var(--radius-md);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            border-top: 3px solid var(--accent);
-        }
-        .stat-number { font-size: 2rem; font-weight: 800; color: var(--accent); }
-        .stat-card p { margin: 0.25rem 0 0; font-size: 0.85rem; color: var(--text-muted); }
-
-        .lesson-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .lesson-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 1.75rem;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.25s, box-shadow 0.25s;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--border);
-        }
-        .lesson-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), #a78bfa);
-        }
-        .lesson-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-        .lesson-number {
-            background: var(--accent);
-            color: white;
-            width: 48px; height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .lesson-title {
-            font-size: 1.2rem;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        .lesson-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 0.75rem;
-        }
-        .difficulty-badge {
-            display: inline-block;
-            padding: 0.2rem 0.65rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .beginner { background: #dcfce7; color: #166534; }
-        .intermediate { background: #fef9c3; color: #854d0e; }
-        .advanced { background: #fee2e2; color: #991b1b; }
-        .mastery { background: #f3f4f6; color: #374151; }
-
-        .lesson-highlights {
-            background: var(--bg-tertiary);
-            padding: 0.75rem 1rem;
-            border-radius: var(--radius-sm);
-            margin-bottom: 1rem;
-            border-left: 3px solid var(--success);
-        }
-        .lesson-highlights strong { font-size: 0.85rem; }
-        .lesson-highlights ul { margin: 0.35rem 0 0 1rem; }
-        .lesson-highlights li { font-size: 0.85rem; padding: 0.1rem 0; color: var(--text-secondary); }
-
-        .lesson-link {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 0.6rem 1.5rem;
-            text-decoration: none;
-            border-radius: var(--radius-xl);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.25s;
-        }
-        .lesson-link:hover {
-            background: var(--accent-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(99,102,241,0.3);
-            color: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.25rem;
-            margin: 2rem 0;
-        }
-        .feature-card {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .feature-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-        }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
-        .feature-card h3 { font-size: 1rem; margin: 0 0 0.35rem; background: none; padding: 0; color: var(--text-primary); }
-        .feature-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
-
-        .learning-path {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            margin: 2rem 0;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-        }
-        .learning-path h2 { background: none; color: var(--text-primary); text-align: center; margin: 0 0 1.5rem; padding: 0; }
-
-        .path-timeline { position: relative; padding: 1rem 0; }
-        .path-item {
-            position: relative;
-            padding: 1rem 0 1rem 4rem;
-            border-left: 2px solid var(--accent);
-            margin-left: 1rem;
-        }
-        .path-item::before {
-            content: attr(data-step);
-            position: absolute;
-            left: -14px;
-            top: 1.1rem;
-            background: var(--accent);
-            color: white;
-            width: 28px; height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.8rem;
-        }
-        .path-item:last-child { border-left: 2px solid transparent; }
-        .path-item h3 { font-size: 1.05rem; margin: 0 0 0.25rem; background: none; padding: 0; }
-        .path-item p { font-size: 0.9rem; margin: 0; color: var(--text-muted); }
-
-        .why-section {
-            background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            margin: 2rem 0;
-        }
-        .why-section h2 { background: none; color: white; text-align: center; margin: 0 0 1rem; padding: 0; }
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
-        }
-        .why-card { text-align: left; }
-        .why-card h3 { font-size: 1rem; margin: 0 0 0.35rem; background: none; padding: 0; color: white; }
-        .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin: 0; }
-
-        .footer-section {
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            margin-top: 2rem;
-            border-top: 1px solid var(--border);
-            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-        }
-        .footer-section h2 { background: none; color: var(--text-primary); padding: 0; margin: 0 0 1rem; font-size: 1.3rem; }
-        .footer-section h3 { font-size: 1.05rem; margin: 1.25rem 0 0.35rem; }
-        .footer-section p { font-size: 0.9rem; color: var(--text-muted); }
-        .footer-gold { font-size: 1.1rem; color: var(--accent); font-weight: 700; margin-top: 1.5rem; }
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        h1, h2, h3, h4 { background: none !important; color: inherit; padding: 0; }
+        .hero { background: linear-gradient(135deg, #b45309, #dc2626, #7c3aed); color: white; padding: 48px 40px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
+        .hero h1 { color: white !important; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 .5rem; }
+        .hero p { color: rgba(255,255,255,.92); margin: .35rem 0; }
+        .hero .kicker { font-size: 1.15rem; font-weight: 600; }
+        .hero .scope { font-size: .95rem; opacity: .85; }
+        .intro { margin: 28px 0; }
+        .tier { margin: 42px 0 8px; }
+        .tier-title { font-size: 1.6rem; margin: 0 0 .2rem; }
+        .tier-sub { color: var(--text-muted); margin: 0 0 1rem; }
+        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 18px; margin-bottom: 10px; }
+        a.lesson-card { display: block; text-decoration: none; color: inherit; background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e7eb); border-radius: 12px; padding: 20px; position: relative; transition: transform .2s, box-shadow .2s, border-color .2s; }
+        a.lesson-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.12); border-color: #b45309; color: inherit; text-decoration: none; }
+        a.lesson-card h3 { margin: 10px 0 6px; font-size: 1.08rem; }
+        a.lesson-card p { margin: 0; font-size: .9rem; color: var(--text-secondary, #555); }
+        .lesson-num { width: 42px; height: 42px; border-radius: 50%; background: #b45309; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.05rem; }
+        .tool-card .lesson-num { background: #7c3aed; font-size: 1.3rem; }
+        .explainer { background: var(--bg-tertiary, #f3f4f6); border-left: 4px solid #b45309; padding: 20px 24px; border-radius: 10px; margin: 40px 0; }
+        .explainer h2 { margin-top: 0; }
+        .note { background: #e1f5fe; border-left: 4px solid #2196f3; padding: 14px 18px; border-radius: 8px; margin: 20px 0; font-size: .95rem; }
+        [data-theme="dark"] a.lesson-card { background: #111827; border-color: #374151; }
+        [data-theme="dark"] .explainer { background: #1f2937; }
+        [data-theme="dark"] .note { background: #0c4a6e; }
     </style>
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand">Kapampangan</a>
-            <div class="nav-right">
-                <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
-                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="kapampangan_intro.html">Intro</a>
-                <a href="kapampangan_basics.html">Basics</a>
-                <a href="kapampangan_conversations.html">Conversations</a>
-                <a href="kapampangan_grammar.html">Grammar</a>
-                <a href="kapampangan_expressions_vocabulary.html">Expressions</a>
-                <a href="kapampangan_mastery_celebration.html">Mastery</a>
-                <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
-                <a href="https://rays-home.netlify.app/contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+<div class="container">
 
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Kapampangan Learning Journey</h1>
-            <p class="hero-subtitle">Master the Heart Language of Central Luzon</p>
-            <p class="hero-tagline">From beginner to cultural ambassador — your complete guide to Kapampangan language and culture</p>
+    <div class="hero">
+        <h1>Kapampangan</h1>
+        <p class="kicker">Amanung Sisuan — the language suckled from birth</p>
+        <p class="scope">A complete A1–A2 course in the language of Pampanga and Central Luzon</p>
+    </div>
+
+    <div class="intro">
+        <h2>20 Lessons — a Complete A1–A2 Foundation</h2>
+        <p>Kapampangan is spoken by around two million people in Pampanga, Tarlac, Bataan and
+        parts of Nueva Ecija and Bulacan. It is <strong>not</strong> a dialect of Tagalog — it
+        belongs to the Central Luzon branch, and its closest relative is Sambal.</p>
+        <p>This course takes you from your first greeting to the point where you can hold a
+        market transaction, describe your family, negate, question, and read an object-focus
+        sentence without flinching. It covers the CEFR <strong>A1</strong> and
+        <strong>A2</strong> levels in full.</p>
+        <div class="note">
+            <strong>Why twenty lessons and not sixteen?</strong> Because Kapampangan needs
+            three lessons where most courses need one. Its marker series, its two pronoun
+            sets, and above all its <em>fused pronouns</em> — <em>ke</em>, <em>me</em>,
+            <em>ne</em>, <em>da ka</em> — have no Tagalog equivalent, and a learner who skips
+            them cannot parse ordinary speech. Lessons 3, 4 and 5 are where the extra room
+            goes.
         </div>
     </div>
 
-    <main>
-        <div class="quick-start">
-            <h2>Ready to Begin Your Adventure?</h2>
-            <p>Choose your starting point based on your current level:</p>
-            <div class="quick-links">
-                <a href="kapampangan_intro.html" class="quick-link">🌱 Complete Beginner</a>
-                <a href="kapampangan_conversations.html" class="quick-link">💬 Some Experience</a>
-                <a href="kapampangan_mastery_celebration.html" class="quick-link">🎯 Test My Skills</a>
-            </div>
-        </div>
-
-        <div class="stats-section">
-            <h2>Your Complete Learning Package</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-number">6</div><p>Comprehensive Lessons</p></div>
-                <div class="stat-card"><div class="stat-number">500+</div><p>Vocabulary Words</p></div>
-                <div class="stat-card"><div class="stat-number">50+</div><p>Cultural Expressions</p></div>
-                <div class="stat-card"><div class="stat-number">25+</div><p>Grammar Patterns</p></div>
-                <div class="stat-card"><div class="stat-number">100+</div><p>Interactive Exercises</p></div>
-                <div class="stat-card"><div class="stat-number">∞</div><p>Cultural Insights</p></div>
-            </div>
-        </div>
-
-        <div class="learning-path">
-            <h2>Your Learning Path</h2>
-            <div class="path-timeline">
-                <div class="path-item" data-step="1"><h3>Foundation Building</h3><p>Learn basic greetings, understand the cultural context, and get familiar with Kapampangan sounds and rhythm.</p></div>
-                <div class="path-item" data-step="2"><h3>Vocabulary &amp; Structure</h3><p>Build essential vocabulary for family, food, time, and daily activities while understanding sentence patterns.</p></div>
-                <div class="path-item" data-step="3"><h3>Conversation Skills</h3><p>Master politeness levels, emotional expressions, and real-world conversation scenarios.</p></div>
-                <div class="path-item" data-step="4"><h3>Grammar Mastery</h3><p>Understand complex focus systems, advanced morphology, and sophisticated sentence construction.</p></div>
-                <div class="path-item" data-step="5"><h3>Cultural Fluency</h3><p>Learn traditional expressions, proverbs, and cultural vocabulary that connects you to Kapampangan heritage.</p></div>
-                <div class="path-item" data-step="6"><h3>Cultural Ambassador</h3><p>Celebrate your mastery and learn how to use your skills to preserve and share Kapampangan culture.</p></div>
-            </div>
-        </div>
-
-        <section class="lesson-grid">
-            <div class="lesson-card">
-                <div class="lesson-number">1</div>
-                <h2 class="lesson-title">Introduction to Kapampangan</h2>
-                <span class="difficulty-badge beginner">Beginner</span>
-                <p class="lesson-description">Discover the heart language of Central Luzon! Learn about Kapampangan's rich history, cultural significance, and start with essential greetings.</p>
-                <div class="lesson-highlights">
-                    <strong>You'll Master:</strong>
-                    <ul>
-                        <li>Essential greetings and responses</li>
-                        <li>Cultural context and significance</li>
-                        <li>Basic pronunciation rules</li>
-                    </ul>
-                </div>
-                <a href="kapampangan_intro.html" class="lesson-link">Start Your Journey! 🌟</a>
-            </div>
-
-            <div class="lesson-card">
-                <div class="lesson-number">2</div>
-                <h2 class="lesson-title">Kapampangan Basics</h2>
-                <span class="difficulty-badge beginner">Beginner</span>
-                <p class="lesson-description">Build your foundation with essential vocabulary, sentence patterns, and practical words for family, food, and daily activities.</p>
-                <div class="lesson-highlights">
-                    <strong>You'll Master:</strong>
-                    <ul>
-                        <li>Family vocabulary and relationships</li>
-                        <li>Food and cooking terminology</li>
-                        <li>Numbers, time, and calendar words</li>
-                    </ul>
-                </div>
-                <a href="kapampangan_basics.html" class="lesson-link">Build Your Foundation! 🏗️</a>
-            </div>
-
-            <div class="lesson-card">
-                <div class="lesson-number">3</div>
-                <h2 class="lesson-title">Kapampangan Conversations</h2>
-                <span class="difficulty-badge intermediate">Intermediate</span>
-                <p class="lesson-description">Master the art of natural conversation! Learn politeness levels, emotional expressions, and real-world scenarios.</p>
-                <div class="lesson-highlights">
-                    <strong>You'll Master:</strong>
-                    <ul>
-                        <li>Politeness levels and respect systems</li>
-                        <li>Emotional expressions and feelings</li>
-                        <li>Market, family, and social scenarios</li>
-                    </ul>
-                </div>
-                <a href="kapampangan_conversations.html" class="lesson-link">Start Talking! 💬</a>
-            </div>
-
-            <div class="lesson-card">
-                <div class="lesson-number">4</div>
-                <h2 class="lesson-title">Grammar Patterns &amp; Structures</h2>
-                <span class="difficulty-badge advanced">Advanced</span>
-                <p class="lesson-description">Dive deep into Kapampangan's sophisticated grammar system. Master focus patterns, complex morphology, and advanced structures.</p>
-                <div class="lesson-highlights">
-                    <strong>You'll Master:</strong>
-                    <ul>
-                        <li>Focus system (Actor, Object, Beneficiary)</li>
-                        <li>Complex verb morphology</li>
-                        <li>Relative clauses and conditionals</li>
-                    </ul>
-                </div>
-                <a href="kapampangan_grammar.html" class="lesson-link">Master Grammar! 🧠</a>
-            </div>
-
-            <div class="lesson-card">
-                <div class="lesson-number">5</div>
-                <h2 class="lesson-title">Expressions &amp; Vocabulary</h2>
-                <span class="difficulty-badge advanced">Advanced</span>
-                <p class="lesson-description">Discover the soul of Kapampangan through traditional proverbs, cultural expressions, and comprehensive vocabulary lists.</p>
-                <div class="lesson-highlights">
-                    <strong>You'll Master:</strong>
-                    <ul>
-                        <li>Traditional proverbs and wisdom</li>
-                        <li>Modern cultural expressions</li>
-                        <li>Comprehensive vocabulary database</li>
-                    </ul>
-                </div>
-                <a href="kapampangan_expressions_vocabulary.html" class="lesson-link">Express Yourself! 🎭</a>
-            </div>
-
-            <div class="lesson-card">
-                <div class="lesson-number">6</div>
-                <h2 class="lesson-title">Mastery &amp; Cultural Celebration</h2>
-                <span class="difficulty-badge mastery">Mastery</span>
-                <p class="lesson-description">Celebrate your journey to mastery! Engage in advanced conversations, explore cultural festivals, and become a cultural ambassador.</p>
-                <div class="lesson-highlights">
-                    <strong>You'll Master:</strong>
-                    <ul>
-                        <li>Advanced conversation skills</li>
-                        <li>Cultural festival participation</li>
-                        <li>Cultural ambassador skills</li>
-                    </ul>
-                </div>
-                <a href="kapampangan_mastery_celebration.html" class="lesson-link">Celebrate Mastery! 🏆</a>
-            </div>
-        </section>
-
-        <section class="features-grid">
-            <div class="feature-card"><div class="feature-icon">🎯</div><h3>Interactive Learning</h3><p>Engaging exercises, quizzes, and real-world scenarios</p></div>
-            <div class="feature-card"><div class="feature-icon">🎨</div><h3>Visual Learning</h3><p>Colorful diagrams, animations, and visual aids</p></div>
-            <div class="feature-card"><div class="feature-icon">🏛️</div><h3>Cultural Context</h3><p>Deep insights connecting language to heritage</p></div>
-            <div class="feature-card"><div class="feature-icon">🎵</div><h3>Pronunciation Guide</h3><p>Clear instructions and cultural pronunciation tips</p></div>
-            <div class="feature-card"><div class="feature-icon">📚</div><h3>Comprehensive Content</h3><p>From basic greetings to advanced expressions</p></div>
-            <div class="feature-card"><div class="feature-icon">🌍</div><h3>Real-World Application</h3><p>Practical scenarios you'll use in actual situations</p></div>
-        </section>
-
-        <div class="why-section">
-            <h2>Why Learn Kapampangan?</h2>
-            <div class="why-grid">
-                <div class="why-card"><h3>🍽️ Culinary Capital</h3><p>Pampanga is the Philippines' culinary capital. Understanding Kapampangan enhances your appreciation of Filipino cuisine.</p></div>
-                <div class="why-card"><h3>🏛️ Rich Heritage</h3><p>Connect with centuries of Filipino history, from pre-colonial times through modern independence.</p></div>
-                <div class="why-card"><h3>💼 Economic Opportunities</h3><p>Central Luzon is an economic powerhouse. Language skills open doors in tourism, business, and culture.</p></div>
-                <div class="why-card"><h3>🤝 Cultural Bridge</h3><p>Become a bridge between cultures, helping preserve and share this beautiful language.</p></div>
-            </div>
-        </div>
-    </main>
-
-    <div class="footer-section">
-        <h2>🙏 Salamat! Welcome to Your Kapampangan Journey!</h2>
-        <p>This comprehensive course was designed with love and respect for the Kapampangan language and culture.</p>
-        <h3>🎯 Your Success Journey</h3>
-        <p>Take your time with each lesson. Practice regularly, embrace mistakes as learning opportunities, and remember that every expert was once a beginner.</p>
-        <p class="footer-gold">Mayap a pamagdakal! Good luck with your learning!</p>
+    <div class="tier">
+        <h2 class="tier-title">A1 — Breakthrough</h2>
+        <p class="tier-sub">Sounds, greetings, the grammatical machinery, and the topics you will use first.</p>
+    </div>
+    <div class="lesson-grid">
+        <a class="lesson-card" href="kapampangan_lesson_1.html">
+            <div class="lesson-num">1</div>
+            <h3>Sounds, Spelling & Stress</h3>
+            <p>Five vowels, phonemic stress, and why this language has no tones</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_2.html">
+            <div class="lesson-num">2</div>
+            <h3>Greetings & Courtesy</h3>
+            <p>Greetings for every hour, and the particle that makes anything polite</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_3.html">
+            <div class="lesson-num">3</div>
+            <h3>The Markers: ing, ning, king</h3>
+            <p>ing, ning, king — the words that assign every noun its job</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_4.html">
+            <div class="lesson-num">4</div>
+            <h3>Pronouns I — the two core sets</h3>
+            <p>Three pronoun sets, three ways to say “we”, one unskippable rule</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_5.html">
+            <div class="lesson-num">5</div>
+            <h3>Pronouns II — the fused pronouns</h3>
+            <p>ke, me, ne, da ka — the most Kapampangan thing in the language</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_6.html">
+            <div class="lesson-num">6</div>
+            <h3>This, That & Where</h3>
+            <p>A four-way pointing system, with plurals Tagalog doesn't have</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_7.html">
+            <div class="lesson-num">7</div>
+            <h3>Pamilya — Family & People</h3>
+            <p>Family, birth order, and showing whose</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_8.html">
+            <div class="lesson-num">8</div>
+            <h3>Bilang, Salapi at Oras — Numbers, Money & Time</h3>
+            <p>Counting, prices, the parts of the day, and asking someone's age</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_9.html">
+            <div class="lesson-num">9</div>
+            <h3>Pamangan — Food & the Pampanga Table</h3>
+            <p>Sisig, bringhe, buru — the culinary capital in its own words</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_10.html">
+            <div class="lesson-num">10</div>
+            <h3>Ati, Ala & Ing Bale — Having, and the House</h3>
+            <p>ati and ala: having, not having, and the house you keep it in</p>
+        </a>
     </div>
 
-    <script>
-        function toggleTheme() {
-            const html = document.documentElement;
-            const current = html.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('kapampangan-theme', next);
-            document.querySelector('.theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
-        }
-        (function() {
-            const saved = localStorage.getItem('kapampangan-theme') ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', saved);
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelector('.theme-toggle').textContent = saved === 'dark' ? '☀️' : '🌙';
-            });
-        })();
-    </script>
+    <div class="tier">
+        <h2 class="tier-title">A2 — Waystage</h2>
+        <p class="tier-sub">Verbs, focus, negation, questions, and handling real situations.</p>
+    </div>
+    <div class="lesson-grid">
+        <a class="lesson-card" href="kapampangan_lesson_11.html">
+            <div class="lesson-num">11</div>
+            <h3>Verbs & Aspect</h3>
+            <p>Three aspects, and the a→e signal that marks completion</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_12.html">
+            <div class="lesson-num">12</div>
+            <h3>Who Does What — Actor and Object Focus</h3>
+            <p>Focus: the verb picks the subject, and the markers follow</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_13.html">
+            <div class="lesson-num">13</div>
+            <h3>Ali, Ala, E — Negation</h3>
+            <p>ali, ala, e — three negators and one clear decision</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_14.html">
+            <div class="lesson-num">14</div>
+            <h3>Asking Questions</h3>
+            <p>Twelve question words, and the distinctions English throws away</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_15.html">
+            <div class="lesson-num">15</div>
+            <h3>Describing Things</h3>
+            <p>ma- adjectives, colours, and the linker hiding since lesson 2</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_16.html">
+            <div class="lesson-num">16</div>
+            <h3>Buri ku, Kailangan ku — Wants, Needs & Ability</h3>
+            <p>Liking, wanting, needing, being able, being allowed</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_17.html">
+            <div class="lesson-num">17</div>
+            <h3>Requests & Commands</h3>
+            <p>Politeness as a dial, not a switch</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_18.html">
+            <div class="lesson-num">18</div>
+            <h3>King Palengke — Shopping</h3>
+            <p>A whole market transaction, using six earlier lessons at once</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_19.html">
+            <div class="lesson-num">19</div>
+            <h3>Katawan, Lasa ampong Panaun — Body, Health, Weather & Calendar</h3>
+            <p>The vocabulary you need on a bad day</p>
+        </a>
+        <a class="lesson-card" href="kapampangan_lesson_20.html">
+            <div class="lesson-num">20</div>
+            <h3>Kapampangan Culture & Fiesta</h3>
+            <p>Ligligan Parul, kasebyan, and what Amanung Sisuan means</p>
+        </a>
+    </div>
+
+    <div class="tier">
+        <h2 class="tier-title">Study Tools</h2>
+        <p class="tier-sub">Reference and practice that works alongside the lessons.</p>
+    </div>
+    <div class="lesson-grid">
+        <a class="lesson-card tool-card" href="cando.html">
+            <div class="lesson-num">✅</div>
+            <h3>Can-Do Checklist</h3>
+            <p>Tick off the CEFR A1 and A2 descriptors as you meet them. Each statement links to the lesson that teaches it.</p>
+        </a>
+        <a class="lesson-card tool-card" href="glossary.html">
+            <div class="lesson-num">📖</div>
+            <h3>Glossary</h3>
+            <p>Every word in the course, searchable and sortable, with audio and one-click adding to your review deck.</p>
+        </a>
+        <a class="lesson-card tool-card" href="readings.html">
+            <div class="lesson-num">💬</div>
+            <h3>Dialogues & Readings</h3>
+            <p>Graded passages that recycle the grammar and vocabulary you have met, with comprehension questions.</p>
+        </a>
+        <a class="lesson-card tool-card" href="cheatsheet.html">
+            <div class="lesson-num">📋</div>
+            <h3>Cheat Sheet</h3>
+            <p>The paradigm tables on one printable page — markers, pronouns, the fusion grid, aspects.</p>
+        </a>
+    </div>
+
+    <div class="explainer" id="dialect">
+        <h2>“Is Kapampangan a dialect?”</h2>
+        <p>No — and the question is worth answering properly, because the word "dialect" has
+        done real damage to Philippine regional languages.</p>
+        <p>Kapampangan is a <strong>separate language</strong>. In the Austronesian family it
+        sits in the <strong>Central Luzon</strong> group, whose other members include Sambal
+        and Bolinao. Tagalog is in a different branch entirely. The two are not parent and
+        child, and they are not close cousins.</p>
+        <p>The clearest proof is in lesson 11. The written form <em>susulat</em> exists in
+        both languages: in Kapampangan it means <em>is writing</em>, in Tagalog it means
+        <em>will write</em>. <em>Sumulat</em> means <em>will write</em> in Kapampangan and
+        <em>wrote</em> in Tagalog. Shared vocabulary with divergent grammar is what separate
+        languages look like, not what dialects look like.</p>
+        <p>Calling it a dialect implies it is a regional flavour of the national language and
+        that speaking it is a lesser form of speaking Filipino. It is neither. Kapampangans
+        call it <em>Amanung Sisuan</em> — the language suckled from birth — and lesson 20
+        explains why that phrase carries the weight it does.</p>
+    </div>
+
+    <div class="note">
+        <strong>A word on the audio.</strong> No browser ships a Kapampangan text-to-speech
+        voice, so the 🔊 buttons use a Filipino (Tagalog) voice as a stand-in. It gets the
+        vowels and most consonants right and the stress frequently wrong. Treat it as a rough
+        guide rather than a model — and if your device has no Filipino voice installed, the
+        audio layer hides itself rather than reading Kapampangan in an English accent.
+    </div>
+
+</div>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Ray de la Paz. Kapampangan: A Complete A1-A2 Course. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
+        <a href="https://rays-home.netlify.app/contact">Contact</a>
+        <a href="#" onclick="window.print(); return false;">Print Page</a>
+    </div>
+</footer>
+
+<script src="/scripts/nav.js"></script>
 <script src="/audio.js"></script>
+<script src="/vocab-data.js"></script>
+<script src="/lesson-content.js"></script>
+<script src="/learn.js"></script>
 </body>
 </html>

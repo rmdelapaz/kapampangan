@@ -1,0 +1,690 @@
+/* ============================================================
+   learn.css — learning-experience layer for the Kapampangan course.
+   Powers the components injected by learn.js: reading-progress
+   bar, end-of-lesson "Words You Learned" review + flashcards,
+   self-check quiz, learning journal, and the home dashboard.
+
+   All colours reference the tokens defined in shared.css, so
+   both light and dark themes are inherited automatically. New
+   class names are prefixed `lx-` to avoid colliding with the
+   audio layer's selectors (audio.js) and the lesson bodies.
+   ============================================================ */
+
+/* ---------- Reading progress bar ---------- */
+.lx-progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 4px;
+    width: 0%;
+    z-index: 1100;
+    background: linear-gradient(90deg, #4ECDC4, #4f46e5, #ec4899);
+    transition: width .1s linear;
+    pointer-events: none;
+}
+
+/* ---------- Shared card look for injected sections ---------- */
+.lx-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    padding: 1.4rem 1.5rem 1.6rem;
+    margin: 2.2rem auto;
+    max-width: 1160px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.lx-card h2 {
+    background: none !important;
+    color: var(--text-primary) !important;
+    font-size: 1.35rem;
+    margin: 0 0 .35rem !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.lx-card .lx-sub {
+    color: var(--text-secondary);
+    font-size: .92rem;
+    margin: 0 0 1.1rem;
+}
+
+/* ---------- Objectives & summary lists ---------- */
+.lx-objectives { border-top: 4px solid #4ECDC4; }
+.lx-summary { border-top: 4px solid var(--accent); }
+
+.lx-check-list, .lx-sum-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .6rem;
+}
+.lx-check-list li, .lx-sum-list li {
+    position: relative;
+    list-style: none;   /* the course main.css forces list-style on bare li */
+    margin: 0;
+    padding: .1rem 0 .1rem 2rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.lx-check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0; top: .05rem;
+    width: 1.4rem; height: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(78,205,196,.18);
+    color: #0e9f8e;
+    font-size: .82rem;
+    font-weight: 700;
+}
+[data-theme="dark"] .lx-check-list li::before { color: #4ECDC4; }
+.lx-sum-list li::before {
+    content: '';
+    position: absolute;
+    left: .35rem; top: .6rem;
+    width: .55rem; height: .55rem;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+/* Two columns on wide screens so a 6-point list stays compact */
+@media (min-width: 720px) {
+    .lx-check-list, .lx-sum-list { grid-template-columns: 1fr 1fr; gap: .6rem 1.6rem; }
+}
+
+/* ---------- Words You Learned / flashcards ---------- */
+.lx-vocab-cat { margin-bottom: 1.1rem; }
+.lx-vocab-cat:last-child { margin-bottom: 0; }
+.lx-cat-title {
+    background: none !important;
+    color: var(--text-secondary) !important;
+    font-size: .82rem !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin: 0 0 .5rem !important;
+    padding: 0 0 .3rem !important;
+    border-bottom: 1px solid var(--border);
+}
+[data-theme="dark"] .lx-cat-title { color: var(--text-secondary) !important; }
+.lx-vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: .85rem;
+}
+.lx-word {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: .8rem .9rem .85rem;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.lx-word:hover { transform: translateY(-2px); box-shadow: var(--card-shadow); }
+.lx-word.lx-known {
+    border-left-color: #22c55e;
+    background: rgba(34,197,94,.07);
+}
+.lx-word-tl {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .15rem;
+}
+[data-theme="dark"] .lx-word-tl { color: var(--accent) !important; }
+.lx-word-pron {
+    font-size: .8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: .1rem 0 .35rem;
+}
+.lx-word-en { font-size: .95rem; color: var(--text-primary); }
+/* Vocabulary illustration (manga set) inside a review card */
+.lx-word-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: -.15rem 0 .55rem;
+    background: rgba(0,0,0,.04);
+}
+[data-theme="dark"] .lx-word-img { background: rgba(255,255,255,.05); }
+/* Illustration on the flashcard front */
+.lx-flash-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .6rem;
+}
+.lx-flash-img .lx-word-img {
+    width: 160px;
+    max-width: 60%;
+    margin: 0;
+    border-radius: 12px;
+}
+.lx-know-btn {
+    margin-top: .6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    font: inherit;
+    font-size: .78rem;
+    padding: .28rem .6rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all .15s;
+}
+.lx-know-btn:hover { border-color: var(--accent); color: var(--accent); }
+.lx-word.lx-known .lx-know-btn {
+    background: #22c55e; border-color: #22c55e; color: #fff;
+}
+
+/* ---------- Toolbar / buttons ---------- */
+.lx-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+.lx-btn {
+    font: inherit;
+    font-size: .9rem;
+    font-weight: 500;
+    padding: .55rem 1.05rem;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all .18s;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+.lx-btn:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+.lx-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.lx-btn-primary:hover { filter: brightness(1.08); background: var(--accent); color: #fff; }
+.lx-btn:disabled { opacity: .5; cursor: default; }
+.lx-btn:disabled:hover { border-color: var(--border); background: var(--bg-secondary); color: var(--text-primary); }
+.lx-rate-miss:hover { border-color: #ef4444; background: rgba(239,68,68,.1); color: #dc2626; }
+.lx-count {
+    font-size: .85rem;
+    color: var(--text-muted);
+    margin-left: auto;
+}
+
+/* ---------- Interactive gap-fill exercises ---------- */
+.lx-blank {
+    font: inherit;
+    font-size: .95em;
+    min-width: 7rem;
+    max-width: 100%;
+    padding: .2rem .5rem;
+    margin: 0 .15rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+.lx-blank:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
+.lx-blank.lx-correct { border-color: #22c55e; background: rgba(34,197,94,.12); }
+.lx-blank.lx-wrong { border-color: #ef4444; background: rgba(239,68,68,.1); }
+.lx-ex-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .6rem;
+    margin: .7rem 0 1.3rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.lx-ex-feedback { font-size: .9rem; color: var(--text-muted); }
+.lx-ex-feedback.lx-good { color: #16a34a; font-weight: 600; }
+@media print { .lx-ex-controls { display: none !important; } }
+
+/* ---------- Self-check quiz ---------- */
+.lx-quiz-q { margin: 0 0 1.3rem; }
+.lx-quiz-q:last-child { margin-bottom: 0; }
+.lx-quiz-stem {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 .6rem;
+    font-size: 1.02rem;
+}
+.lx-quiz-stem .lx-q-word { color: var(--accent); }
+.lx-quiz-opts { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.lx-opt {
+    text-align: left;
+    font: inherit;
+    font-size: .93rem;
+    padding: .6rem .8rem;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all .15s;
+}
+.lx-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-light); }
+.lx-opt:disabled { cursor: default; }
+.lx-opt.lx-correct { border-color: #22c55e; background: rgba(34,197,94,.14); color: var(--text-primary); font-weight: 600; }
+.lx-opt.lx-wrong { border-color: #ef4444; background: rgba(239,68,68,.12); color: var(--text-primary); }
+.lx-quiz-score {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.lx-quiz-score.lx-good { color: #16a34a; }
+
+/* ---------- Learning journal ---------- */
+.lx-journal-label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: .5rem;
+}
+.lx-journal-note { font-weight: 400; color: var(--text-muted); font-size: .82rem; }
+.lx-journal-prompts {
+    font-size: .86rem;
+    color: var(--text-secondary);
+    background: var(--accent-light);
+    border-radius: 9px;
+    padding: .7rem .9rem;
+    margin: 0 0 .85rem;
+}
+.lx-journal-prompts strong { color: var(--text-primary); }
+.lx-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: .85rem 1rem;
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    resize: vertical;
+}
+.lx-textarea:focus { outline: none; border-color: var(--accent); }
+.lx-journal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+    margin-top: .7rem;
+}
+.lx-status { font-size: .84rem; color: var(--text-muted); }
+
+/* ---------- Lesson-complete control ---------- */
+.lx-complete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .8rem;
+    margin: 2.2rem auto 0;
+    max-width: 1160px;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    background: var(--accent-light);
+    border: 1px dashed var(--accent);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.lx-complete.lx-done { border-style: solid; background: rgba(34,197,94,.1); border-color: #22c55e; }
+.lx-complete-text { color: var(--text-primary); font-weight: 500; }
+
+/* ---------- Home dashboard ---------- */
+.lx-dash {
+    max-width: 960px;
+    margin: 0 auto 2rem;
+    padding: 0 1.25rem;
+}
+.lx-dash-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+}
+.lx-dash h2 { font-size: 1.3rem; margin: 0 0 1rem !important; color: var(--text-primary) !important; background: none !important; }
+.lx-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
+.lx-stat {
+    text-align: center;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem .5rem;
+}
+.lx-stat-num { font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.lx-stat-label { font-size: .82rem; color: var(--text-muted); margin-top: .35rem; }
+.lx-track {
+    height: 12px;
+    border-radius: 999px;
+    background: var(--toggle-bg);
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+.lx-track-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #4ECDC4, #4f46e5, #ec4899);
+    transition: width .5s ease;
+}
+
+/* Completion ticks on the lesson cards (home page) */
+.lesson-card { position: relative; }
+.lesson-card .lx-tick {
+    position: absolute;
+    top: .6rem; right: .6rem;
+    width: 1.5rem; height: 1.5rem;
+    border-radius: 50%;
+    background: #22c55e;
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+.lesson-card.lx-visited .lx-tick { display: flex; background: var(--toggle-bg); color: var(--text-muted); }
+.lesson-card.lx-completed .lx-tick { display: flex; background: #22c55e; color: #fff; }
+
+/* ---------- Flashcard modal ---------- */
+.lx-modal {
+    position: fixed; inset: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background: rgba(0,0,0,.55);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+.lx-modal[hidden] { display: none; }
+.lx-flash {
+    width: 100%;
+    max-width: 460px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    padding: 1.25rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.lx-flash-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.lx-flash-head h3 { margin: 0 !important; font-size: 1.05rem; color: var(--text-primary) !important; background: none !important; }
+.lx-flash-close {
+    font: inherit; font-size: 1.4rem; line-height: 1;
+    background: none; border: none; color: var(--text-muted); cursor: pointer;
+}
+.lx-flash-card {
+    min-height: 190px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+.lx-flash-front { font-size: 1.9rem; font-weight: 800; color: var(--accent); }
+.lx-flash-pron { font-size: .95rem; color: var(--text-muted); font-style: italic; }
+.lx-flash-back { font-size: 1.35rem; color: var(--text-primary); }
+.lx-flash-hint { font-size: .8rem; color: var(--text-muted); margin-top: .4rem; }
+.lx-flash-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .6rem;
+    margin-top: 1rem;
+}
+.lx-flash-progress { font-size: .85rem; color: var(--text-muted); }
+
+@media (max-width: 600px) {
+    .lx-card { padding: 1.1rem 1rem 1.25rem; border-radius: 12px; }
+    .lx-count { margin-left: 0; width: 100%; }
+    .lx-vocab-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+    .lx-vocab-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Glossary page ---------- */
+.g-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: 1rem 0 1.1rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.g-search {
+    flex: 1 1 240px;
+    min-width: 0;
+    padding: .6rem .85rem;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+}
+.g-search:focus { outline: none; border-color: var(--accent); }
+.g-select {
+    flex: 0 1 auto;
+    padding: .6rem .7rem;
+    font: inherit;
+    font-size: .92rem;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.g-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: 0 0 1rem;
+}
+
+.g-azbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin-bottom: .9rem;
+}
+.g-az {
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--accent);
+    cursor: pointer;
+    transition: all .15s;
+}
+.g-az:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.g-stats { font-size: .85rem; color: var(--text-muted); margin: 0 0 .6rem; }
+
+.g-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.g-table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: left;
+    padding: .6rem .7rem;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    background: var(--table-header, var(--accent));
+    color: #fff;
+}
+.g-table td {
+    padding: .55rem .7rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    color: var(--text-primary);
+}
+.g-table tbody tr:hover td { background: var(--accent-light); }
+.g-tl span { font-weight: 700; color: var(--accent); }
+[data-theme="dark"] .g-tl span { color: var(--accent) !important; }
+.g-pron { font-style: italic; color: var(--text-muted); font-size: .9rem; white-space: nowrap; }
+.g-en { color: var(--text-primary); }
+.g-lesson-link {
+    display: inline-block;
+    padding: .05rem .4rem;
+    margin: 0 .1rem .1rem 0;
+    font-size: .78rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--accent);
+    background: var(--accent-light);
+    border: 1px solid var(--border);
+}
+.g-lesson-link:hover { background: var(--accent); color: #fff !important; }
+.g-th-act { text-align: center; }
+.g-act { text-align: center; }
+.g-review {
+    width: 1.9rem; height: 1.9rem;
+    padding: 0;
+    font: inherit;
+    font-size: .9rem;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all .15s;
+}
+.g-review:hover { border-color: var(--accent); color: var(--accent); }
+.g-review.g-on { background: #22c55e; border-color: #22c55e; color: #fff; }
+.g-empty { text-align: center; color: var(--text-muted); padding: 1.5rem 0; }
+
+@media (max-width: 600px) {
+    .g-pron { white-space: normal; }
+    .g-table th, .g-table td { padding: .5rem .45rem; font-size: .9rem; }
+}
+
+/* ---------- Printable cheat sheet ---------- */
+.cs-intro { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+.cs-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: .75rem 0; }
+.cs-print { vertical-align: middle; }
+.cs-meta { color: var(--text-muted); font-size: .9rem; margin-top: .5rem; }
+.cs-grid {
+    max-width: 1160px;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.cs-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 1rem 1.1rem 1.1rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+.cs-cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin: 0 0 .6rem !important;
+    padding: 0 0 .4rem !important;
+    font-size: 1.05rem;
+    color: var(--accent) !important;
+    background: none !important;
+    border-bottom: 2px solid var(--accent-light);
+}
+.cs-cat-practice {
+    flex-shrink: 0;
+    font: inherit;
+    font-size: .82rem;
+    line-height: 1;
+    padding: .2rem .5rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-secondary);
+    color: var(--accent);
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+}
+.cs-cat-practice:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.cs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .1rem .8rem;
+    padding: .4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+.cs-row:last-child { border-bottom: none; }
+.cs-tl { font-weight: 700; color: var(--accent); grid-column: 1; }
+[data-theme="dark"] .cs-tl { color: var(--accent) !important; }
+.cs-pron { font-style: italic; color: var(--text-muted); font-size: .82rem; grid-column: 1; }
+.cs-en { color: var(--text-primary); grid-row: 1 / span 2; grid-column: 2; align-self: center; }
+
+@media (max-width: 480px) {
+    .cs-grid { grid-template-columns: 1fr; }
+}
+
+/* Print: hide interactive-only chrome */
+@media print {
+    .lx-progress-bar, .lx-toolbar, .lx-know-btn, .lx-quiz, .lx-complete, .lx-modal,
+    .g-controls, .g-azbar, .g-th-act, .g-act,
+    .cs-actions, .cs-cat-practice, .cs-hero, .lesson-nav, .site-footer, .audio-btn { display: none !important; }
+
+    /* Cheat sheet: tight, ink-friendly, fits a couple of pages */
+    body { background: #fff !important; color: #000 !important; }
+    .cs-intro { margin: 0 0 .5rem; }
+    .cs-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+        margin: 0;
+        padding: 0;
+    }
+    .cs-card { box-shadow: none; border: 1px solid #999; padding: .5rem .6rem; }
+    .cs-cat { color: #000 !important; border-color: #000; font-size: 1rem; }
+    .cs-tl { color: #000 !important; }
+    .cs-pron, .cs-en { color: #222 !important; }
+}

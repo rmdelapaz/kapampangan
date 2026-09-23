@@ -1,3 +1,4 @@
 status.md
 old_content/
 *.bak
+__pycache__/
