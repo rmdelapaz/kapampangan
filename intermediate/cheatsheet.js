@@ -8,160 +8,111 @@
     'use strict';
 
     var SHEET = [
-        { title: 'Greetings & Courtesy', items: [
-            ['Mayap a abak', 'MA-yap a A-bak', 'Good morning'],
-            ['Mayap a ugtu', 'MA-yap a UG-tu', 'Good noon'],
-            ['Mayap a gatpanapun', 'MA-yap a gat-pa-NA-pun', 'Good afternoon'],
-            ['Mayap a bengi', 'MA-yap a BE-ngi', 'Good evening'],
-            ['Komusta ka?', 'ko-mus-TA ka', 'How are you?'],
-            ['Mayap ku naman', 'MA-yap ku na-MAN', "I'm fine"],
-            ['Salamat', 'sa-LA-mat', 'Thank you'],
-            ['Dakal a salamat pu', 'DA-kal a sa-LA-mat pu', 'Thank you very much (polite)'],
-            ['Wa', 'wah', 'Yes'],
-            ['Opu', 'o-PU', 'Yes (polite)'],
-            ['Ali', 'a-LI', 'No'],
-            ['Pasensya na pu', 'pa-SEN-sya na pu', 'Sorry / excuse me (polite)'],
-            ['Nanung lagyu mu?', 'NA-nung LAG-yu mu', "What is your name?"],
-            ['Kaluguran daka', 'ka-lu-GU-ran da-KA', 'I love you']
+        { title: 'Predication types', items: [
+            ['Action-Actor', 'AF', '-um-, mag-, maN- \u2014 the doer takes ing'],
+            ['Action-Goal', 'GF', '-an or i- \u2014 the thing acted on takes ing, agent drops to ning'],
+            ['Action-Beneficiary', 'BF', 'i-, paN-, pag- \u2014 the person it is for takes ing'],
+            ['Locative / directional', 'LF', '-an or i- \u2014 the place or goal takes ing'],
+            ['Instrumental', 'IF', 'pag-/pan- with i- \u2014 the thing used takes ing'],
+            ['Place-forms', 'pi-', 'pi-, pipan-, pipag- \u2014 "a place where..."'],
+            ['Stative', 'mi- / ka-', 'the ing phrase is in a state; ka- often causative'],
+            ['Recent completion', 'ka- + doubling', 'just this minute finished; usually with pa']
         ]},
-        { title: 'The Markers', items: [
-            ['ing', 'ing', 'marks the noun in focus'],
-            ['ning', 'ning', 'marks a doer that is not in focus'],
-            ['king', 'king', 'to, at, in, for'],
-            ['deng / ding', 'deng', 'plural of ing'],
-            ['reng / ring', 'reng', 'plural of ning'],
-            ['karing', 'ka-RING', 'plural of king'],
-            ['i', 'ee', "marks a person's name, in focus"],
-            ['nang', 'nang', "marks a person's name as doer"],
-            ['kang', 'kang', 'to / for a named person'],
-            ['di / ri', 'dee', 'a named person and their company']
+        { title: 'The -an verb classes', items: [
+            ['List A', 'A', '-an drops, no vowel change: aus \u2192 inaus'],
+            ['List B', 'B', '-an stays, no vowel change: alila \u2192 inalilan'],
+            ['List C', 'C', '-an drops, vowel changes: buklat \u2192 biklat, sali \u2192 seli'],
+            ['List D', 'D', '-an stays, vowel changes: busbus \u2192 bisbusan']
         ]},
-        { title: 'Pronouns — subject set', items: [
-            ['yaku / ku', 'YA-ku', 'I'],
-            ['ika / ka', 'i-KA', 'you'],
-            ['iya / ya', 'i-YA', 'he, she, it'],
-            ['ikata / kata', 'i-KA-ta', 'we two — you and I'],
-            ['ikatamu / katamu', 'i-ka-TA-mu', 'we, including you'],
-            ['ikami / kami', 'i-ka-MI', 'we, excluding you'],
-            ['ikayu / kayu', 'i-KA-yu', 'you (plural)'],
-            ['ila / la', 'i-LA', 'they']
+        { title: 'Sound changes', items: [
+            ['u \u2192 i', 'u to i', 'buklat \u2192 biklat, kutang \u2192 kitnan'],
+            ['a \u2192 e', 'a to e', 'sali \u2192 seli, mag- \u2192 meg-, maN- \u2192 meN-'],
+            ['paN- + p, b', 'pam-', 'balbas \u2192 mamalbas'],
+            ['paN- + t, d', 'pan-', 'damdam \u2192 panamdam'],
+            ['paN- + k, g', 'pang-', 'kutang \u2192 mangutang'],
+            ['s, d \u2192 y', 'after mang-/pang-', 'sali \u2192 panyali, danum \u2192 panyanuman'],
+            ['d \u2192 r', 'between vowels', 'dakal \u2192 marakal, ding \u2192 ring'],
+            ['final -e \u2192 -ay', 'before a suffix', 'abe \u2192 abayan'],
+            ['final -o \u2192 -aw', 'before a suffix', 'laso \u2192 lasawan'],
+            ['glottal \u2192 y, w', '', 'abak \u2192 mayap a yabak']
         ]},
-        { title: 'Pronouns — doer & oblique', items: [
-            ['ku', 'ku', 'my / by me'],
-            ['mu', 'mu', 'your / by you'],
-            ['na', 'na', 'his, her / by him, her'],
-            ['mi', 'mi', 'our (excl.) / by us'],
-            ['tamu', 'TA-mu', 'our (incl.) / by us'],
-            ['yu', 'yu', 'your (pl.) / by you'],
-            ['da / ra', 'da', 'their / by them'],
-            ['kaku', 'KA-ku', 'to me'],
-            ['keka', 'KE-ka', 'to you'],
-            ['keya', 'KE-ya', 'to him, to her'],
-            ['karela', 'ka-RE-la', 'to them']
+        { title: 'Non-verbal predication', items: [
+            ['ati', 'A-ti', 'BE \u2014 is present, is located; takes yu / lu'],
+            ['atin', 'A-tin', 'HAVE \u2014 takes the short pronouns plus -ng'],
+            ['ala', 'A-la', 'negates both'],
+            ['mika-', 'mi-KA', 'another HAVE construction'],
+            ['aliwa', 'a-li-WA', 'other \u2014 negates identity'],
+            ['ali', 'a-LI', 'can stand for a whole predicate']
         ]},
-        { title: 'Fused pronouns', items: [
-            ['ke', 'ke', 'I ... him/her/it  (ku + ya)'],
-            ['ko', 'ko', 'I ... them  (ku + la)'],
-            ['da ka', 'da ka', 'I ... you  (irregular)'],
-            ['me', 'me', 'you ... him/her/it  (mu + ya)'],
-            ['mo', 'mo', 'you ... them  (mu + la)'],
-            ['ne', 'ne', 'he/she ... him/her/it  (na + ya)'],
-            ['no', 'no', 'he/she ... them  (na + la)'],
-            ['te', 'te', 'we two ... him/her/it  (ta + ya)'],
-            ['to', 'to', 'we two ... them  (ta + la)'],
-            ['ye', 'ye', 'you all ... him/her/it  (yu + ya)'],
-            ['yo', 'yo', 'you all ... them  (yu + la)'],
-            ['de / re', 'de', 'they ... him/her/it  (da + ya)'],
-            ['do / ro', 'do', 'they ... them  (da + la)']
+        { title: 'Lexical particles', items: [
+            ['na', 'na', 'now, already'],
+            ['pa', 'pa', 'still, yet'],
+            ['mu', 'mu', 'only, just'],
+            ['man', 'man', 'even'],
+            ['pin', 'pin', 'indeed, for sure'],
+            ['pala', 'pa-LA', 'realisation \u2014 oh, that\u2019s right'],
+            ['kanu', 'ka-NU', 'reportedly, so they say'],
+            ['sana', 'SA-na', 'hope, unrealised wish'],
+            ['yata', 'ya-TA', 'probably, it seems'],
+            ['kaya', 'ka-YA', 'I wonder, how about'],
+            ['wari', 'WA-ri', 'question marker'],
+            ['rugu', 'RU-gu', 'sympathy or humility'],
+            ['galang', 'GA-lang', 'respect']
         ]},
-        { title: 'This, that & where', items: [
-            ['iti', 'i-TI', 'this — near me, not near you'],
-            ['ini', 'i-NI', 'this — near both of us'],
-            ['ita', 'i-TA', 'that — near you'],
-            ['iyan', 'i-YAN', 'that — away from us both'],
-            ['keti', 'KE-ti', 'here — where I am'],
-            ['keni', 'KE-ni', 'here — where we both are'],
-            ['keta', 'KE-ta', 'there — where you are (also ken, kyan)'],
-            ['karin', 'ka-RIN', 'over there — away from us both'],
-            ['Nanu ini?', 'NA-nu i-NI', 'What is this?']
+        { title: 'Particle order', items: [
+            ['rank 1', '1', 'mu, kanu, rugu'],
+            ['rank 2', '2', 'na, pa, pin, yata, sana'],
+            ['rank 3', '3', 'man, pala, kaya'],
+            ['rank 4', '4', 'galang'],
+            ['rank 5', '5', 'wari'],
+            ['Ali na pa mu sana', '', 'four particles stacked \u2014 Forman\u2019s maximum']
         ]},
-        { title: 'Verbs & aspect', items: [
-            ['sumulat', 'su-MU-lat', 'will write (contemplative)'],
-            ['susulat', 'su-SU-lat', 'is writing (progressive) — not "will write"'],
-            ['sinulat', 'si-NU-lat', 'wrote (completed)'],
-            ['mangan', 'MA-ngan', 'will eat'],
-            ['mamangan', 'ma-MA-ngan', 'is eating'],
-            ['mengan', 'ME-ngan', 'ate'],
-            ['mag- becomes meg-', 'meg', 'completed aspect of mag- verbs'],
-            ['maN- becomes meN-', 'men', 'completed aspect of maN- verbs'],
-            ['gawa / gewa', 'GA-wa', 'do / did'],
-            ['sali / seli', 'SA-li', 'buy / bought it'],
-            ['datang / dintang', 'da-TANG', 'arrive / arrived']
+        { title: 'Relators', items: [
+            ['at, at saka, ampo', '', 'and'],
+            ['dapot, pero, oneng', '', 'but'],
+            ['u / o', '', 'or'],
+            ['uling, kasi', '', 'because'],
+            ['nung, istung, pota', '', 'if, when'],
+            ['agyang, maski', '', 'even though'],
+            ['bayu, kabang, angga', '', 'before, while, until'],
+            ['ban, inya', '', 'so that']
         ]},
-        { title: 'Negation & existence', items: [
-            ['ati', 'A-ti', 'there is; to have'],
-            ['ala', 'A-la', 'there is not; to not have'],
-            ['ali', 'a-LI', 'not (negates verbs)'],
-            ['e', 'eh', 'not (short form of ali)'],
-            ['ali pa', 'a-LI pa', 'not yet'],
-            ['ali na', 'a-LI na', 'not any more'],
-            ['E ku balu', 'e ku BA-lu', "I don't know"],
-            ['Ala kung kwalta', 'A-la kung KWAL-ta', 'I have no money'],
-            ['Alang problema', 'A-lang pro-BLE-ma', 'No problem']
+        { title: 'Deictics (Forman)', items: [
+            ['iti / keti', 'i-TI', 'near me only'],
+            ['ini / keni', 'i-NI', 'near us both'],
+            ['ita / keta', 'i-TA', 'near you'],
+            ['iyan / karin', 'i-YAN', 'near neither'],
+            ['niti, nini, nita, niyan', '', 'the ning-case forms'],
+            ['kaniti, kanini, kanita, kanyan', '', 'the king-case forms'],
+            ['oiti, oini, oita, oyan', '', 'presentatives \u2014 here it is'],
+            ['ninuman, nanuman', '', 'whosoever, whatever'],
+            ['ninuninu, nanunanu', '', 'everybody, all sorts of things']
         ]},
-        { title: 'Questions', items: [
-            ['nanu', 'NA-nu', 'what'],
-            ['ninu', 'NI-nu', 'who'],
-            ['nukarin', 'nu-KA-rin', 'where'],
-            ['kapilan', 'ka-pi-LAN', 'when'],
-            ['obakit', 'o-BA-kit', 'why'],
-            ['kaninu', 'ka-NI-nu', 'whose, to whom'],
-            ['makananu', 'ma-ka-NA-nu', 'how (by what method)'],
-            ['nuanti', 'nu-AN-ti', 'how (to what degree)'],
-            ['pilan', 'pi-LAN', 'how many'],
-            ['magkanu', 'mag-KA-nu', 'how much (price)'],
-            ['isanu', 'i-SA-nu', 'which'],
-            ['wari', 'WA-ri', 'yes-or-no question particle']
+        { title: 'Comparison', items: [
+            ['mising-', 'MI-sing', 'equal: both phrases ing-marked'],
+            ['king / keng', 'king', 'than \u2014 marks the standard'],
+            ['mas', 'mas', 'more (optional, Spanish)'],
+            ['kesa', 'KE-sa', 'than (optional, Spanish)'],
+            ['peka-', 'PE-ka', 'most'],
+            ['ka- + root', 'ka', 'emphatic: Kasanting! Katas mu!']
         ]},
-        { title: 'Numbers', items: [
-            ['metung / isa', 'me-TUNG', 'one'],
-            ['adua', 'a-DU-a', 'two'],
-            ['atlu', 'at-LU', 'three'],
-            ['apat', 'A-pat', 'four'],
-            ['lima', 'li-MA', 'five'],
-            ['anam', 'A-nam', 'six'],
-            ['pitu', 'pi-TU', 'seven'],
-            ['ualu', 'u-A-lu', 'eight'],
-            ['siyam', 'si-YAM', 'nine'],
-            ['apulu', 'a-PU-lu', 'ten'],
-            ['aduang pulu', 'a-DU-ang PU-lu', 'twenty'],
-            ['dinalan', 'di-NA-lan', 'one hundred']
+        { title: 'Minor sentences', items: [
+            ['Dios pu', 'di-YOS pu', 'announcing yourself at a gate'],
+            ['Kumusta abe?', 'ku-mus-TA A-be', 'how are you, friend?'],
+            ['Muduran ya', 'mu-DU-ran ya', 'it is raining'],
+            ['Aray!', 'a-RAY', 'ouch!'],
+            ['Aru!', 'a-RU', 'wow! hey!'],
+            ['Naku!', 'na-KU', 'mother of mine! (dismay)'],
+            ['Wa pin', 'wa pin', 'yes indeed'],
+            ['Wa pala', 'wa pa-LA', 'oh yes, that\u2019s right'],
+            ['Wa rugu', 'wa RU-gu', 'yes [with sympathy]']
         ]},
-        { title: 'Describing', items: [
-            ['mayap', 'MA-yap', 'good'],
-            ['marok', 'ma-ROK', 'bad'],
-            ['masanting', 'ma-SAN-ting', 'beautiful, fine, excellent'],
-            ['maragul', 'ma-ra-GUL', 'big'],
-            ['malati', 'ma-LA-ti', 'small'],
-            ['mapali', 'ma-PA-li', 'hot'],
-            ['marimla', 'ma-RIM-la', 'cold'],
-            ['maniaman', 'ma-ni-A-man', 'delicious'],
-            ['a / -ng', 'a', 'linker: a after a consonant, -ng after a vowel'],
-            ['masanting a bale', 'ma-SAN-ting a BA-le', 'a beautiful house'],
-            ['malagung babai', 'ma-LA-gung ba-BA-i', 'a beautiful woman']
-        ]},
-        { title: 'Getting things done', items: [
-            ['buri', 'BU-ri', 'to like; to want (a thing)'],
-            ['bisa', 'BI-sa', 'to want to (+ verb)'],
-            ['kailangan', 'ka-i-LA-ngan', 'to need'],
-            ['dapat', 'DA-pat', 'should, ought to'],
-            ['malyari', 'mal-YA-ri', 'can, may, it is possible'],
-            ['Malyari ku waring lumwal?', 'mal-YA-ri ku WA-ring lum-WAL', 'May I go out?'],
-            ['pu', 'poo', 'politeness particle'],
-            ['naman', 'na-MAN', 'softens a request'],
-            ['Mangan tana!', 'MA-ngan TA-na', "Let's eat!"],
-            ['Magkanu ya ini?', 'mag-KA-nu ya i-NI', 'How much is this?'],
-            ['Pakitawad naman', 'pa-ki-TA-wad na-MAN', 'Could you lower it a bit, please']
+        { title: 'Old orthography', items: [
+            ['c before a, o, u', 'c', 'modern k \u2014 Capampangan'],
+            ['qu before e, i', 'qu', 'modern k \u2014 queni, queti'],
+            ['qng', 'qng', 'modern king'],
+            ['co', 'co', 'modern ko / ku'],
+            ['Guagua', 'GWA-gwa', 'the town also written Wawa']
         ]}
     ];
 

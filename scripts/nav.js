@@ -34,6 +34,8 @@
     <span class="nav-sep">·</span>
     <a href="/cando.html">Can-Do</a>
     <span class="nav-sep">·</span>
+    <a href="/intermediate/index.html">Intermediate (B1–B2) →</a>
+    <span class="nav-sep">·</span>
     <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
     <span class="nav-sep">·</span>
     <a href="https://rays-home.netlify.app/contact">Contact</a>

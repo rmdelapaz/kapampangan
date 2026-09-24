@@ -10,116 +10,114 @@
     /* ---- content: each piece recycles earlier lessons' words ---- */
     var DIALOGUES = [
         {
-            id: 'greetings',
-            title: 'Mayap a Abak!',
-            en_title: 'Good Morning!',
-            kind: 'Dialogue',
-            scene: 'Two people meet for the first time outside a house in Angeles City.',
-            recycles: [2, 4, 7],
+            id: 'signs',
+            title: 'Deng Pasibayu',
+            en_title: 'Public Signs',
+            kind: 'Authentic texts',
+            scene: 'Real signage collected in Pampanga, in the older Spanish-based spelling. Work out each one before reading the translation.',
+            recycles: [19, 5, 15],
             lines: [
-                { sp: 'Ana', kp: 'Mayap a abak pu!', en: 'Good morning!' },
-                { sp: 'Ben', kp: 'Mayap a abak. Komusta ka?', en: 'Good morning. How are you?' },
-                { sp: 'Ana', kp: 'Mayap ku naman, salamat. Ika?', en: "I'm fine, thank you. And you?" },
-                { sp: 'Ben', kp: 'Mayap ku naman. Nanung lagyu mu?', en: "I'm fine too. What is your name?" },
-                { sp: 'Ana', kp: 'Ana ya ing lagyu ku. Ika?', en: 'My name is Ana. And you?' },
-                { sp: 'Ben', kp: 'Ben ya ing lagyu ku. Taga-Angeles ku.', en: "My name is Ben. I'm from Angeles." },
-                { sp: 'Ana', kp: 'Masanting! Kaluguran ta na.', en: "Wonderful! We're friends now." }
+                { kp: 'Bawal ing mugse basura queni.', en: 'Throwing garbage here is prohibited.' },
+                { kp: 'Multa P5 o suculan.', en: 'A 5-peso fine, or jail.' },
+                { kp: 'Bawal ing mimi queti.', en: 'Urinating here is forbidden.' },
+                { kp: 'E co misusulud imalan a "sleeveless" qng pamakinabang.', en: "Don't wear sleeveless dresses to Communion." },
+                { kp: 'Distancia koy.', en: 'Keep your distance, brother.' },
+                { kp: 'Pot-pot bayo lusot.', en: 'Toot-toot before you cut in.' }
             ],
             questions: [
-                { q: 'How does Ana greet Ben? (three words)', a: 'mayap a abak', hint: '"___ pu!"' },
-                { q: 'What does Ben ask for, after saying he is fine? (one word)', a: 'lagyu|name', hint: '"Nanung ___ mu?"' },
-                { q: 'Which particle does Ana add to be polite?', a: 'pu', hint: 'Two letters.' }
+                { q: 'In the old spelling, queni is written how today?', a: 'keni', hint: 'qu before e and i becomes k.' },
+                { q: 'And qng?', a: 'king', hint: 'The oblique marker.' },
+                { q: 'Which word in the last sign means "before"?', a: 'bayo|bayu', hint: 'A relator from lesson 15.' },
+                { q: 'In "E co misusulud", what does E do?', a: 'negates|negator|not', hint: 'It is the short negator.' }
             ]
         },
         {
-            id: 'palengke',
-            title: 'King Palengke',
-            en_title: 'At the Market',
-            kind: 'Dialogue',
-            scene: 'Buying bananas at a market stall in San Fernando.',
-            recycles: [8, 14, 17, 18],
+            id: 'goal',
+            title: 'Deng Utus',
+            en_title: 'Instructions',
+            kind: 'Sentence set',
+            scene: 'Goal-focus imperatives from Forman. Notice how much of each sentence is a fused pronoun.',
+            recycles: [1, 4],
             lines: [
-                { sp: 'Lita', kp: 'Mayap a abak pu! Magkanu la reng saging?', en: 'Good morning! How much are the bananas?' },
-                { sp: 'Tindera', kp: 'Limang piso ya ing metung.', en: 'Five pesos each.' },
-                { sp: 'Lita', kp: 'Mal ya naman pu. Pakitawad naman.', en: "That's a bit expensive. Could you lower it a little?" },
-                { sp: 'Tindera', kp: 'Sige, apat a piso.', en: 'All right, four pesos.' },
-                { sp: 'Lita', kp: 'Salamat pu. Bisa kung lima.', en: "Thank you. I'd like five." },
-                { sp: 'Tindera', kp: 'Aduang pulu a piso sablan.', en: 'Twenty pesos altogether.' },
-                { sp: 'Lita', kp: 'Ini ing bayad ku.', en: "Here's my payment." },
-                { sp: 'Tindera', kp: 'Dakal a salamat pu!', en: 'Thank you very much!' }
+                { kp: 'Patdan me ing radio.', en: 'Turn off the radio.' },
+                { kp: 'Isara me ing pasbul.', en: 'Close the door.' },
+                { kp: 'Ibuklat me ing libru mu.', en: 'Open your book.' },
+                { kp: 'Ilaga mu reng ebun.', en: 'Boil the eggs.' },
+                { kp: 'Itiltil me ing asan keng aslam.', en: 'Dip the fish into the vinegar.' },
+                { kp: 'Sakmalan me ing pale.', en: 'Grab a handful of the rice.' }
             ],
             questions: [
-                { q: 'What is the first price the vendor gives? (the number word)', a: 'lima|limang|five', hint: '"___ piso ya ing metung."' },
-                { q: 'What price does she settle on? (the number word)', a: 'apat|four', hint: '"Sige, ___ a piso."' },
-                { q: 'How does Lita say "it is expensive"? (one word)', a: 'mal', hint: '"___ ya naman pu."' },
-                { q: 'What is the total? (the number phrase, two words)', a: 'aduang pulu|twenty', hint: '"___ a piso sablan."' }
+                { q: 'The fused pronoun me is made of which two pronouns? (two words)', a: 'mu ya', hint: 'Doer plus object.' },
+                { q: 'Which marker is on the thing being acted on?', a: 'ing', hint: 'The focus marker.' },
+                { q: 'Ibuklat is built on which root?', a: 'buklat', hint: 'Its completed form is biklat.' }
             ]
         },
         {
-            id: 'pamilya',
-            title: 'Ing Pamilya Ku',
-            en_title: 'My Family',
-            kind: 'Short passage',
-            scene: 'A short self-introduction of the kind you might give when you meet someone new.',
-            recycles: [4, 7, 10, 15],
+            id: 'particles',
+            title: 'Ing Kaibaan',
+            en_title: 'The Difference a Particle Makes',
+            kind: 'Contrast set',
+            scene: "Forman's own frames. The word stays the same; the particle changes everything.",
+            recycles: [14],
             lines: [
-                { kp: 'Ini ing pamilya ku.', en: 'This is my family.' },
-                { kp: 'Ati kung ibpa, indu, ampong aduang kapatad.', en: 'I have a father, a mother, and two siblings.' },
-                { kp: 'Mestru ya ing ibpa ku.', en: 'My father is a teacher.' },
-                { kp: 'Masanting a tau ing indu ku.', en: 'My mother is a fine person.' },
-                { kp: 'Ati kung metung a koya ampong metung a atsi.', en: 'I have one older brother and one older sister.' },
-                { kp: 'Ati kami king Pampanga.', en: 'We are in Pampanga.' },
-                { kp: 'Kaluguran ke ing pamilya ku.', en: 'I love my family.' }
+                { kp: 'Wa.', en: 'Yes.' },
+                { kp: 'Wa pin.', en: 'Yes indeed, for sure.' },
+                { kp: 'Wa pala.', en: "Oh yes, that's right, isn't it? (I'd forgotten)" },
+                { kp: 'Wa kanu.', en: 'Yes, so they say.' },
+                { kp: 'Wa sana.', en: 'Yes, I hope so.' },
+                { kp: 'Wa rugu.', en: 'Yes [with sympathy or humility].' },
+                { kp: 'Ala pa.', en: 'None yet, still none.' },
+                { kp: 'Ala na.', en: 'No more, none now.' },
+                { kp: 'Ali pa mu.', en: 'Not just yet.' }
             ],
             questions: [
-                { q: 'How many siblings does the speaker have? (the number word)', a: 'adua|aduang|two', hint: '"... ampong ___ kapatad."' },
-                { q: 'What is the father’s job? (one word)', a: 'mestru|teacher', hint: '"___ ya ing ibpa ku."' },
-                { q: 'Which fused pronoun appears in the last line?', a: 'ke', hint: 'ku + ya, from lesson 5.' }
+                { q: 'Which particle marks something as second-hand information?', a: 'kanu', hint: 'So they say.' },
+                { q: 'Which particle marks a sudden realisation?', a: 'pala', hint: "Oh, that's right." },
+                { q: 'Which particle adds sympathy?', a: 'rugu', hint: 'Forman glosses it in brackets.' },
+                { q: 'In "Ala na", what does na mean?', a: 'now|already', hint: 'Its partner is pa.' }
             ]
         },
         {
-            id: 'pamangan',
-            title: 'Mangan Tana!',
-            en_title: "Let's Eat!",
-            kind: 'Dialogue',
-            scene: 'A neighbour is invited in for a meal. Sisig is involved.',
-            recycles: [9, 16, 17],
+            id: 'narrative',
+            title: 'Metung a Salita',
+            en_title: 'A Short Narrative',
+            kind: 'Connected text',
+            scene: "Forman's example sentences, arranged as a sequence. Watch the relators doing the joining.",
+            recycles: [15, 22],
             lines: [
-                { sp: 'Rosa', kp: 'Mangan tana! Ati kaming sisig.', en: "Let's eat! We have sisig." },
-                { sp: 'Mario', kp: 'Salamat pu! Danup ku naman.', en: "Thank you! I am hungry, actually." },
-                { sp: 'Rosa', kp: 'Bisa kang nasi?', en: 'Would you like rice?' },
-                { sp: 'Mario', kp: 'Wa pu, salamat.', en: 'Yes please, thank you.' },
-                { sp: 'Mario', kp: 'Maniaman ya! Ninu ing meglutu?', en: 'It is delicious! Who cooked?' },
-                { sp: 'Rosa', kp: 'Ing indu ku. Mabanglu ya, ali wa?', en: "My mother. It smells wonderful, doesn't it?" },
-                { sp: 'Mario', kp: 'Wa pu. Busug ku na. Dakal a salamat!', en: "Yes. I'm full now. Thank you very much!" }
+                { kp: 'I Suan, pintalan ne misan a yaldo i Pedro dapot e ne disan.', en: "Suan went to Pedro one day, but he didn't get to him." },
+                { kp: 'Buri ra kang paglapakan oneng e ra ka agyu uling maragul ka.', en: "They'd like to beat you up, but they can't overcome you because you're big." },
+                { kp: 'Masaya lang masaya ring adua king arakap dang tugak.', en: 'The two were very happy that they were able to catch a frog.' },
+                { kp: 'Mayap na ing makasaup ka kang Maria.', en: "It's good that you will be able to help Maria." },
+                { kp: 'Kaibatibat kung mengan.', en: 'I have just finished eating.' }
             ],
             questions: [
-                { q: 'What dish are they eating?', a: 'sisig', hint: 'Pampanga’s most famous export.' },
-                { q: 'How does Mario say "delicious"? (one word)', a: 'maniaman', hint: '"___ ya!"' },
-                { q: 'What is the completed form of "cooked" in the passage?', a: 'meglutu', hint: 'mag- becomes meg-.' },
-                { q: 'How does Mario say he is full? (one word)', a: 'busug', hint: '"___ ku na."' }
+                { q: 'Which word in the first line means "but"?', a: 'dapot', hint: 'A relator.' },
+                { q: 'And which word means "because" in the second?', a: 'uling', hint: 'Another relator.' },
+                { q: 'arakap is an ability form of which root?', a: 'dakap', hint: 'The a- prefix from lesson 8.' },
+                { q: 'Kaibatibat marks the action as what? (one word)', a: 'recent|just', hint: 'Lesson 7.' }
             ]
         },
         {
-            id: 'pista',
-            title: 'Ing Ligligan Parul',
-            en_title: 'The Giant Lantern Festival',
-            kind: 'Short passage',
-            scene: 'A description of San Fernando in December, using the culture vocabulary from lesson 20.',
-            recycles: [11, 15, 19, 20],
+            id: 'exclaim',
+            title: 'Deng Pamagtaka',
+            en_title: 'Exclamations',
+            kind: 'Minor sentences',
+            scene: "Forman's emphatic descriptives and minor sentences — the ka- construction at work.",
+            recycles: [12, 17],
             lines: [
-                { kp: 'Kapilan ya ing Ligligan Parul? Dominggo bayu ing Pasku.', en: 'When is the Giant Lantern Festival? The Sunday before Christmas.' },
-                { kp: 'Maragul la reng parul.', en: 'The lanterns are big.' },
-                { kp: 'Masanting la, at malutu, dilo ampong berde la.', en: 'They are beautiful, and they are red, yellow and green.' },
-                { kp: 'Dakal a tau ing datang king San Fernando.', en: 'Many people come to San Fernando.' },
-                { kp: 'Marimla ya ing bengi, pero matula la ring tau.', en: 'The night is cold, but the people are happy.' },
-                { kp: 'Ini ing pista ning Kapampangan.', en: 'This is the fiesta of the Kapampangan.' }
+                { kp: 'Kasanting na ning gayak king dalan!', en: 'How beautiful the decorations in the street are!' },
+                { kp: 'Katas mu!', en: "You're so tall!" },
+                { kp: 'Kanyaman ning makaduyan!', en: 'How delightful to be in a hammock!' },
+                { kp: 'Kapormalan mu naman!', en: "Well, you're so very formal!" },
+                { kp: 'Oita ya pala ing salamin mu!', en: "So that's where your glasses are!" },
+                { kp: 'Dios pu!', en: '(announcing yourself at the gate)' }
             ],
             questions: [
-                { q: 'Where is the festival held?', a: 'san fernando', hint: '"... king ___."' },
-                { q: 'How does the passage describe the lanterns’ size? (one word)', a: 'maragul|big', hint: '"___ la reng parul."' },
-                { q: 'Which word means "cold"?', a: 'marimla', hint: '"___ ya ing bengi."' },
-                { q: 'Which word means "happy"?', a: 'matula', hint: '"... pero ___ la ring tau."' }
+                { q: 'The emphatic exclamation uses which prefix?', a: 'ka|ka-', hint: 'One syllable.' },
+                { q: 'Kasanting is built on which root?', a: 'santing', hint: 'Strip the ka-.' },
+                { q: 'Which particle in the glasses sentence marks realisation?', a: 'pala', hint: 'From lesson 14.' },
+                { q: 'What is "Dios pu" used for? (one word)', a: 'announcing|greeting', hint: 'At a door or gate.' }
             ]
         }
     ];

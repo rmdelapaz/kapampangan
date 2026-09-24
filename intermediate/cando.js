@@ -7,100 +7,100 @@
 
     var CANDO = [
         {
-            level: 'A1', title: 'A1 — Breakthrough (Beginner)',
+            level: 'B1', title: 'B1 — Threshold (Intermediate)',
             groups: [
                 {
-                    name: 'Getting started', items: [
-                        { id: 'a1-sounds', text: 'Pronounce the five vowels and put the stress on the right syllable', ln: [[1]] },
-                        { id: 'a1-tone', text: 'Explain why Kapampangan has stress but no tones', ln: [[1]] },
-                        { id: 'a1-greet', text: 'Greet someone correctly at any hour of the day', ln: [[2]] },
-                        { id: 'a1-pu', text: 'Use pu and opu to show respect', ln: [[2], [17]] },
-                        { id: 'a1-thanks', text: 'Say yes, no, thank you and sorry', ln: [[2]] },
-                        { id: 'a1-name', text: 'Give my name and ask for someone else\u2019s', ln: [[2]] }
+                    name: 'The predication system', items: [
+                        { id: 'b1-goal', text: 'Recognise an action-goal predication and read its markers', ln: [[1]] },
+                        { id: 'b1-classes', text: 'Sort an -an verb into one of the four classes', ln: [[1], [4]] },
+                        { id: 'b1-benef', text: 'Tell an action-beneficiary predication from an action-goal one', ln: [[2]] },
+                        { id: 'b1-pan', text: 'Recognise paN- and pag- beneficiary forms', ln: [[2]] },
+                        { id: 'b1-other', text: 'Recognise locative, instrumental and reason predications', ln: [[3]] },
+                        { id: 'b1-king', text: 'Explain the range of jobs king does', ln: [[3]] }
                     ]
                 },
                 {
-                    name: 'The grammatical core', items: [
-                        { id: 'a1-markers', text: 'Use ing, ning and king to show what each noun is doing', ln: [[3]] },
-                        { id: 'a1-plural', text: 'Switch to deng, reng and karing for plurals', ln: [[3]] },
-                        { id: 'a1-personal', text: 'Mark people\u2019s names with i, nang and kang', ln: [[3]] },
-                        { id: 'a1-pron1', text: 'Use the subject pronouns and the doer pronouns', ln: [[4]] },
-                        { id: 'a1-we', text: 'Choose correctly between ikata, ikatamu and ikami', ln: [[4]] },
-                        { id: 'a1-agree', text: 'Remember the pronoun even when the noun is already there', ln: [[4]] },
-                        { id: 'a1-fused', text: 'Recognise and use ke, me, ne, no and da ka', ln: [[5]] },
-                        { id: 'a1-fused2', text: 'Hear the difference between Dintang ya and Dintang ne', ln: [[5]] }
+                    name: 'Reading unfamiliar forms', items: [
+                        { id: 'b1-stress', text: 'Recognise stress shift as meaning-bearing', ln: [[4]] },
+                        { id: 'b1-vowel', text: 'Apply the u-to-i and a-to-e changes', ln: [[4]] },
+                        { id: 'b1-ay', text: 'Handle the final -e/-ay and -o/-aw alternations', ln: [[4]] },
+                        { id: 'b1-assim', text: 'Apply paN- assimilation to get pam-, pan- and pang-', ln: [[5]] },
+                        { id: 'b1-sdy', text: 'Undo the s/d-to-y change to find a root', ln: [[5]] },
+                        { id: 'b1-dr', text: 'Explain why da and ra are one word', ln: [[5]] },
+                        { id: 'b1-method', text: 'Work back from an unfamiliar derived form to its root', ln: [[5], [4]] }
                     ]
                 },
                 {
-                    name: 'Pointing and naming', items: [
-                        { id: 'a1-demo', text: 'Choose between ini, iti, iyan and ita', ln: [[6]] },
-                        { id: 'a1-loc', text: 'Say where something is with keti, keni, keta and karin', ln: [[6]] },
-                        { id: 'a1-family', text: 'Name the members of a family and address older siblings correctly', ln: [[7]] },
-                        { id: 'a1-poss', text: 'Say whose something is, two different ways', ln: [[7], [10]] }
+                    name: 'States, ability and causation', items: [
+                        { id: 'b1-mi', text: 'Form a stative predication with mi-', ln: [[6]] },
+                        { id: 'b1-ka', text: 'Use ka- statives and read their causative sense', ln: [[6]] },
+                        { id: 'b1-recip', text: 'Use the number-inflected reciprocals', ln: [[6]] },
+                        { id: 'b1-recent', text: 'Recognise the ka- recent-completion construction', ln: [[7]] },
+                        { id: 'b1-maka', text: 'Use maka- correctly \u2014 and not as the Tagalog potentive', ln: [[8]] },
+                        { id: 'b1-abil', text: 'Use the a- ability forms', ln: [[8]] },
+                        { id: 'b1-caus', text: 'Recognise pa-, ipa-, magpa- and magpaka-', ln: [[9]] }
                     ]
                 },
                 {
-                    name: 'Everyday life', items: [
-                        { id: 'a1-count', text: 'Count from one to ten, and build bigger numbers', ln: [[8]] },
-                        { id: 'a1-metung', text: 'Choose correctly between metung and isa', ln: [[8]] },
-                        { id: 'a1-time', text: 'Name the parts of the day and say yesterday, now and tomorrow', ln: [[8]] },
-                        { id: 'a1-age', text: 'Ask and answer how old someone is', ln: [[8]] },
-                        { id: 'a1-food', text: 'Name everyday food and drink, and praise a meal', ln: [[9]] },
-                        { id: 'a1-invite', text: 'Invite someone to eat with Mangan tana!', ln: [[9], [17]] },
-                        { id: 'a1-have', text: 'Say what I have and don\u2019t have with ati and ala', ln: [[10]] },
-                        { id: 'a1-house', text: 'Name the rooms and everyday objects of a house', ln: [[10]] }
+                    name: 'Phrases', items: [
+                        { id: 'b1-link', text: 'Choose a or -ng correctly in any attributive phrase', ln: [[10]] },
+                        { id: 'b1-unlink', text: 'Recognise unlinked attributives', ln: [[10]] },
+                        { id: 'b1-split', text: 'Read a split attributive without losing the head', ln: [[10], [14]] },
+                        { id: 'b1-chain', text: 'Chain two verbs with a pseudo-verb', ln: [[11]] },
+                        { id: 'b1-manner', text: 'Add a complement of manner', ln: [[11]] },
+                        { id: 'b1-comp', text: 'Compare two things with king, with or without mas', ln: [[12]] },
+                        { id: 'b1-equal', text: 'Use the mising- equal comparative', ln: [[12]] },
+                        { id: 'b1-excl', text: 'Use the emphatic ka- exclamation', ln: [[12]] }
                     ]
                 }
             ]
         },
         {
-            level: 'A2', title: 'A2 — Waystage (Elementary)',
+            level: 'B2', title: 'B2 — Vantage (Upper Intermediate)',
             groups: [
                 {
-                    name: 'Verbs', items: [
-                        { id: 'a2-aspect', text: 'Use the contemplative, progressive and completed aspects', ln: [[11]] },
-                        { id: 'a2-meg', text: 'Recognise the a\u2192e change that signals a completed verb', ln: [[11]] },
-                        { id: 'a2-false', text: 'Avoid the susulat trap that catches Tagalog speakers', ln: [[11]] },
-                        { id: 'a2-focus', text: 'Explain what focus is and why the markers move', ln: [[12]] },
-                        { id: 'a2-af', text: 'Build an actor-focus sentence', ln: [[12]] },
-                        { id: 'a2-of', text: 'Build an object-focus sentence with i- or -an', ln: [[12]] }
+                    name: 'Sentences without verbs', items: [
+                        { id: 'b2-nonverb', text: 'Name the four non-verbal predication types', ln: [[13]] },
+                        { id: 'b2-atin', text: 'Use ati and atin correctly and negate both with ala', ln: [[13]] },
+                        { id: 'b2-ident', text: 'Build and negate an identificational sentence', ln: [[13]] },
+                        { id: 'b2-descten', text: 'Recognise descriptives inflected for tense and number', ln: [[13]] }
                     ]
                 },
                 {
-                    name: 'Saying no, and asking', items: [
-                        { id: 'a2-neg', text: 'Choose correctly between ali, ala and e', ln: [[13]] },
-                        { id: 'a2-notyet', text: 'Say not yet, not any more, and I don\u2019t know', ln: [[13]] },
-                        { id: 'a2-qw', text: 'Use the twelve question words', ln: [[14]] },
-                        { id: 'a2-pilan', text: 'Distinguish pilan from magkanu', ln: [[14], [8]] },
-                        { id: 'a2-yesno', text: 'Form a yes-or-no question with wari', ln: [[14]] }
+                    name: 'Particles and texture', items: [
+                        { id: 'b2-part', text: 'Use kanu, pala, pin, sana and rugu appropriately', ln: [[14]] },
+                        { id: 'b2-order', text: 'Order a string of particles correctly', ln: [[14]] },
+                        { id: 'b2-place', text: 'Place a particle cluster after the first constituent', ln: [[14]] },
+                        { id: 'b2-back', text: 'Backchannel with varied short responses', ln: [[17], [22]] }
                     ]
                 },
                 {
-                    name: 'Describing and wanting', items: [
-                        { id: 'a2-ma', text: 'Form and use the ma- adjectives', ln: [[15]] },
-                        { id: 'a2-linker', text: 'Attach an adjective to a noun with a or -ng', ln: [[15]] },
-                        { id: 'a2-colour', text: 'Name the basic colours', ln: [[15]] },
-                        { id: 'a2-ka', text: 'Make a quality noun with ka- and a superlative with peka-', ln: [[15]] },
-                        { id: 'a2-buri', text: 'Say what I like and want with buri and bisa', ln: [[16]] },
-                        { id: 'a2-need', text: 'Express need, obligation and ability', ln: [[16]] }
+                    name: 'Building sentences', items: [
+                        { id: 'b2-coord', text: 'Coordinate and subordinate clauses with the right relator', ln: [[15]] },
+                        { id: 'b2-embed', text: 'Embed a clause with nung or ing', ln: [[15]] },
+                        { id: 'b2-multiing', text: 'Explain why a sentence can have several ing phrases', ln: [[15]] },
+                        { id: 'b2-rel', text: 'Build a relative clause with the linker', ln: [[16]] },
+                        { id: 'b2-unpack', text: 'Unpack a long noun phrase and find its head', ln: [[16]] },
+                        { id: 'b2-three', text: 'Produce a three-clause sentence with a concession and a reason', ln: [[15], [22]] }
                     ]
                 },
                 {
-                    name: 'Getting things done', items: [
-                        { id: 'a2-cmd', text: 'Give a command and soften it appropriately', ln: [[17]] },
-                        { id: 'a2-perm', text: 'Ask permission politely', ln: [[17], [16]] },
-                        { id: 'a2-lets', text: 'Make a let\u2019s suggestion with tana', ln: [[17]] },
-                        { id: 'a2-market', text: 'Complete a whole market transaction', ln: [[18]] },
-                        { id: 'a2-bargain', text: 'Ask a price and bargain politely', ln: [[18]] },
-                        { id: 'a2-health', text: 'Say what hurts and ask for help', ln: [[19]] },
-                        { id: 'a2-weather', text: 'Describe the weather and name the days of the week', ln: [[19]] }
+                    name: 'Speaking naturally', items: [
+                        { id: 'b2-minor', text: 'Use minor sentences \u2014 greetings, exclamations, short answers', ln: [[17]] },
+                        { id: 'b2-dios', text: 'Announce yourself properly at someone\u2019s gate', ln: [[17]] },
+                        { id: 'b2-deic', text: 'Use the deictic case forms, not just the plain ones', ln: [[18]] },
+                        { id: 'b2-indef', text: 'Form indefinites with man and with reduplication', ln: [[18]] },
+                        { id: 'b2-narr', text: 'Shape a narrative with time words and aspect contrast', ln: [[22]] }
                     ]
                 },
                 {
-                    name: 'Culture', items: [
-                        { id: 'a2-fiesta', text: 'Name Pampanga\u2019s festivals and say what happens at each', ln: [[20]] },
-                        { id: 'a2-amanu', text: 'Explain what Amanung Sisuan means and why it matters', ln: [[20]] },
-                        { id: 'a2-dialect', text: 'Explain why Kapampangan is a language, not a dialect of Tagalog', ln: [[20], [11]] }
+                    name: 'Text and context', items: [
+                        { id: 'b2-ortho', text: 'Read the Spanish-based orthography', ln: [[19]] },
+                        { id: 'b2-signs', text: 'Read real Kapampangan signage in the old spelling', ln: [[19]] },
+                        { id: 'b2-lit', text: 'Name the main literary forms and figures', ln: [[20]] },
+                        { id: 'b2-dialect', text: 'Describe how the western and eastern varieties differ', ln: [[21]] },
+                        { id: 'b2-socio', text: 'Explain the pressure on the language and what the revival argues', ln: [[21]] },
+                        { id: 'b2-limits', text: 'State honestly which parts of this description are uncertain', ln: [[21], [22]] }
                     ]
                 }
             ]

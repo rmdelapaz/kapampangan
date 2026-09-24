@@ -14,7 +14,7 @@ Notes are deduplicated case-insensitively by the Kapampangan text; lesson number
 and categories are merged into the note's Info field and its tags.
 
 Run:  python3 build_anki.py     (from the kapampangan folder; needs `genanki`)
-Output: kapampangan_course.apkg
+Output: kapampangan_intermediate.apkg
 """
 import json
 import os
@@ -26,8 +26,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SCRATCH = os.environ.get("SCRATCH", "")
 
 # Stable IDs (random-but-fixed so re-imports update instead of duplicating).
-MODEL_ID = 1607392983   # unique to Kapampangan; must not collide with the Tagalog decks
-DECK_ID = 2059400391    # unique to Kapampangan
+MODEL_ID = 1607393077   # unique to the Kapampangan B1-B2 tier
+DECK_ID = 2059400477    # unique to the Kapampangan B1-B2 tier
 
 
 def load_vocab():
@@ -131,7 +131,7 @@ hr#answer { border: none; border-top: 1px solid #e5e7eb; margin: .9em 0; }
 """,
     )
 
-    deck = genanki.Deck(DECK_ID, "Kapampangan Course")
+    deck = genanki.Deck(DECK_ID, "Kapampangan Intermediate (B1-B2)")
 
     def sort_key(n):
         # by earliest lesson, then Kapampangan
@@ -150,7 +150,7 @@ hr#answer { border: none; border-top: 1px solid #e5e7eb; margin: .9em 0; }
             tags=sorted(n["tags"]),
         ))
 
-    out = os.path.join(HERE, "kapampangan_course.apkg")
+    out = os.path.join(HERE, "kapampangan_intermediate.apkg")
     genanki.Package(deck).write_to_file(out)
     print("wrote %s" % out)
     print("unique notes: %d  (cards: %d)" % (len(notes), len(notes) * 2))
