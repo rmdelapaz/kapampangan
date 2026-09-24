@@ -82,3 +82,50 @@ register/rhetoric.
 - localStorage is namespaced `kapampangan-*`.
 - Audio uses a Filipino/Tagalog TTS voice as a **stand-in** — no Kapampangan voice
   exists. Lessons say so rather than implying the playback is authentic.
+
+---
+
+## Audit against Forman (2026-09-23)
+
+After the course shipped, Michael Forman's **_Kapampangan Grammar Notes_** (University of
+Hawai'i Press, 1971) turned out to be open access under CC BY-NC-SA 4.0
+(scholarspace.manoa.hawaii.edu, 100 pp). It is a proper reference grammar from fieldwork and
+outranks the encyclopedia article this course was first built from. The A1–A2 material was
+audited against it.
+
+**Confirmed unchanged:** all four pronoun sets, the `-e` portmanteau series, the existential
+special forms `yu`/`lu`, `ing`/`ning`/`king`, obligatory pronoun agreement, the absence of a
+copula, `ali`/`e`/`ala`, the `a`/`-ng` linker, `ampong`, `ka-` quality forms, and 58 of 88
+spot-checked vocabulary items.
+
+**Corrected:**
+1. **`ati` vs `atin`** (L10, L13). Forman separates them: `ati` = BE (present, located), taking
+   the special pronouns `yu`/`lu`; `atin` = HAVE, taking the ordinary short pronouns plus the
+   `-ng` linker. The course had taught `ati` for both.
+2. **Fusion in questions** (L5). The course said fused pronouns are "avoided in questions."
+   Forman records a *second series* used in interrogatives — `kya`, `mya`, `nya`, `tya`,
+   `dya` — so this is an alternative paradigm, not avoidance.
+3. **`bakit`** (L14). The course asserted "obakit, not bakit," claiming `bakit` marks you as
+   speaking Tagalog. Forman lists `obat`, `ot` **and `bakit`** as Kapampangan words for "why."
+   The false distinction was removed.
+4. **`keng` / `neng`** (L3) added as ordinary variants of `king` / `ning`.
+5. **Deictics** (L6) — see below.
+
+**Deictics: a genuine source conflict.** Forman and the Wikipedia table assign the four
+demonstratives to *different* distance slots, close to reversed on two of the four:
+
+| slot | Forman (now taught) | Wikipedia (was taught) |
+|---|---|---|
+| near speaker only | `iti` / `keti` | `ini` / `keni` |
+| near both | `ini` / `keni` | `iti` / `keti` |
+| near addressee | `ita` / `keta`,`ken`,`kyan` | `iyan` / `ken` |
+| far from both | `iyan` / `karin` | `ita` / `keta` |
+
+Ray's call: **follow Forman, state the disagreement on the page.** Lesson 6 now teaches
+Forman's arrangement and carries a callout saying other descriptions order them differently,
+that deictics vary by locality, and that learners should follow the speakers around them.
+Forman himself notes the `keta`/`ken`/`kyan` variation "is not yet well understood."
+
+**Still open:** a handful of everyday nouns remain unattested in Forman because a grammar is
+not a dictionary — `asbuk`, `pisali`, `dake`, `pusu`, `katawan`. These want a dictionary
+(Bergaño) or a native-speaker check. Note Forman spells "market" `palengki`, not `palengke`.

@@ -80,7 +80,7 @@ window.KAPAMPANGAN_LESSON_INFO = {
       "Use ke, ko, me, mo, ne and no fluently in short sentences",
       "Say 'I ... you' with the irregular da ka",
       "Recognise the unfused leftovers (mu ku, na ku, mi ya) and know why they don't merge",
-      "Spot the contexts where speakers avoid fusing — questions and phrases with naman",
+      "Use the separate question series (kya, mya, nya, tya, dya)",
       "Hear the difference between Dintang ya and Dintang ne"
     ],
     "summary": [
@@ -88,26 +88,26 @@ window.KAPAMPANGAN_LESSON_INFO = {
       "The core grid is ku+ya=ke, ku+la=ko, mu+ya=me, mu+la=mo, na+ya=ne, na+la=no, da+ya=de, da+la=do.",
       "'I … you' is irregular: da ka (or ra ka), as in Kaluguran daka.",
       "Some combinations never fuse and stay as two words: mu ku, na ku, na ka, mi ya.",
-      "Fused pronouns are usually avoided in questions and alongside naman.",
+      "Questions use a second set of fused forms — kya, mya, nya, tya, dya — rather than dropping fusion.",
       "Fusion carries meaning: Dintang ya is 'he arrived', Dintang ne is 'he has arrived'."
     ]
   },
   "6": {
     "objectives": [
-      "Choose between ini, iti, iyan and ita — a four-way system, not Tagalog's three",
+      "Choose between iti, ini, ita and iyan — a four-way system, not Tagalog's three",
       "Tell the difference between ini for concrete things and iti for abstract ones",
       "Use the plural forms deni, deti, den and deta",
-      "Use the locatives keni, keti, ken and keta to say where something is",
-      "Explain why two people in the same country say keti but say keni about their own towns",
+      "Use the locatives keti, keni, keta and karin to say where something is",
+      "Explain why two people in the same country say keni but say keti about their own side",
       "Ask and answer Nanu ini? — 'What is this?'"
     ],
     "summary": [
-      "Kapampangan points four ways: ini and iti (this), iyan (that, near you), ita (that over there).",
+      "Kapampangan points four ways: iti (by me), ini (by us both), ita (by you), iyan (away from us both) — following Forman; other descriptions order them differently.",
       "ini is for concrete things you can point at; iti usually refers to something abstract.",
       "Demonstratives have distinct plural forms — deni, deti, den, deta — which most Philippine languages lack.",
-      "The locative forms are keni, keti, ken and keta.",
-      "keti is 'here' where both speakers are; keni is 'here' where you are but the listener isn't.",
-      "The 'near you' row is irregular: the plural of iyan is den/ren, not *deyan."
+      "The locative forms are keti, keni, keta/ken/kyan and karin.",
+      "keni is 'here' where both of you are; keti is 'here' on your own side. Sources disagree about which label goes where, so follow the speakers around you.",
+      "The iyan row is irregular: its plural is den/ren, not *deyan, and its locative is karin."
     ]
   },
   "7": {
@@ -166,7 +166,7 @@ window.KAPAMPANGAN_LESSON_INFO = {
   },
   "10": {
     "objectives": [
-      "Say that something exists or that you have it, using ati",
+      "Say that something is present with ati, and that you have it with atin",
       "Say that it doesn't, using ala",
       "Use the special ati/ala pronoun forms atyu, atilu, ala ya and ala lu",
       "Name the rooms and everyday objects of a Kapampangan house",
@@ -174,7 +174,7 @@ window.KAPAMPANGAN_LESSON_INFO = {
       "Say where you are with Ati ku keti"
     ],
     "summary": [
-      "ati covers both 'there is' and 'to have' — Kapampangan does not need a separate verb.",
+      "ati means 'is present, is located'; atin means 'has'. One letter separates them, and the negative ala covers both.",
       "ala is its negative: 'there isn't' and 'I don't have'.",
       "With ati and ala, the pronouns ya and la take special forms: atyu, atilu/atila, ala ya/ala yu, ala la/ala lu.",
       "bale is 'house' — the word behind the surname and the place name you may already know.",
@@ -240,7 +240,7 @@ window.KAPAMPANGAN_LESSON_INFO = {
     "objectives": [
       "Use the twelve core Kapampangan question words",
       "Ask where something is with nukarin — and know it isn't used with verbs",
-      "Ask why with obakit",
+      "Ask why with obakit, obat or ot",
       "Distinguish pilan (how many) from magkanu (how much)",
       "Form a yes-or-no question with wari",
       "Answer questions about yourself in full sentences"
@@ -248,10 +248,10 @@ window.KAPAMPANGAN_LESSON_INFO = {
     "summary": [
       "The question words are nanu, ninu, nukarin, kapilan, obakit, kaninu, makananu, pilan, magkanu, nuanti, isanu and komusta.",
       "nukarin asks about the location of a thing or person, not about an action.",
-      "obakit is 'why' — not the Tagalog bakit.",
+      "'Why' has several forms: obakit, the shorter obat and ot, and bakit — which Forman records as Kapampangan too.",
       "pilan counts things; magkanu asks a price.",
       "wari turns a statement into a yes-or-no question, roughly like Tagalog ba.",
-      "Fused pronouns are usually avoided in questions, so you will hear Akakit me? rather than a fused alternative."
+      "Questions have their own fused series (kya, mya, nya, tya, dya), taught in lesson 5."
     ]
   },
   "15": {
@@ -341,7 +341,7 @@ window.KAPAMPANGAN_LESSON_INFO = {
       "Weather words: uran (rain), angin (wind), bagyu (typhoon), aldo (sun).",
       "The days of the week are borrowed from Spanish, as in most Philippine languages.",
       "panaun covers weather, season and time all at once.",
-      "Use ati and ala from lesson 10 to say whether you have a symptom."
+      "Use atin and ala from lesson 10 to say whether you have a symptom."
     ]
   },
   "20": {

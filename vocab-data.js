@@ -655,73 +655,73 @@ window.KAPAMPANGAN_VOCAB = {
     {
       "kp": "ini",
       "pron": "i-NI",
-      "en": "this (something concrete you can point at)",
+      "en": "this (near both of us)",
       "cat": "Pointing at things"
     },
     {
       "kp": "iti",
       "pron": "i-TI",
-      "en": "this (usually something abstract)",
+      "en": "this (near me, not near you)",
       "cat": "Pointing at things"
     },
     {
       "kp": "iyan",
       "pron": "i-YAN",
-      "en": "that (near the person you're talking to)",
+      "en": "that over there, away from us both",
       "cat": "Pointing at things"
     },
     {
       "kp": "ita",
       "pron": "i-TA",
-      "en": "that over there (far from you both)",
+      "en": "that (near you)",
       "cat": "Pointing at things"
     },
     {
       "kp": "deni",
       "pron": "DE-ni",
-      "en": "these (also reni)",
+      "en": "these, near us both (also reni)",
       "cat": "More than one"
     },
     {
       "kp": "deti",
       "pron": "DE-ti",
-      "en": "these (also reti)",
+      "en": "these, near me (also reti)",
       "cat": "More than one"
     },
     {
       "kp": "den",
       "pron": "den",
-      "en": "those, near you (also ren)",
+      "en": "those over there (also ren)",
       "cat": "More than one"
     },
     {
       "kp": "deta",
       "pron": "DE-ta",
-      "en": "those over there (also reta)",
+      "en": "those, near you (also reta)",
       "cat": "More than one"
     },
     {
       "kp": "keni",
       "pron": "KE-ni",
-      "en": "here (where you are, not the listener)",
+      "en": "here, where we both are",
       "cat": "Here and there"
     },
     {
       "kp": "keti",
       "pron": "KE-ti",
-      "en": "here (where you both are)",
+      "en": "here, where I am",
       "cat": "Here and there"
     },
     {
       "kp": "ken",
       "pron": "ken",
-      "en": "there, near the listener",
+      "en": "there, where you are (also keta, kyan)",
       "cat": "Here and there"
     },
     {
       "kp": "keta",
       "pron": "KE-ta",
-      "en": "over there, away from you both",
+      "en": "there, where you are (also ken, kyan)",
       "cat": "Here and there"
     },
     {
@@ -753,6 +753,12 @@ window.KAPAMPANGAN_VOCAB = {
       "pron": "MA-ngan la KE-ta",
       "en": "they will eat over there",
       "cat": "Using them"
+    },
+    {
+      "kp": "karin",
+      "pron": "ka-RIN",
+      "en": "over there, away from us both",
+      "cat": "Here and there"
     }
   ],
   "7": [
@@ -1235,7 +1241,13 @@ window.KAPAMPANGAN_VOCAB = {
     {
       "kp": "ati",
       "pron": "A-ti",
-      "en": "there is; there are; to have",
+      "en": "there is; is present, is located",
+      "cat": "There is / there isn't"
+    },
+    {
+      "kp": "atin",
+      "pron": "A-tin",
+      "en": "to have (possession) — takes the -ng linker",
       "cat": "There is / there isn't"
     },
     {
