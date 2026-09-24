@@ -24,19 +24,17 @@
   const links = document.createElement('div');
   links.className = 'nav-links';
   links.innerHTML = `
-    <a href="/intermediate/index.html" class="nav-brand">Kapampangan B1–B2</a>
+    <a href="/advanced/index.html" class="nav-brand">Kapampangan C1–C2</a>
     <span class="nav-sep">·</span>
-    <a href="/intermediate/readings.html">Readings</a>
+    <a href="/advanced/readings.html">Readings</a>
     <span class="nav-sep">·</span>
-    <a href="/intermediate/glossary.html">Glossary</a>
+    <a href="/advanced/glossary.html">Glossary</a>
     <span class="nav-sep">·</span>
-    <a href="/intermediate/cheatsheet.html">Cheat Sheet</a>
+    <a href="/advanced/cheatsheet.html">Cheat Sheet</a>
     <span class="nav-sep">·</span>
-    <a href="/intermediate/cando.html">Can-Do</a>
+    <a href="/advanced/cando.html">Can-Do</a>
     <span class="nav-sep">·</span>
-    <a href="/advanced/index.html">Advanced (C1–C2) →</a>
-    <span class="nav-sep">·</span>
-    <a href="/index.html">← Beginner (A1–A2)</a>
+    <a href="/intermediate/index.html">← Intermediate (B1–B2)</a>
     <span class="nav-sep">·</span>
     <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
     <span class="nav-sep">·</span>

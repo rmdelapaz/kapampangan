@@ -132,17 +132,17 @@ window.KAPAMPANGAN_INT_LESSON_INFO = {
       "Use maka- for ability",
       "Use maka- for 'managed to'",
       "Use maka- for accidental action",
-      "Tell maka- apart from the Tagalog potentive",
+      "Read a maka- form's sense from its context",
       "Recognise the a- ability forms",
       "Tell a maka- descriptive from a plain ma- adjective"
     ],
     "summary": [
-      "Forman's maka- is a stative descriptive: it says something causes or is in a state — makatamad, 'makes one lazy'.",
+      "maka- is polysemous: Forman's data is stative descriptive (makatamad 'makes one lazy'), while Bergaño records a genuine potential (macasulat co 'I can write').",
       "This is NOT the Tagalog potentive maka-; assuming it is will mislead you.",
       "Ability and accidental action are carried by a- forms instead: akakit 'can see', abili 'happened to put'.",
       "malyari covers 'can, may, it is possible' analytically.",
       "maka- descriptives are extremely common and are worth recognising early.",
-      "Forman treats maka- under descriptive predication, which is why this lesson follows his framing rather than Tagalog's."
+      "sukat is also potential, and covers remote ability where maka- covers only proximate: Sukat yang lumakad, dapot ali ya makalakad."
     ]
   },
   "9": {
