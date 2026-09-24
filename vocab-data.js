@@ -2527,7 +2527,8 @@ window.KAPAMPANGAN_VOCAB = {
       "kp": "Ligligan Parul",
       "pron": "lig-LI-gan PA-rul",
       "en": "the Giant Lantern Festival of San Fernando",
-      "cat": "Pampanga's festivals"
+      "cat": "Pampanga's festivals",
+      "img": "ligligan-parul"
     },
     {
       "kp": "parul",

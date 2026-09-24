@@ -194,6 +194,12 @@
     "from": "esl",
     "src_file": "esl/images/vocab/kitchen.webp"
   },
+  "ligligan-parul": {
+    "concept": "the Giant Lantern Festival of San Fernando",
+    "from": "generated",
+    "note": "ChatGPT pipeline, same chat as parul so the style carries. Round kaleidoscopic disc, NOT a star - shape checked against Wikimedia Commons Parol.JPG and GLFjf1503_03.JPG. Pairs with parul.webp to show the contrast lesson 20 teaches.",
+    "src_file": "_art_src/vocab/ligligan-parul_1024.png (gitignored)"
+  },
   "love": {
     "concept": "love",
     "from": "tagalog",
