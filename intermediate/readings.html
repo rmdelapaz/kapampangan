@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapampangan Dialogues & Readings — Ray's Kapampangan Lessons</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/learn.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <style>
+        .rd-hero { background: linear-gradient(135deg, #00b894, #0984e3, #6c5ce7); color: #fff;
+            padding: 40px 20px; border-radius: 15px; text-align: center; margin-bottom: 24px; }
+        .rd-hero h1 { margin: 0 0 8px; }
+        .rd-intro { max-width: 820px; margin: 0 auto 20px; }
+        .rd-meta { color: var(--muted-color, #667); font-weight: 600; margin-top: 8px; }
+
+        #readings-root { max-width: 820px; margin: 0 auto; display: grid; gap: 26px; }
+        .rd-card { background: var(--card-bg, #fff); border: 1px solid rgba(0,0,0,.08);
+            border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,.07); overflow: hidden; }
+        .rd-head { padding: 18px 20px 14px; border-bottom: 1px solid rgba(0,0,0,.07);
+            background: linear-gradient(180deg, rgba(108,92,231,.08), transparent); }
+        .rd-kind { display: inline-block; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+            font-weight: 700; color: #6c5ce7; background: rgba(108,92,231,.12);
+            padding: 3px 10px; border-radius: 999px; }
+        .rd-title { margin: 8px 0 4px; font-size: 1.4rem; }
+        .rd-title-en { font-size: .95rem; font-weight: 500; color: var(--muted-color, #778); }
+        .rd-scene { margin: 4px 0 10px; color: var(--muted-color, #667); }
+        .rd-recycles { margin: 6px 0 12px; font-size: .85rem; color: var(--muted-color, #667); }
+        .rd-chip { display: inline-block; margin: 2px 4px 2px 0; padding: 2px 9px; border-radius: 999px;
+            background: rgba(0,184,148,.14); color: #0a7a63; text-decoration: none; font-weight: 600; font-size: .8rem; }
+        .rd-chip:hover { background: rgba(0,184,148,.28); }
+        .rd-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .rd-lines { padding: 8px 20px 4px; }
+        .rd-line { display: grid; grid-template-columns: 92px 1fr; gap: 10px;
+            padding: 10px 0; border-bottom: 1px dashed rgba(0,0,0,.08); }
+        .rd-line-narr { grid-template-columns: 1fr; }
+        .rd-line:last-child { border-bottom: none; }
+        .rd-sp { font-weight: 700; color: #0984e3; }
+        .rd-tl { margin: 0 0 3px; font-size: 1.08rem; }
+        .rd-en { margin: 0; color: var(--muted-color, #667); font-style: italic; }
+        .rd-card.rd-hide-en .rd-en { display: none; }
+
+        .rd-quiz { padding: 6px 20px 20px; }
+        .rd-quiz-title { font-size: 1rem; margin: 12px 0 8px; }
+        .rd-qs { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+        .rd-q { background: rgba(9,132,227,.05); border: 1px solid rgba(9,132,227,.14);
+            border-radius: 10px; padding: 12px 14px; }
+        .rd-q-text { margin: 0 0 8px; font-weight: 600; }
+        .rd-q-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+        .rd-q-input { flex: 1 1 160px; min-width: 140px; padding: 7px 10px; font-size: 1rem;
+            border: 2px solid rgba(0,0,0,.18); border-radius: 8px; background: var(--card-bg, #fff);
+            color: var(--text-color, #222); }
+        .rd-q-input:focus { outline: none; border-color: #6c5ce7; }
+        .rd-q.rd-correct .rd-q-input { border-color: #00b894; background: rgba(0,184,148,.1); }
+        .rd-q.rd-wrong .rd-q-input { border-color: #e17055; background: rgba(225,112,85,.1); }
+        .rd-q-fb { margin: 8px 0 0; font-weight: 600; min-height: 1.1em; }
+        .rd-q.rd-correct .rd-q-fb { color: #0a7a63; }
+        .rd-q.rd-wrong .rd-q-fb { color: #c0392b; }
+        .rd-q-hint { margin: 6px 0 0; font-size: .85rem; color: var(--muted-color, #778); }
+
+        @media (max-width: 520px) {
+            .rd-line { grid-template-columns: 1fr; gap: 2px; }
+        }
+        @media print {
+            .rd-controls, .rd-quiz .rd-q-row, .audio-btn, .tts-settings { display: none !important; }
+            .rd-card.rd-hide-en .rd-en { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="rd-hero">
+    <h1>💬 Dialogues &amp; Readings</h1>
+    <p>Short conversations and passages that put the words you've learned to work.</p>
+</div>
+
+<div class="section rd-intro">
+    <p>The fastest way to make vocabulary stick is to meet it again in context. Each piece below
+    recycles words and grammar from earlier lessons — tap 🔊 to hear any line, use
+    <strong>Hide English</strong> to test yourself, then answer the comprehension questions.
+    The chips show which lessons each reading draws on.</p>
+    <p class="rd-meta" id="rd-count"></p>
+</div>
+
+<div id="readings-root"></div>
+
+<!-- BEGIN footer-nav (managed by add_footer_nav.py) -->
+<nav class="lesson-nav" aria-label="Lesson Navigation">
+    <a href="index.html" class="prev-lesson">&larr; Course Home</a>
+    <a href="glossary.html" class="home-link">Glossary</a>
+    <a href="cheatsheet.html" class="next-lesson">Cheat Sheet &rarr;</a>
+</nav>
+
+<footer class="site-footer">
+    <p>&copy; 2026 All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://rays-home.netlify.app/">Ray's House of Fun</a>
+        <a href="https://rays-home.netlify.app/contact">Contact</a>
+        <a href="#" onclick="window.print(); return false;">Print Page</a>
+    </div>
+</footer>
+<!-- END footer-nav -->
+
+<script src="/scripts/nav.js"></script>
+<script src="/audio.js"></script>
+<script src="/vocab-data.js"></script>
+<script src="/readings.js"></script>
+</body>
+</html>
