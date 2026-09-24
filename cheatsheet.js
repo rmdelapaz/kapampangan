@@ -75,14 +75,14 @@
             ['do / ro', 'do', 'they ... them  (da + la)']
         ]},
         { title: 'This, that & where', items: [
-            ['iti', 'i-TI', 'this — near me, not near you'],
-            ['ini', 'i-NI', 'this — near both of us'],
-            ['ita', 'i-TA', 'that — near you'],
-            ['iyan', 'i-YAN', 'that — away from us both'],
-            ['keti', 'KE-ti', 'here — where I am'],
-            ['keni', 'KE-ni', 'here — where we both are'],
-            ['keta', 'KE-ta', 'there — where you are (also ken, kyan)'],
-            ['karin', 'ka-RIN', 'over there — away from us both'],
+            ['ini', 'i-NI', 'this — a place mine alone'],
+            ['iti', 'i-TI', 'this — a place common to us both'],
+            ['iyan', 'i-YAN', 'that — near you'],
+            ['ita', 'i-TA', 'that — further off'],
+            ['keni', 'KE-ni', 'here — where I am'],
+            ['keti', 'KE-ti', 'here — where we both are'],
+            ['keyan', 'ke-YAN', 'there — where you are (also ken)'],
+            ['keta', 'KE-ta', 'over there — further off'],
             ['Nanu ini?', 'NA-nu i-NI', 'What is this?']
         ]},
         { title: 'Verbs & aspect', items: [

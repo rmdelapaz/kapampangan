@@ -34,7 +34,7 @@
                 {
                     name: 'Pointing and naming', items: [
                         { id: 'a1-demo', text: 'Choose between ini, iti, iyan and ita', ln: [[6]] },
-                        { id: 'a1-loc', text: 'Say where something is with keti, keni, keta and karin', ln: [[6]] },
+                        { id: 'a1-loc', text: 'Say where something is with keni, keti, keyan and keta', ln: [[6]] },
                         { id: 'a1-family', text: 'Name the members of a family and address older siblings correctly', ln: [[7]] },
                         { id: 'a1-poss', text: 'Say whose something is, two different ways', ln: [[7], [10]] }
                     ]

@@ -94,20 +94,20 @@ window.KAPAMPANGAN_LESSON_INFO = {
   },
   "6": {
     "objectives": [
-      "Choose between iti, ini, ita and iyan — a four-way system, not Tagalog's three",
+      "Choose between ini, iti, iyan and ita — a four-way system, not Tagalog's three",
       "Tell the difference between ini for concrete things and iti for abstract ones",
       "Use the plural forms deni, deti, den and deta",
-      "Use the locatives keti, keni, keta and karin to say where something is",
-      "Explain why two people in the same country say keni but say keti about their own side",
+      "Use the locatives keni, keti, keyan and keta to say where something is",
+      "Explain why two people in the same country say keti but say keni about their own side",
       "Ask and answer Nanu ini? — 'What is this?'"
     ],
     "summary": [
-      "Kapampangan points four ways: iti (by me), ini (by us both), ita (by you), iyan (away from us both) — following Forman; other descriptions order them differently.",
+      "Kapampangan points four ways: ini (a place mine alone), iti (a place common to us both), iyan (near you), ita (further off) — following Bergaño; Forman orders them differently.",
       "ini is for concrete things you can point at; iti usually refers to something abstract.",
       "Demonstratives have distinct plural forms — deni, deti, den, deta — which most Philippine languages lack.",
-      "The locative forms are keti, keni, keta/ken/kyan and karin.",
-      "keni is 'here' where both of you are; keti is 'here' on your own side. Sources disagree about which label goes where, so follow the speakers around you.",
-      "The iyan row is irregular: its plural is den/ren, not *deyan, and its locative is karin."
+      "The locative forms are keni, keti, keyan/ken and keta.",
+      "keti is 'here' where both of you are; keni is 'here' on your own side — Bergaño's shared inkwell versus the pen in your own hand. Sources disagree, so follow the speakers around you.",
+      "The iyan row is irregular: its plural is den/ren, not *deyan."
     ]
   },
   "7": {

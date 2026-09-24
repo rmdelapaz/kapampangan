@@ -77,11 +77,11 @@
             ['bayu, kabang, angga', '', 'before, while, until'],
             ['ban, inya', '', 'so that']
         ]},
-        { title: 'Deictics (Forman)', items: [
-            ['iti / keti', 'i-TI', 'near me only'],
-            ['ini / keni', 'i-NI', 'near us both'],
-            ['ita / keta', 'i-TA', 'near you'],
-            ['iyan / karin', 'i-YAN', 'near neither'],
+        { title: 'Deictics (Bergaño)', items: [
+            ['ini / keni', 'i-NI', 'a place mine alone'],
+            ['iti / keti', 'i-TI', 'a place common to us both'],
+            ['iyan / keyan, ken', 'i-YAN', 'near you'],
+            ['ita / keta', 'i-TA', 'further off'],
             ['niti, nini, nita, niyan', '', 'the ning-case forms'],
             ['kaniti, kanini, kanita, kanyan', '', 'the king-case forms'],
             ['oiti, oini, oita, oyan', '', 'presentatives \u2014 here it is'],

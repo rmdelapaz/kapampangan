@@ -313,8 +313,8 @@ window.KAPAMPANGAN_INT_LESSON_INFO = {
       "Use niti, nini and their plurals",
       "Use the presentative forms",
       "Use the indefinite substitutes",
-      "Recognise dialect variants",
-      "Handle the keta / ken / kyan variation"
+      "Weigh Bergaño's arrangement against Forman's",
+      "Recognise that the case forms are settled even where the distances are not"
     ],
     "summary": [
       "The deictics inflect for case as well as distance: ing, ning and king forms all exist.",
@@ -322,7 +322,7 @@ window.KAPAMPANGAN_INT_LESSON_INFO = {
       "The presentatives oiti, oini, oreti and oreni mean 'here it is / here they are'.",
       "Indefinite substitutes: ninuman 'whosoever', nanuman 'whatever', nukarinman 'wherever'.",
       "Reduplication makes them collective: ninuninu 'everybody'.",
-      "Forman records keta, ken and kyan as variants he cannot yet fully separate, and local usage varies."
+      "Bergaño (1736) and Forman (1971) assign the four base words to different distances; this course follows Bergaño. The case forms themselves are not in dispute."
     ]
   },
   "19": {
